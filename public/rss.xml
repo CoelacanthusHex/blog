@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 14 Dec 2019 00:46:29 +0800</lastBuildDate>
+        <lastBuildDate>Sat, 14 Dec 2019 01:21:22 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="http://localhost:1313/rss.xml" />
         
@@ -157,7 +157,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
+                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
                                 
                             
                                 
@@ -212,7 +212,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
+                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
                                 
                             
                                 
@@ -343,7 +343,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/tools/">tools</category>
+                                    <category domain="http://localhost:1313/tags/tools/">Tools</category>
                                 
                             
                                 
@@ -379,7 +379,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
+                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
                                 
                             
                         
@@ -507,19 +507,19 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
+                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/rmq/">rmq</category>
+                                    <category domain="http://localhost:1313/tags/rmq/">RMQ</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/st%E8%A1%A8/">st表</category>
+                                    <category domain="http://localhost:1313/tags/st%E8%A1%A8/">ST表</category>
                                 
                             
                                 
@@ -574,13 +574,13 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
+                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/noip/">noip</category>
+                                    <category domain="http://localhost:1313/tags/noip/">NOIP</category>
                                 
                             
                                 
@@ -592,7 +592,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/foi/">foi</category>
+                                    <category domain="http://localhost:1313/tags/foi/">FOI</category>
                                 
                             
                         
