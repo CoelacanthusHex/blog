@@ -1,4 +1,4 @@
- # SSG 生成的文件所在目录
+# SSG 生成的文件所在目录
 public
 
 # Node.js
@@ -6,12 +6,6 @@ node_modules
 
 # Hugo
 resources
-
-# Hexo
-db.json
-.deploy*
-*.log
-
 
 # ipfs-deploy
 .env
