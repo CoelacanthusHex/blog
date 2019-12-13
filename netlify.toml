@@ -1,0 +1,13 @@
+[build]
+  publish = "public"
+  command = "npm run build && npm run ipfs-deploy"
+
+[context.production.environment]
+  HUGO_VERSION = "0.60.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "https://lhwcrt.netlify.com/*"
+  to = "https://blog.lhwcrt.top/:splat"
+  force = true 
