@@ -52,7 +52,7 @@ uglyURLs = false
 
 # URL 结构
 [permalinks]
-    categories = "/categories/:slug/"
+    #categories = "/categories/:slug/"
     tags = "/tags/:slug/"
 
 # 类别
