@@ -19,4 +19,8 @@ gitinfo: true
 >   %%%
 
 
+### [Arch Linux 中文论坛](https://bbs.archlinuxcn.org/index.php)
+>   论坛里的 dalao 可强了，有问题来这里就对了
+
+
 #### 添加友链请发送邮件至liuhongwu2003@outlook.com
