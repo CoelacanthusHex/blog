@@ -9,4 +9,10 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.coding.me/)
 >   %%%
 
+### [thyzzs' blog](https://thyzzs.coding.me/)
+>   %%%
+
+### [Byte Bye](https://blog.bytebye.com/)
+>   %%%
+
 #### 添加友链请发送邮件至liuhongwu2003@outlook.com
