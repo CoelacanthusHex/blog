@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">lhw&#39;s blog</title>
     <subtitle type="html">lhw自己的网上小窝</subtitle>
-    <updated>2019-12-14T01:21:22+08:00</updated>
+    <updated>2019-12-14T16:46:59+08:00</updated>
     <id>http://localhost:1313/</id>
     <link rel="alternate" type="text/html" href="http://localhost:1313/" />
     <link rel="self" type="application/atom+xml" href="http://localhost:1313/atom.xml" />
@@ -18,9 +18,9 @@
     <generator uri="https://gohugo.io/" version="0.61.0">Hugo</generator>
         <entry>
             <title type="text">[笔记]对顶堆</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/" />
-            <id>http://localhost:1313/posts/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</id>
-            <updated>2019-12-14T00:46:28+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/" />
+            <id>http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</id>
+            <updated>2019-12-14T16:36:54+08:00</updated>
             <published>2019-12-13T20:32:10+08:00</published>
             <author>
                     <name>lhw</name>
@@ -133,12 +133,8 @@
                     
                     
                         
-                            <category scheme="http://localhost:1313/posts/" term="posts" label="posts" />
+                            <category scheme="http://localhost:1313/oi/" term="OI" label="OI" />
                         
-                    
-                
-                    
-                    
                     
                 
             
@@ -166,9 +162,9 @@
     
         <entry>
             <title type="text">线段树笔记</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/" />
-            <id>http://localhost:1313/posts/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</id>
-            <updated>2019-12-13T20:24:28+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/" />
+            <id>http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</id>
+            <updated>2019-12-14T16:36:54+08:00</updated>
             <published>2019-12-13T16:47:17+08:00</published>
             <author>
                     <name>lhw</name>
@@ -191,12 +187,8 @@
                     
                     
                         
-                            <category scheme="http://localhost:1313/posts/" term="posts" label="posts" />
+                            <category scheme="http://localhost:1313/oi/" term="OI" label="OI" />
                         
-                    
-                
-                    
-                    
                     
                 
             
@@ -224,8 +216,8 @@
     
         <entry>
             <title type="text">我的软件清单</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/" />
-            <id>http://localhost:1313/posts/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</id>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/" />
+            <id>http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</id>
             <updated>2019-12-13T01:46:54+08:00</updated>
             <published>2019-12-12T20:38:18+08:00</published>
             <author>
@@ -327,7 +319,7 @@
                     
                     
                         
-                            <category scheme="http://localhost:1313/posts/" term="posts" label="posts" />
+                            <category scheme="http://localhost:1313/tech/" term="tech" label="tech" />
                         
                     
                 
@@ -390,9 +382,9 @@
     
         <entry>
             <title type="text">RMQ笔记</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/oi/rmq%E7%AC%94%E8%AE%B0/" />
-            <id>http://localhost:1313/posts/oi/rmq%E7%AC%94%E8%AE%B0/</id>
-            <updated>2019-12-12T20:10:05+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/" />
+            <id>http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</id>
+            <updated>2019-12-14T16:36:54+08:00</updated>
             <published>2019-12-12T18:45:58+08:00</published>
             <author>
                     <name>lhw</name>
@@ -496,12 +488,8 @@
                     
                     
                         
-                            <category scheme="http://localhost:1313/posts/" term="posts" label="posts" />
+                            <category scheme="http://localhost:1313/oi/" term="OI" label="OI" />
                         
-                    
-                
-                    
-                    
                     
                 
             
@@ -532,76 +520,6 @@
                             
                             
                                 <category scheme="http://localhost:1313/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" term="线段树" label="线段树" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/test/hello-world/" />
-            <id>http://localhost:1313/posts/test/hello-world/</id>
-            <updated>2019-12-12T23:31:05+08:00</updated>
-            <published>2019-12-05T17:29:51+08:00</published>
-            <author>
-                    <name>lhw</name>
-                    <uri>https://blog.lhwcrt.top/</uri>
-                    <email>liuhongwu2003@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"><![CDATA[test]]></summary>
-            
-                <content type="html"><![CDATA[
-
-<h1 id="test">test</h1>
-]]></content>
-            
-            
-            
-                
-                
-                
-                    
-                    
-                    
-                        
-                            <category scheme="http://localhost:1313/posts/" term="posts" label="posts" />
-                        
-                    
-                
-                    
-                    
-                    
-                
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://localhost:1313/tags/noip/" term="NOIP" label="NOIP" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF/" term="信息" label="信息" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="http://localhost:1313/tags/foi/" term="FOI" label="FOI" />
                             
                         
                     

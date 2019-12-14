@@ -3,6 +3,7 @@ title: "Friends"
 date: 2019-12-07T15:04:13+08:00
 draft: false
 toc: false
+gitinfo: true
 ---
 
 ### [thyzzs' blog](https://thyzzs.coding.me/)

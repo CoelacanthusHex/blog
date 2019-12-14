@@ -3,43 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/posts/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
+    <loc>http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</loc>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/oi/</loc>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/oi/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/%E5%AF%B9%E9%A1%B6%E5%A0%86/</loc>
-    <lastmod>2019-12-14T00:46:28+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
-    <lastmod>2019-12-13T20:24:28+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2019-12-13T20:24:28+08:00</lastmod>
+    <loc>http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tech/</loc>
+    <lastmod>2019-12-13T01:46:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/tags/tldr/</loc>
     <lastmod>2019-12-13T01:46:54+08:00</lastmod>
   </url>
@@ -68,7 +73,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</loc>
+    <loc>http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</loc>
     <lastmod>2019-12-13T01:46:54+08:00</lastmod>
   </url>
   
@@ -79,17 +84,17 @@
   
   <url>
     <loc>http://localhost:1313/tags/rmq/</loc>
-    <lastmod>2019-12-12T20:10:05+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/oi/rmq%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2019-12-12T20:10:05+08:00</lastmod>
+    <loc>http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/st%E8%A1%A8/</loc>
-    <lastmod>2019-12-12T20:10:05+08:00</lastmod>
+    <lastmod>2019-12-14T16:36:54+08:00</lastmod>
   </url>
   
   <url>
@@ -104,22 +109,27 @@
   
   <url>
     <loc>http://localhost:1313/tags/foi/</loc>
-    <lastmod>2019-12-12T23:31:05+08:00</lastmod>
+    <lastmod>2019-12-07T15:48:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/test/hello-world/</loc>
-    <lastmod>2019-12-12T23:31:05+08:00</lastmod>
+    <loc>http://localhost:1313/test/hello-world/</loc>
+    <lastmod>2019-12-07T15:48:59+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/noip/</loc>
-    <lastmod>2019-12-12T23:31:05+08:00</lastmod>
+    <lastmod>2019-12-07T15:48:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/test/</loc>
+    <lastmod>2019-12-07T15:48:59+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2019-12-12T23:31:05+08:00</lastmod>
+    <lastmod>2019-12-07T15:48:59+08:00</lastmod>
   </url>
   
   <url>
