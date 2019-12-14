@@ -4,6 +4,7 @@ date: 2019-12-12T18:45:58+08:00
 draft: false
 toc: true
 gitinfo: true
+slug: "rmq-note"
 tags: [OI, RMQ, ST表, 线段树]
 ---
 
@@ -27,6 +28,7 @@ RMQ是区间最值询问（Range Maximum/Minimum Query）的缩写
 > > 单次询问 $O(1)$
 
 > 空间复杂度
+>
 > > $O(n\,log\,n)$
 
 **不支持修改**
