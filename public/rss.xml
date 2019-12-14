@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 14 Dec 2019 01:21:22 +0800</lastBuildDate>
+        <lastBuildDate>Sat, 14 Dec 2019 16:46:59 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="http://localhost:1313/rss.xml" />
         
         
             <item>
                 <title>[笔记]对顶堆</title>
-                <link>http://localhost:1313/posts/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</link>
-                <guid isPermaLink="true">http://localhost:1313/posts/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</guid>
+                <link>http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</guid>
                 <pubDate>Fri, 13 Dec 2019 20:32:10 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -140,12 +140,8 @@
                         
                         
                             
-                                <category domain="http://localhost:1313/posts/">posts</category>
+                                <category domain="http://localhost:1313/oi/">OI</category>
                             
-                        
-                    
-                        
-                        
                         
                     
                 
@@ -173,8 +169,8 @@
         
             <item>
                 <title>线段树笔记</title>
-                <link>http://localhost:1313/posts/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</link>
-                <guid isPermaLink="true">http://localhost:1313/posts/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</guid>
+                <link>http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</guid>
                 <pubDate>Fri, 13 Dec 2019 16:47:17 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -195,12 +191,8 @@
                         
                         
                             
-                                <category domain="http://localhost:1313/posts/">posts</category>
+                                <category domain="http://localhost:1313/oi/">OI</category>
                             
-                        
-                    
-                        
-                        
                         
                     
                 
@@ -228,8 +220,8 @@
         
             <item>
                 <title>我的软件清单</title>
-                <link>http://localhost:1313/posts/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</link>
-                <guid isPermaLink="true">http://localhost:1313/posts/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</guid>
+                <link>http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</link>
+                <guid isPermaLink="true">http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</guid>
                 <pubDate>Thu, 12 Dec 2019 20:38:18 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -326,7 +318,7 @@
                         
                         
                             
-                                <category domain="http://localhost:1313/posts/">posts</category>
+                                <category domain="http://localhost:1313/tech/">tech</category>
                             
                         
                     
@@ -389,8 +381,8 @@
         
             <item>
                 <title>RMQ笔记</title>
-                <link>http://localhost:1313/posts/oi/rmq%E7%AC%94%E8%AE%B0/</link>
-                <guid isPermaLink="true">http://localhost:1313/posts/oi/rmq%E7%AC%94%E8%AE%B0/</guid>
+                <link>http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</guid>
                 <pubDate>Thu, 12 Dec 2019 18:45:58 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -490,12 +482,8 @@
                         
                         
                             
-                                <category domain="http://localhost:1313/posts/">posts</category>
+                                <category domain="http://localhost:1313/oi/">OI</category>
                             
-                        
-                    
-                        
-                        
                         
                     
                 
@@ -526,73 +514,6 @@
                                 
                                 
                                     <category domain="http://localhost:1313/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>Hello World</title>
-                <link>http://localhost:1313/posts/test/hello-world/</link>
-                <guid isPermaLink="true">http://localhost:1313/posts/test/hello-world/</guid>
-                <pubDate>Thu, 05 Dec 2019 17:29:51 +0800</pubDate>
-                
-                    <author>liuhongwu2003@gmail.com (lhw)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description><![CDATA[
-
-<h1 id="test">test</h1>
-]]></description>
-                
-                
-                
-                    
-                    
-                    
-                        
-                        
-                        
-                            
-                                <category domain="http://localhost:1313/posts/">posts</category>
-                            
-                        
-                    
-                        
-                        
-                        
-                    
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://localhost:1313/tags/noip/">NOIP</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF/">信息</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="http://localhost:1313/tags/foi/">FOI</category>
                                 
                             
                         
