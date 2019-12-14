@@ -10,7 +10,7 @@ gitinfo: true
 >   %%%
 
 ### [IT 玩客 ](https://www.91the.top)
->   记录工作中有趣的技术，问题 如果同意交换，请发下链接和锚文本 同时加上我的外联，我看到会及时加上。
+>   记录工作中有趣的技术，问题
 
 ### [Byte Bye](https://blog.bytebye.com/)
 >   %%%
