@@ -3,6 +3,7 @@ title: "RMQ笔记"
 date: 2019-12-12T18:45:58+08:00
 draft: false
 toc: true
+gitinfo: true
 tags: [OI, RMQ, ST表, 线段树]
 ---
 
