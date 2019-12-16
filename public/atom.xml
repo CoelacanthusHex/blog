@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">lhw&#39;s blog</title>
     <subtitle type="html">lhw自己的网上小窝</subtitle>
-    <updated>2019-12-14T18:31:03+08:00</updated>
+    <updated>2019-12-16T17:54:54+08:00</updated>
     <id>http://localhost:1313/</id>
     <link rel="alternate" type="text/html" href="http://localhost:1313/" />
     <link rel="self" type="application/atom+xml" href="http://localhost:1313/atom.xml" />
@@ -17,10 +17,47 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.61.0">Hugo</generator>
         <entry>
+            <title type="text">我的歌单</title>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/life/my-music-list/" />
+            <id>http://localhost:1313/life/my-music-list/</id>
+            <updated>2019-12-14T23:27:56+08:00</updated>
+            <published>2019-12-14T23:24:31+08:00</published>
+            <author>
+                    <name>lhw</name>
+                    <uri>https://blog.lhwcrt.top/</uri>
+                    <email>liuhongwu2003@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"><![CDATA[]]></summary>
+            
+                <content type="html"><![CDATA[]]></content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="http://localhost:1313/life/" term="life" label="life" />
+                        
+                    
+                
+            
+            
+            
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">[笔记]对顶堆</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/" />
-            <id>http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</id>
-            <updated>2019-12-14T16:36:54+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/note-dui-ding-dui/" />
+            <id>http://localhost:1313/oi/note-dui-ding-dui/</id>
+            <updated>2019-12-14T23:26:24+08:00</updated>
             <published>2019-12-13T20:32:10+08:00</published>
             <author>
                     <name>lhw</name>
@@ -146,7 +183,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
                             
                         
                             
@@ -162,9 +199,9 @@
     
         <entry>
             <title type="text">线段树笔记</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/" />
-            <id>http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</id>
-            <updated>2019-12-14T16:36:54+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/note-segment-tree/" />
+            <id>http://localhost:1313/oi/note-segment-tree/</id>
+            <updated>2019-12-14T23:26:55+08:00</updated>
             <published>2019-12-13T16:47:17+08:00</published>
             <author>
                     <name>lhw</name>
@@ -200,7 +237,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
                             
                         
                             
@@ -216,9 +253,9 @@
     
         <entry>
             <title type="text">我的软件清单</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/" />
-            <id>http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</id>
-            <updated>2019-12-13T01:46:54+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/tech/my-package-list/" />
+            <id>http://localhost:1313/tech/my-package-list/</id>
+            <updated>2019-12-15T12:05:05+08:00</updated>
             <published>2019-12-12T20:38:18+08:00</published>
             <author>
                     <name>lhw</name>
@@ -275,6 +312,32 @@
 
 <p>AUR：有原始版本的 aria2，但编译参数限定了 16 线程的上限，建议安装去除限制的 aria2-fast ， 同时有打包好的AriaNG(ariang-allinone)和YAAW(yaaw-git)。</p>
 
+<h2 id="编辑">编辑</h2>
+
+<h3 id="wps">WPS</h3>
+
+<p><code>金山wps</code> 办公套件，除了体积有点大以外没啥缺点了</p>
+
+<p>Archlinuxcn：wps-office, ttf-wps-fonts</p>
+
+<h2 id="视频图片">视频图片</h2>
+
+<h3 id="flameshot">flameshot</h3>
+
+<p>linux 下代替 Snipaste 的截图工具，可以截图后直接编辑，但可惜没有贴图功能，可以绑定快捷键，命令是 <code>flameshot gui</code></p>
+
+<p>Github：<a href="https://github.com/lupoDharkael/flameshot" target="_blank">https://github.com/lupoDharkael/flameshot</a></p>
+
+<p>AUR：flameshot</p>
+
+<h3 id="mpv">mpv</h3>
+
+<p>mpv 播放器是一个跨平台开源的播放器，很好很强大。简洁的作风尤其深得人心。 但是因为太过简洁，省略了按钮和菜单，它就要求用户学习一下快捷键和配置，否则就不好定制和控制播放器。</p>
+
+<p>Github：</p>
+
+<p>Arch：在 community 仓库里有</p>
+
 <h2 id="others">Others</h2>
 
 <h3 id="graphviz">Graphviz</h3>
@@ -323,10 +386,6 @@
                         
                     
                 
-                    
-                    
-                    
-                
             
             
             
@@ -336,7 +395,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/tools/" term="Tools" label="Tools" />
+                                <category scheme="http://localhost:1313/tags/tools/" term="tools" label="tools" />
                             
                         
                             
@@ -372,7 +431,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
+                                <category scheme="http://localhost:1313/tags/oimpv/" term="oi，mpv" label="oi，mpv" />
                             
                         
                     
@@ -382,9 +441,9 @@
     
         <entry>
             <title type="text">RMQ笔记</title>
-            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/" />
-            <id>http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</id>
-            <updated>2019-12-14T16:36:54+08:00</updated>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/oi/rmq-note/" />
+            <id>http://localhost:1313/oi/rmq-note/</id>
+            <updated>2019-12-14T23:25:57+08:00</updated>
             <published>2019-12-12T18:45:58+08:00</published>
             <author>
                     <name>lhw</name>
@@ -417,8 +476,11 @@
 &gt; 预处理 $O(n\,log\,n)$
 &gt; 单次询问 $O(1)$</p>
 
-<p>空间复杂度
-&gt; $O(n\,log\,n)$</p>
+<p>空间复杂度</p>
+
+<blockquote>
+<p>$O(n\,log\,n)$</p>
+</blockquote>
 </blockquote>
 
 <p><strong>不支持修改</strong></p>
@@ -501,19 +563,19 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
                             
                         
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/rmq/" term="RMQ" label="RMQ" />
+                                <category scheme="http://localhost:1313/tags/rmq/" term="rmq" label="rmq" />
                             
                         
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/st%E8%A1%A8/" term="ST表" label="ST表" />
+                                <category scheme="http://localhost:1313/tags/st%E8%A1%A8/" term="st表" label="st表" />
                             
                         
                             
