@@ -19,6 +19,9 @@ gitinfo: true
 ### [络壳 LockShell](https://lockshell.com/)
 >   %%%
 
+### [Mushrooms11s Blog](http://www.mushrooms11s.com/)
+>	Mushrooms11s Blog
+
 
 ### [Arch Linux 中文论坛](https://bbs.archlinuxcn.org/index.php)
 >   论坛里的 dalao 可强了，有问题来这里就对了
