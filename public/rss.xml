@@ -23,15 +23,49 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 14 Dec 2019 18:31:03 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 16 Dec 2019 17:54:54 +0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss+xml" href="http://localhost:1313/rss.xml" />
         
         
             <item>
+                <title>我的歌单</title>
+                <link>http://localhost:1313/life/my-music-list/</link>
+                <guid isPermaLink="true">http://localhost:1313/life/my-music-list/</guid>
+                <pubDate>Sat, 14 Dec 2019 23:24:31 +0800</pubDate>
+                
+                    <author>liuhongwu2003@gmail.com (lhw)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description><![CDATA[]]></description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="http://localhost:1313/life/">life</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>[笔记]对顶堆</title>
-                <link>http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</link>
-                <guid isPermaLink="true">http://localhost:1313/oi/%E7%AC%94%E8%AE%B0%E5%AF%B9%E9%A1%B6%E5%A0%86/</guid>
+                <link>http://localhost:1313/oi/note-dui-ding-dui/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/note-dui-ding-dui/</guid>
                 <pubDate>Fri, 13 Dec 2019 20:32:10 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -153,7 +187,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
+                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
                                 
                             
                                 
@@ -169,8 +203,8 @@
         
             <item>
                 <title>线段树笔记</title>
-                <link>http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</link>
-                <guid isPermaLink="true">http://localhost:1313/oi/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%AC%94%E8%AE%B0/</guid>
+                <link>http://localhost:1313/oi/note-segment-tree/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/note-segment-tree/</guid>
                 <pubDate>Fri, 13 Dec 2019 16:47:17 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -204,7 +238,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
+                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
                                 
                             
                                 
@@ -220,8 +254,8 @@
         
             <item>
                 <title>我的软件清单</title>
-                <link>http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</link>
-                <guid isPermaLink="true">http://localhost:1313/tech/tools/%E6%88%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</guid>
+                <link>http://localhost:1313/tech/my-package-list/</link>
+                <guid isPermaLink="true">http://localhost:1313/tech/my-package-list/</guid>
                 <pubDate>Thu, 12 Dec 2019 20:38:18 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -274,6 +308,32 @@
 
 <p>AUR：有原始版本的 aria2，但编译参数限定了 16 线程的上限，建议安装去除限制的 aria2-fast ， 同时有打包好的AriaNG(ariang-allinone)和YAAW(yaaw-git)。</p>
 
+<h2 id="编辑">编辑</h2>
+
+<h3 id="wps">WPS</h3>
+
+<p><code>金山wps</code> 办公套件，除了体积有点大以外没啥缺点了</p>
+
+<p>Archlinuxcn：wps-office, ttf-wps-fonts</p>
+
+<h2 id="视频图片">视频图片</h2>
+
+<h3 id="flameshot">flameshot</h3>
+
+<p>linux 下代替 Snipaste 的截图工具，可以截图后直接编辑，但可惜没有贴图功能，可以绑定快捷键，命令是 <code>flameshot gui</code></p>
+
+<p>Github：<a href="https://github.com/lupoDharkael/flameshot" target="_blank">https://github.com/lupoDharkael/flameshot</a></p>
+
+<p>AUR：flameshot</p>
+
+<h3 id="mpv">mpv</h3>
+
+<p>mpv 播放器是一个跨平台开源的播放器，很好很强大。简洁的作风尤其深得人心。 但是因为太过简洁，省略了按钮和菜单，它就要求用户学习一下快捷键和配置，否则就不好定制和控制播放器。</p>
+
+<p>Github：</p>
+
+<p>Arch：在 community 仓库里有</p>
+
 <h2 id="others">Others</h2>
 
 <h3 id="graphviz">Graphviz</h3>
@@ -322,10 +382,6 @@
                             
                         
                     
-                        
-                        
-                        
-                    
                 
                 
                 
@@ -335,7 +391,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/tools/">Tools</category>
+                                    <category domain="http://localhost:1313/tags/tools/">tools</category>
                                 
                             
                                 
@@ -371,7 +427,7 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
+                                    <category domain="http://localhost:1313/tags/oimpv/">oi，mpv</category>
                                 
                             
                         
@@ -381,8 +437,8 @@
         
             <item>
                 <title>RMQ笔记</title>
-                <link>http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</link>
-                <guid isPermaLink="true">http://localhost:1313/oi/rmq%E7%AC%94%E8%AE%B0/</guid>
+                <link>http://localhost:1313/oi/rmq-note/</link>
+                <guid isPermaLink="true">http://localhost:1313/oi/rmq-note/</guid>
                 <pubDate>Thu, 12 Dec 2019 18:45:58 +0800</pubDate>
                 
                     <author>liuhongwu2003@gmail.com (lhw)</author>
@@ -411,8 +467,11 @@
 &gt; 预处理 $O(n\,log\,n)$
 &gt; 单次询问 $O(1)$</p>
 
-<p>空间复杂度
-&gt; $O(n\,log\,n)$</p>
+<p>空间复杂度</p>
+
+<blockquote>
+<p>$O(n\,log\,n)$</p>
+</blockquote>
 </blockquote>
 
 <p><strong>不支持修改</strong></p>
@@ -495,19 +554,19 @@
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/oi/">OI</category>
+                                    <category domain="http://localhost:1313/tags/oi/">oi</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/rmq/">RMQ</category>
+                                    <category domain="http://localhost:1313/tags/rmq/">rmq</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="http://localhost:1313/tags/st%E8%A1%A8/">ST表</category>
+                                    <category domain="http://localhost:1313/tags/st%E8%A1%A8/">st表</category>
                                 
                             
                                 
