@@ -10,6 +10,9 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.coding.me/)
 >   %%%
 
+### [KAYGB ](https://kaygb.top/)
+>   前端爱好者
+
 ### [IT 玩客 ](https://www.91the.top)
 >   记录工作中有趣的技术，问题
 
