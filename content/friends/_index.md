@@ -16,6 +16,9 @@ gitinfo: true
 ### [MySpace](https://www.zkl2333.com/)
 >   一只大佬
 
+### [肥鱼Blog](https://www.feiyuyu.net)
+>   但盼风雨来，能留你在此。
+
 ### [IT 玩客 ](https://www.91the.top)
 >   记录工作中有趣的技术，问题
 
