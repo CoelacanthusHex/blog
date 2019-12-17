@@ -24,5 +24,10 @@
     "readable-stream": "^3.4.0",
     "uglify-es": "^3.3.9",
     "workbox-build": "^4.3.1"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1"
   }
 }
