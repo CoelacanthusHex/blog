@@ -1,0 +1,42 @@
+{{ if and .Site.Params.enableFooter (not (and .IsHome (in (slice "poetry" "footage") .Site.Params.homeLayout))) }}
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            {{ if .Site.Params.displayCopyrightSymbol }}
+                {{ .Scratch.Set "siteInfoCopyright" "©&nbsp;" }}
+            {{ else }}
+                {{ .Scratch.Set "siteInfoCopyright" "" }}
+            {{ end }}
+            {{ $siteInfoCopyright := .Scratch.Get "siteInfoCopyright" }}
+
+            {{ if .Site.Params.displaySiteCreatedYear }}
+                {{ .Scratch.Set "siteInfoCreatedYear" (printf `%s–%s` (dateFormat "2006" (time .Site.Params.siteCreatedTime)) (now.Format "2006")) }}
+            {{ else }}
+                {{ .Scratch.Set "siteInfoCreatedYear" (now.Format "2006") }}
+            {{ end }}
+            {{ $siteInfoCreatedYear := .Scratch.Get "siteInfoCreatedYear" }}
+
+            {{ with .Site.Params.iconBetweenYearAndAuthor }}
+                {{ $.Scratch.Set "siteInfoIcon" (replace (index $.Site.Data.SVG .) "icon" "icon footer-icon") }}
+            {{ else }}
+                {{ $.Scratch.Set "siteInfoIcon" "&nbsp;" }}
+            {{ end }}
+            {{ $siteInfoIcon := .Scratch.Get "siteInfoIcon" }}
+
+            <div class="site-info">{{ printf `%s%s%s%s` $siteInfoCopyright $siteInfoCreatedYear $siteInfoIcon .Site.Author.name | safeHTML }}</div>
+
+            {{ if .Site.Params.displayPoweredBy }}
+                <div class="powered-by" rel="noreferrer">{{ printf `Powered by [Hugo](https://github.com/gohugoio/hugo) | Theme is [MemE](https://github.com/reuixiy/hugo-theme-meme)` | markdownify | safeHTML }}</div>
+            {{ end }}
+
+            {{ if .Site.Params.displaySiteCopyright }}
+                <div class="site-copyright" rel="noreferrer">{{ .Site.Copyright | markdownify | safeHTML }}</div>
+            {{ end }}
+
+            {{ with .Site.Params.customFooter }}
+                <div class="custom-footer">{{ . | markdownify | safeHTML }}</div>
+            {{ end }}
+
+            {{ partial "custom/footer.html" . }}
+        </div>
+    </footer>
+{{ end }}
