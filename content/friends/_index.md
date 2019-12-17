@@ -19,6 +19,9 @@ gitinfo: true
 ### [肥鱼Blog](https://www.feiyuyu.net)
 >   但盼风雨来，能留你在此。
 
+### [Studying Father's blog](https://studyingfather.com/)
+>   一只大佬
+
 ### [IT 玩客 ](https://www.91the.top)
 >   记录工作中有趣的技术，问题
 
