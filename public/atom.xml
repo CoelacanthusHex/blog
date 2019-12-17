@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">lhw&#39;s blog</title>
     <subtitle type="html">lhw自己的网上小窝</subtitle>
-    <updated>2019-12-16T17:54:54+08:00</updated>
+    <updated>2019-12-17T08:50:39+08:00</updated>
     <id>http://localhost:1313/</id>
     <link rel="alternate" type="text/html" href="http://localhost:1313/" />
     <link rel="self" type="application/atom+xml" href="http://localhost:1313/atom.xml" />
@@ -183,7 +183,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
                             
                         
                             
@@ -237,7 +237,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
                             
                         
                             
@@ -395,7 +395,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/tools/" term="tools" label="tools" />
+                                <category scheme="http://localhost:1313/tags/tools/" term="Tools" label="Tools" />
                             
                         
                             
@@ -431,7 +431,7 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oimpv/" term="oi，mpv" label="oi，mpv" />
+                                <category scheme="http://localhost:1313/tags/oimpv/" term="OI，mpv" label="OI，mpv" />
                             
                         
                     
@@ -563,19 +563,19 @@
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/oi/" term="oi" label="oi" />
+                                <category scheme="http://localhost:1313/tags/oi/" term="OI" label="OI" />
                             
                         
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/rmq/" term="rmq" label="rmq" />
+                                <category scheme="http://localhost:1313/tags/rmq/" term="RMQ" label="RMQ" />
                             
                         
                             
                             
                             
-                                <category scheme="http://localhost:1313/tags/st%E8%A1%A8/" term="st表" label="st表" />
+                                <category scheme="http://localhost:1313/tags/st%E8%A1%A8/" term="ST表" label="ST表" />
                             
                         
                             
