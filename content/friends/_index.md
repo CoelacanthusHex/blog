@@ -29,7 +29,7 @@ gitinfo: true
 >   %%%
 
 ### [Mushrooms11s Blog](http://www.mushrooms11s.com/)
->	Mushrooms11s Blog
+>   Mushrooms11s Blog
 
 
 ### [Arch Linux 中文论坛](https://bbs.archlinuxcn.org/index.php)
@@ -37,3 +37,4 @@ gitinfo: true
 
 
 #### 添加友链请发送邮件至liuhongwu2003@outlook.com
+
