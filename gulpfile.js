@@ -79,6 +79,6 @@ gulp.task("uglify", function () {
     );
 });
 
-//gulp.task("build", gulp.series("generate-service-worker", "uglify"));
+gulp.task("build", gulp.series("generate-service-worker", "uglify"));
  
-gulp.task('build', gulp.series('generate-service-worker', 'minify-css', 'uglify'))
+//gulp.task('build', gulp.series('generate-service-worker', 'minify-css', 'uglify'))
