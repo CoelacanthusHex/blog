@@ -84,7 +84,7 @@ uglyURLs = false
     # 邮箱
     email = "liuhongwu2003@gmail.com"
     # 座右铭或简介
-    motto = "Viva La Vida"
+    motto = "爱是一个人的事情，而爱情是两个人的事情。所以，我爱你，与你无关。"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
@@ -270,7 +270,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = []
+    homePoetry = ["爱是一个人的事情，而爱情是两个人的事情。所以，我爱你，与你无关。"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
