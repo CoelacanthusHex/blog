@@ -23,3 +23,12 @@ pre code {
     left: 0;
     top: 0;
 }
+
+/*黑幕*/
+.spoiler { 
+  color: black; 
+  background-color:black;
+}
+.spoiler:hover{
+  color: white;
+}
