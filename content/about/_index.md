@@ -28,7 +28,7 @@ gitinfo: true
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
 *   也是个`妹控`呢  <span class="spoiler">喜欢上了妹妹呢</span>
 *   心理性别认同与生理不一致。  <span class="spoiler">是个男生却想做女孩子呢</span>    <span class="spoiler">出过女装</span>
-*   ![十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
+*   [十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
 
 ![](https://i.loli.net/2019/12/28/7my5Dxpc83gBbZh.png)
 
