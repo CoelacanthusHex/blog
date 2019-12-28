@@ -54,7 +54,8 @@ gitinfo: true
 *   E-Mail: liuhongwu2003@outlook.com
 *   Wikipedia: [Electriccubes](https://zh.wikipedia.org/wiki/User:Electriccubes)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
-*   Skype: 
+*   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes)
+*   Skype:
 
 ## 关于本站点的搭建
 
