@@ -16,7 +16,7 @@ gitinfo: true
 
 *   `Linux` 党，主力机是 `Arch Linux`，使用 `Grub 2` 引导，`systemd` 管理进程，`linux-ck` 内核，`yay` 作为 AUR Helper
 *   使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)
-*   使用的浏览器是 `Firefox Developer Edition`
+*   使用的浏览器是 ~~`Firefox Developer Edition`~~, 现在是 `Firefox Nightly` 了
 *   使用的手机是 `Redmi Note 8` with `MIUI 11 @ Android Pie` by `Xiaomi`
 *   无神论者
 *   ACG 及其相关宅文化爱好者
