@@ -548,7 +548,7 @@ uglyURLs = false
     disqusShortname = ""
 
     ## Valine
-    enableValine = true
+    enableValine = false
     valineAppId = "zLQ843JUXHsElRdX1LQQntHy-gzGzoHsz"
     valineAppKey = "yc29ElaaTOuGuxgauQud8MUW"
     valinePlaceholder = "Just go go"
@@ -566,6 +566,14 @@ uglyURLs = false
     valineServerURLs = ""
     # 说明：https://valine.js.org/
 
+	## Utterances
+    enableUtterances = true
+    utterancesRepo = "ayalhw/blog_comment"
+    utterancesIssueTerm = "pathname"
+    utterancesTheme = "github-light"
+    utterancesThemeDark = "photon-dark"
+    utterancesLabel = ""
+    # 说明：https://utteranc.es/
 
     ######################################
     # Google Analytics
@@ -682,7 +690,14 @@ uglyURLs = false
     # 阅读时长的图标
     readingTimeIcon = "clock"
 
-
+    # 是否显示不蒜子页面浏览量
+    displayBusuanziPagePV = true
+    # 不蒜子页面浏览量的图标
+    busuanziPagePVIcon = "eye"
+    # 说明：仅在生产环境（production）下渲染
+    #      首页暂不支持
+    #      https://busuanzi.ibruce.info/
+    
     ######################################
     # 文章目录
 
@@ -804,11 +819,11 @@ uglyURLs = false
     fontFamilySiteBrand = ""
     # 菜单栏
     fontFamilyMenu = ""
-    # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
-    fontFamilyTitle = "'Cinzel Decorative', 'Noto Serif SC', serif"
+	# 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
+    fontFamilyTitle = "'Noto Serif SC', 'EB Garamond', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'EB Garamond', 'Noto Serif SC', serif"
-    # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚
+    fontFamilyHeadings = "'Noto Serif SC', 'EB Garamond', serif"
+    # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
     fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
     fontFamilyQuote = ""
@@ -1072,6 +1087,15 @@ uglyURLs = false
 
     # 自定义页脚（支持 Markdown）
     customFooter = ""
+    
+    displayBusuanziSiteUVAndPV = true
+    busuanziSiteUVText = "本站访客数"
+    busuanziSiteUVIcon = "user"
+    busuanziSitePVText = "本站访问量"
+    busuanziSitePVIcon = "eye"
+    # 说明：仅在生产环境（production）下渲染
+    #      文本或图标，留空（""）则无
+    #      https://busuanzi.ibruce.info/
 
 
     ######################################
@@ -1109,7 +1133,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启
-    enableForceHTTPS = false
+    enableForceHTTPS = true
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可
     #      开启此选项。
