@@ -1040,7 +1040,11 @@ uglyURLs = false
 
     # 是否开启
     enableMinimalFooter = false
-
+	enableVerticalBarStructure = false
+    # 说明：如果开启此项，显示在右边的部类或分区
+    #      将会包含全部的第一级部类或分区，并且
+    #      以竖线（|）分隔开来。
+    
     # 是否开启关于页面的极简页脚
     enableAboutPageMinimalFooter = false
 
@@ -1050,6 +1054,9 @@ uglyURLs = false
 
     # 是否开启
     enableBackToTop = true
+    
+    # 是否开启自动隐藏
+    enableBackToTopAutoHide = true
 
     # 是否在首页显示
     displayBackToTopInHome = true
@@ -1138,6 +1145,19 @@ uglyURLs = false
     #      的服务器不支持强制 HTTPS 跳转，则可
     #      开启此选项。
     
+    ######################################
+    # 平滑滚动
+    # 是否开启
+    enableSmoothScroll = true
+    # 说明：https://github.com/cferdinandi/smooth-scroll
+
+
+    ######################################
+    # 图片缩放
+
+    enableMediumZoom = true
+    # 说明：https://github.com/francoischalifour/medium-zoom
+
 
     ######################################
     # 404 页面
