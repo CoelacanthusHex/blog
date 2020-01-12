@@ -835,7 +835,7 @@ uglyURLs = false
     # 页脚
     fontFamilyFooter = ""
     # 主体
-    fontFamilyBody = "'EB Garamond', 'Noto Serif SC', serif"
+    fontFamilyBody = "'Noto Serif SC', 'EB Garamond', serif"
 
     # 网络字体链接
     #fontsLink = "https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,700,700i|Noto+Serif+SC:400,500,700|Source+Code+Pro:400,400i,700,700i&display=swap&subset=chinese-simplified"
