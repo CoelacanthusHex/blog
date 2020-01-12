@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://blog.lhwcrt.top/"
-title = "lhw's blog"
+title = "Coelacanthus"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -80,7 +80,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "lhw"
+    name = "Coelacanthus"
     # 邮箱
     email = "liuhongwu2003@gmail.com"
     # 座右铭或简介
@@ -222,7 +222,7 @@ uglyURLs = false
     # 品牌栏（在顶栏内）
 
     # 是否使用 SVG 图片
-    siteBrandSVG = true
+    siteBrandSVG = false
     # 如果是，请将你的 SVG 放到 `SVG.toml` 文
     # 件内，并配置以下项。单位：px。
     siteBrandSVGWidth = 250
@@ -295,7 +295,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "lhw自己的网上小窝"
+    siteDescription = "Coelacanthus自己的网上小窝"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -817,7 +817,7 @@ uglyURLs = false
     #      SVG，则可留空（""）品牌栏字体。
 
     # 品牌栏
-    fontFamilySiteBrand = ""
+    fontFamilySiteBrand = "'Noto Serif SC'"
     # 菜单栏
     fontFamilyMenu = ""
 	# 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
