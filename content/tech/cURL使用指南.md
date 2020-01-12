@@ -5,7 +5,7 @@ draft: false
 toc: true
 gitinfo: true
 slug: "curl-use-man"
-tags: [cURL, tool]
+tags: [cURL, Tools]
 ---
 
 # 简介
