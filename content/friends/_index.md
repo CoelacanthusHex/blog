@@ -16,6 +16,9 @@ gitinfo: true
 ### [MySpace](https://www.zkl2333.com/)
 >   一只大佬
 
+### [zhang0peter的个人博客](https://zhang0peter.com/)
+>   学生，喜欢使用Python。  即将入职拼多多。 
+
 ### [肥鱼Blog](https://www.feiyuyu.net)
 >   但盼风雨来，能留你在此。
 
