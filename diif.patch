@@ -1,4 +1,4 @@
---- config.toml	2020-02-10 23:28:49.584560667 +0800
+--- config.toml	2020-02-10 23:40:15.480294403 +0800
 +++ themes/meme/config-examples/zh-cn/config.toml	2020-02-10 23:27:23.421015568 +0800
 @@ -1,8 +1,8 @@
  ##########################################
@@ -11,7 +11,7 @@
  languageCode = "zh-CN"
  hasCJKLanguage = true
  # 版权信息（支持 Markdown）
-@@ -31,75 +31,87 @@
+@@ -31,27 +31,27 @@
  footnoteReturnLinkContents = "↩"
  
  # 是否启用 Git 版本信息
@@ -25,12 +25,6 @@
  # 每一分页的文章数（仅对「文章摘要」首页布局有效）
  paginate = 5
  
--# 代码高亮
--pygmentsCodefences = true
--pygmentsUseClasses = true
--pygmentsCodefencesGuessSyntax = true
--pygmentsOptions = "linenos=table"
--
  # URL 相关
  disablePathToLower = false
 -relativeURLs = true
@@ -50,51 +44,12 @@
      tag = "tags"
  
  # 修改时间
- [frontmatter]
-     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
- 
--# v0.60.0
--[markup]
--    defaultMarkdownHandler = "blackfriday"
--
- # Markdown 渲染器
--[blackfriday]
--    # 是否开启智能标点符号替换
--    smartypants = false
--    # 是否在新标签页打开外链
--    hrefTargetBlank = true
--    # 屏蔽的扩展
--    extensionsmask = ["hardLineBreak", "backslashLineBreak"]
-+[markup]
-+    defaultMarkdownHandler = "goldmark"
-+    [markup.goldmark]
-+        [markup.goldmark.extensions]
-+            definitionList = true
-+            footnote = true
-+            linkify = true
-+            strikethrough = true
-+            table = true
-+            taskList = true
-+            typographer = false
-+        [markup.goldmark.parser]
-+            attribute = true
-+            autoHeadingID = true
-+            autoHeadingIDType = "github"
-+        [markup.goldmark.renderer]
-+            hardWraps = false
-+            unsafe = true
-+            xHTML = false
-+    [markup.highlight]
-+        codeFences = true
-+        guessSyntax = false
-+        lineNos = true
-+        lineNumbersInTable = true
-+        noClasses = false
-+    [markup.tableOfContents]
-+        startLevel = 2
-+        endLevel = 6
-+        ordered = true
- 
+@@ -88,30 +88,30 @@
+         startLevel = 2
+         endLevel = 6
+         ordered = true
+-    
++
  # 作者信息
  [author]
      # 名字
@@ -129,7 +84,7 @@
      [[related.indices]]
          name = "tags"
          weight = 95
-@@ -166,39 +178,27 @@
+@@ -178,39 +178,27 @@
          pre = "internal"
          post = "home"
      [[menu.main]]
@@ -179,7 +134,7 @@
          pre = "internal"
          post = "user-circle"
  
-@@ -222,7 +222,7 @@
+@@ -234,7 +222,7 @@
      # 品牌栏（在顶栏内）
  
      # 是否使用 SVG 图片
@@ -188,7 +143,7 @@
      # 如果是，请将你的 SVG 放到 `SVG.toml` 文
      # 件内，并配置以下项。单位：px。
      siteBrandSVGWidth = 250
-@@ -270,7 +270,7 @@
+@@ -282,7 +270,7 @@
  
      ## 「诗意人生」
      # 诗句，支持 Markdown
@@ -197,7 +152,7 @@
      # 底部链接的内间距，单位：em
      homeLinksPadding = 1
  
-@@ -295,7 +295,7 @@
+@@ -307,7 +295,7 @@
      # 说明：用于 JSON-LD、Open Graph
  
      # 站点的描述
@@ -206,7 +161,7 @@
      # 说明：用于 HTML 的头部元数据、JSON-LD、
      #      Open Graph、Atom、RSS
  
-@@ -305,11 +305,11 @@
+@@ -317,11 +305,11 @@
      #      区名（如果按分区分类）作为默认值
  
      # 站点的创建时间
@@ -220,7 +175,7 @@
      # 说明：用于 Twitter Cards
  
  
-@@ -330,11 +330,13 @@
+@@ -342,7 +330,7 @@
      # 的树状分类，故如需保留树状分类，建议适应
      # Hugo 的设计理念——分区。
  
@@ -229,14 +184,7 @@
      # 注意：如果你设置为 `sections`，请务必将
      #      此配置文件中的类别（taxonomies）中
      #      的 `categories` 删除，不然分类页
--    #      面会失效。
-+    #      面会失效。同时，你还需要自己新建一个
-+    #      `content/categories/_index.md`
-+    #      文件。
- 
- 
-     ######################################
-@@ -377,7 +379,7 @@
+@@ -391,7 +379,7 @@
      displayListTitle = true
  
      # 日期的格式
@@ -245,7 +193,7 @@
      # 注意：请遵循格式 https://gohugo.io/functions/format/
  
      # 日期的位置
-@@ -385,13 +387,13 @@
+@@ -399,13 +387,13 @@
      # 说明：left（左边）或 right（右边）
  
      # 是否按月份分隔列表
@@ -261,7 +209,7 @@
      # 是否翻译月份（仅对月份标题有效）
      i18nMonth = true
  
-@@ -415,7 +417,7 @@
+@@ -429,7 +417,7 @@
      # 说明：分区的名字即站点的 content 目录下
      #      的文件夹的名字。
  
@@ -270,7 +218,7 @@
  
  
      ######################################
-@@ -510,7 +512,7 @@
+@@ -524,7 +512,7 @@
  
      # 说明：仅在生产环境（production）下渲染
  
@@ -279,7 +227,7 @@
      # 说明：需要第三方支持，暂见：
      #      https://io-oi.me/tech/pwa-via-workbox/
  
-@@ -519,10 +521,11 @@
+@@ -533,10 +521,11 @@
      # KaTeX 公式支持（包括化学方程式）
  
      # 是否开启（全局设置）
@@ -292,7 +240,7 @@
      ######################################
      # MathJax 公式支持（包括化学方程式）
  
-@@ -533,14 +536,15 @@
+@@ -547,14 +536,15 @@
  
      # 是否禁用 MathJax 的右键菜单
      disableMathJaxMenu = false
@@ -310,7 +258,7 @@
      # 说明：文章的 Front Matter 中的 `comments`
      #      的优先级高于此处
  
-@@ -550,8 +554,8 @@
+@@ -564,8 +554,8 @@
  
      ## Valine
      enableValine = false
@@ -321,7 +269,7 @@
      valinePlaceholder = "Just go go"
      valineNotify = false
      valineVerify = false
-@@ -560,34 +564,35 @@
+@@ -574,34 +564,35 @@
      valineMeta = ["nick", "mail", "link"]
      valinePageSize = 10
      valineLang = "zh-cn"
@@ -364,37 +312,43 @@
  
  
      ######################################
-@@ -698,7 +703,18 @@
+@@ -712,9 +703,9 @@
      # 说明：仅在生产环境（production）下渲染
      #      首页暂不支持
      #      https://busuanzi.ibruce.info/
 -    
+-    
+-	######################################
 +
 +
 +    ######################################
-+    # Markdown 相关
-+
-+    # 在新标签页打开外链？
-+    hrefTargetBlank = true
-+
-+    # 与 LaTeX 的兼容性？
-+    compatibleWithLaTeX = false
+     # Markdown 相关
+ 
+     # 在新标签页打开外链？
+@@ -722,8 +713,8 @@
+ 
+     # 与 LaTeX 的兼容性？
+     compatibleWithLaTeX = false
+-    
+-    
 +
 +
      ######################################
      # 文章目录
  
-@@ -775,14 +791,17 @@
+@@ -800,17 +791,17 @@
  
      # 说明：仅在生产环境（production）下渲染
      #
 -    #      只支持相对于站点根目录的绝对链接
 +    #      只支持相对于网站根目录的绝对链接
      #      比如：/videos/meme.mp4
+-	#
 +    #
-+    #      且你添加的 HTML 代码必需以以下开头：
-+    #      `<video src="`
- 
+     #      且你添加的 HTML 代码必需以以下开头：
+     #      `<video src="`
+-    
++
      # 是否开启
 -    enableVideoHost = true
 +    enableVideoHost = false
@@ -405,7 +359,7 @@
  
  
      ######################################
-@@ -817,10 +836,10 @@
+@@ -845,10 +836,10 @@
      #      SVG，则可留空（""）品牌栏字体。
  
      # 品牌栏
@@ -418,7 +372,7 @@
      fontFamilyTitle = "'Noto Serif SC', 'EB Garamond', serif"
      # 分节标题、目录标题
      fontFamilyHeadings = "'Noto Serif SC', 'EB Garamond', serif"
-@@ -835,12 +854,10 @@
+@@ -863,12 +854,10 @@
      # 页脚
      fontFamilyFooter = ""
      # 主体
@@ -433,19 +387,23 @@
      # 说明：要想读者一定体验到你设置的字体，最好
      #      采用网络字体。MemE 主题目前仅支持
      #      Google Fonts 的链接，请前往
-@@ -869,6 +886,11 @@
+@@ -896,12 +885,12 @@
+ 
      # 是否开启
      enableParagraphIndent = true
- 
+-    
+-	# 是否缩进第一段（全局设置）
++
 +    # 是否缩进第一段（全局设置）
-+    indentFirstParagraph = false
-+    # 说明：文章的 Front Matter 中的 `indentFirstParagraph`
-+    #      的优先级高于此处
+     indentFirstParagraph = false
+     # 说明：文章的 Front Matter 中的 `indentFirstParagraph`
+     #      的优先级高于此处
+-    
 +
      # 分段样式（全局设置）
      paragraphStyle = "margin"
      # 说明：段间距式（margin）或段首缩排（indent）
-@@ -881,7 +903,7 @@
+@@ -914,7 +903,7 @@
      # 是否开启（全局设置）
      enableJustify = true
      # 说明：文章的 Front Matter 中的 `align`
@@ -454,7 +412,7 @@
  
      ######################################
      ## 首字下沉
-@@ -889,17 +911,17 @@
+@@ -922,12 +911,12 @@
      # 是否开启（全局设置）
      enableDropCap = false
      # 说明：文章的 Front Matter 中的 `dropCap`
@@ -469,40 +427,7 @@
  
      # 是否删除首字下沉前的分隔线（全局设置）
      deleteHrBeforeDropCap = false
-     # 说明：文章的 Front Matter 中的 `deleteHrBeforeDropCap`
--    #      的的优先级高于此处
-+    #      的优先级高于此处
- 
-     ######################################
-     ## 大型小写（英文）
-@@ -908,7 +930,7 @@
-     enableSmallCaps = false
-     # 说明：只会应用到分节标题和目录标题
-     #      文章的 Front Matter 中的 `smallCaps`
--    #      的的优先级高于此处
-+    #      的优先级高于此处
- 
-     ######################################
-     ## 着重号
-@@ -935,7 +957,7 @@
-     # 是否显示（全局设置）
-     displayPostCopyright = true
-     # 说明：文章的 Front Matter 中的 `displayCopyright`
--    #      的的优先级高于此处
-+    #      的优先级高于此处
- 
- 
-     ######################################
-@@ -947,7 +969,7 @@
-     # 是否显示（全局设置）
-     displayUpdatedBadge = true
-     # 说明：文章的 Front Matter 中的 `badge`
--    #      的的优先级高于此处
-+    #      的优先级高于此处
- 
-     # 是否添加 `title`
-     enableBadgeTitle = true
-@@ -959,17 +981,17 @@
+@@ -992,7 +981,7 @@
      # 文章的 Git 版本信息
  
      # 是否开启
@@ -511,9 +436,8 @@
  
      # 是否显示（全局设置）
      displayPostGitInfo = false
-     # 说明：文章的 Front Matter 中的 `gitinfo`
--    #      的的优先级高于此处
-+    #      的优先级高于此处
+@@ -1000,9 +989,9 @@
+     #      的优先级高于此处
  
      # 仓库地址
 -    repoURL = "https://github.com/ayalhw/blog"
@@ -524,7 +448,7 @@
  
      # Git 的图标
      gitIcon = "code-branch"
-@@ -995,8 +1017,8 @@
+@@ -1028,8 +1017,8 @@
      # 编辑链接的文本
      editText = "Edit Me?"
  
@@ -535,7 +459,7 @@
      # 文章分享
  
      # 是否开启
-@@ -1028,7 +1050,7 @@
+@@ -1061,7 +1050,7 @@
      # 是否显示（全局设置）
      displayRelatedPosts = true
      # 说明：文章的 Front Matter 中的 `related`
@@ -544,7 +468,7 @@
  
      # 相关文章数
      relatedPostsNumber = 5
-@@ -1069,11 +1091,11 @@
+@@ -1102,11 +1091,11 @@
  
      # 是否开启
      enableMinimalFooter = false
@@ -558,7 +482,7 @@
      # 是否开启关于页面的极简页脚
      enableAboutPageMinimalFooter = false
  
-@@ -1083,7 +1105,7 @@
+@@ -1116,7 +1105,7 @@
  
      # 是否开启
      enableBackToTop = true
@@ -567,7 +491,7 @@
      # 是否开启自动隐藏
      enableBackToTopAutoHide = true
  
-@@ -1123,7 +1145,7 @@
+@@ -1156,7 +1145,7 @@
  
      # 自定义页脚（支持 Markdown）
      customFooter = ""
@@ -576,7 +500,7 @@
      displayBusuanziSiteUVAndPV = false
      busuanziSiteUVText = "本站访客数"
      busuanziSiteUVIcon = "user"
-@@ -1163,19 +1185,22 @@
+@@ -1196,19 +1185,22 @@
      enableFingerprint = true
      # 说明：仅对 MemE 生成的 CSS 和 JS 有效
  
@@ -601,7 +525,7 @@
      # 是否开启
      enableSmoothScroll = true
      # 说明：https://github.com/cferdinandi/smooth-scroll
-@@ -1197,4 +1222,4 @@
+@@ -1230,4 +1222,4 @@
      # 视频地址
      fofVideoWebm = ""
      fofVideoMp4 = ""
