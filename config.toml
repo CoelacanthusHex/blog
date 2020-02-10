@@ -39,12 +39,6 @@ enableRobotsTXT = false
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
 paginate = 5
 
-# 代码高亮
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsOptions = "linenos=table"
-
 # URL 相关
 disablePathToLower = false
 relativeURLs = true
@@ -64,19 +58,37 @@ uglyURLs = false
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
-# v0.60.0
-[markup]
-    defaultMarkdownHandler = "blackfriday"
-
 # Markdown 渲染器
-[blackfriday]
-    # 是否开启智能标点符号替换
-    smartypants = false
-    # 是否在新标签页打开外链
-    hrefTargetBlank = true
-    # 屏蔽的扩展
-    extensionsmask = ["hardLineBreak", "backslashLineBreak"]
-
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = false
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        lineNos = true
+        lineNumbersInTable = true
+        noClasses = false
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = true
+    
 # 作者信息
 [author]
     # 名字
@@ -334,7 +346,9 @@ uglyURLs = false
     # 注意：如果你设置为 `sections`，请务必将
     #      此配置文件中的类别（taxonomies）中
     #      的 `categories` 删除，不然分类页
-    #      面会失效。
+    #      面会失效。同时，你还需要自己新建一个
+    #      `content/categories/_index.md`
+    #      文件。
 
 
     ######################################
@@ -699,6 +713,17 @@ uglyURLs = false
     #      首页暂不支持
     #      https://busuanzi.ibruce.info/
     
+    
+	######################################
+    # Markdown 相关
+
+    # 在新标签页打开外链？
+    hrefTargetBlank = true
+
+    # 与 LaTeX 的兼容性？
+    compatibleWithLaTeX = false
+    
+    
     ######################################
     # 文章目录
 
@@ -777,7 +802,10 @@ uglyURLs = false
     #
     #      只支持相对于站点根目录的绝对链接
     #      比如：/videos/meme.mp4
-
+	#
+    #      且你添加的 HTML 代码必需以以下开头：
+    #      `<video src="`
+    
     # 是否开启
     enableVideoHost = true
 
@@ -868,7 +896,12 @@ uglyURLs = false
 
     # 是否开启
     enableParagraphIndent = true
-
+    
+	# 是否缩进第一段（全局设置）
+    indentFirstParagraph = false
+    # 说明：文章的 Front Matter 中的 `indentFirstParagraph`
+    #      的优先级高于此处
+    
     # 分段样式（全局设置）
     paragraphStyle = "margin"
     # 说明：段间距式（margin）或段首缩排（indent）
@@ -899,7 +932,7 @@ uglyURLs = false
     # 是否删除首字下沉前的分隔线（全局设置）
     deleteHrBeforeDropCap = false
     # 说明：文章的 Front Matter 中的 `deleteHrBeforeDropCap`
-    #      的的优先级高于此处
+    #      的优先级高于此处
 
     ######################################
     ## 大型小写（英文）
@@ -908,7 +941,7 @@ uglyURLs = false
     enableSmallCaps = false
     # 说明：只会应用到分节标题和目录标题
     #      文章的 Front Matter 中的 `smallCaps`
-    #      的的优先级高于此处
+    #      的优先级高于此处
 
     ######################################
     ## 着重号
@@ -935,7 +968,7 @@ uglyURLs = false
     # 是否显示（全局设置）
     displayPostCopyright = true
     # 说明：文章的 Front Matter 中的 `displayCopyright`
-    #      的的优先级高于此处
+    #      的优先级高于此处
 
 
     ######################################
@@ -947,7 +980,7 @@ uglyURLs = false
     # 是否显示（全局设置）
     displayUpdatedBadge = true
     # 说明：文章的 Front Matter 中的 `badge`
-    #      的的优先级高于此处
+    #      的优先级高于此处
 
     # 是否添加 `title`
     enableBadgeTitle = true
@@ -964,7 +997,7 @@ uglyURLs = false
     # 是否显示（全局设置）
     displayPostGitInfo = false
     # 说明：文章的 Front Matter 中的 `gitinfo`
-    #      的的优先级高于此处
+    #      的优先级高于此处
 
     # 仓库地址
     repoURL = "https://github.com/ayalhw/blog"
@@ -994,6 +1027,29 @@ uglyURLs = false
     editIcon = "edit"
     # 编辑链接的文本
     editText = "Edit Me?"
+
+	
+	######################################
+    # 文章分享
+
+    # 是否开启
+    enablePostShare = true
+
+    # 是否显示（全局设置）
+    displayPostShare = true
+    # 说明：文章的 Front Matter 中的 `share`
+    #      的优先级高于此处
+
+    shareOnTwitter = true
+    shareOnFacebook = true
+    shareOnLinkedIn = true
+    shareOnTelegram = true
+    shareOnWeibo = true
+    shareOnDouban = true
+    shareOnQQ = true
+    shareOnQzone = true
+
+    shareViaQRCode = true
 
 
     ######################################
