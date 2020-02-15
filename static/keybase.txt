@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/coelacanthus
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.lhwcrt.top
+  * I am coelacanthus (https://keybase.io/coelacanthus) on keybase.
+  * I have a public key ASAvSF1su64STmEK5YChYHCZDtiopac4ibD6Qj2hp0AgYQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202f485d6cbbae124e610ae580a16070990ed8a8a5a73889b0fa423da1a74020610a",
+      "host": "keybase.io",
+      "kid": "01202f485d6cbbae124e610ae580a16070990ed8a8a5a73889b0fa423da1a74020610a",
+      "uid": "339b59c3b1d70b25d21b34ca94f80519",
+      "username": "coelacanthus"
+    },
+    "merkle_root": {
+      "ctime": 1581740820,
+      "hash": "a25c5959985211eba744ffa3daa0383f0dc2342bf589a191bdfd656a428357cdeb772d795d33f895696874cb30f4463e9ab585be2c593ab80f5f59d1e723eee2",
+      "hash_meta": "fd6f5bf6d41283880dabada8971182caecde84b98dc4ec683f8debb01988a23e",
+      "seqno": 14608662
+    },
+    "service": {
+      "entropy": "3d4sgRJjzYCTqy2OCg+0VMao",
+      "hostname": "blog.lhwcrt.top",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.0"
+  },
+  "ctime": 1581740848,
+  "expire_in": 504576000,
+  "prev": "f9aed06db8f5bc243907f115d43556077f03994a73012bdb7d84739ad64bf9c0",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgL0hdbLuuEk5hCuWAoWBwmQ7YqKWnOImw+kI9oadAIGEKp3BheWxvYWTESpcCCMQg+a7Qbbj1vCQ5B/EV1DVWB38DmUpzASvbfYRzmtZL+cDEIEqP95tue6H7ermY86RVFHDJ4D3ib/N0YVQ4VdT3gvXaAgHCo3NpZ8RAQaMfvghf+hGnwMdfQ2PkViAmheSb84x16sD6HQlI90OEyV2yBfzmX8clOWk+lEasXPZudGgQTAFZQPDfoxT9A6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHiDp30VNVfrRxEgEHUozoaDNVHL7PPxz6gYmeRFAJSro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/coelacanthus
+
+==================================================================
