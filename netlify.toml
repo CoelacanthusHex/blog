@@ -3,7 +3,7 @@
   command = "npm run build && npm run ipfs-deploy"
 
 [context.production.environment]
-  HUGO_VERSION = "0.65.0"
+  HUGO_VERSION = "0.65.2"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
