@@ -102,7 +102,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://blog.lhwcrt.top/"
     # 推特
-    twitter = "HongwuLiu"
+    twitter = ""
 
 # 相关文章
 [related]
@@ -316,7 +316,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "HongwuLiu"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 
@@ -495,7 +495,7 @@ uglyURLs = false
 
     jsonLD = true
     openGraph = true
-    twitterCards = true
+    twitterCards = false
     # 注意：如果你设置 twitterCards 为 `true`，
     #      请务必开启 openGraph。否则，网页的
     #      Twitter Cards 信息将会不完整。
