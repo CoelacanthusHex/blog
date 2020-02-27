@@ -33,15 +33,12 @@ gitinfo: true
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
-*   也是个`妹控`呢  <span class="spoiler">喜欢上了妹妹呢</span>
 *   心理性别认同与生理不一致。  <span class="spoiler">是个男生却想做女孩子呢</span>    <span class="spoiler">出过女装</span>
 *   [十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
 
 ![我的十六型人格测试结果](https://i.loli.net/2019/12/28/7my5Dxpc83gBbZh.png)
 
-*   脑洞很大，脑补很强。
-*   有转变为“无心”、“无情”的趋势。
-*   有抑郁倾向
+*   抑郁
 *	一个人的时候会感到孤独，但和不喜欢的人待在一起更痛苦
 
 ## 关于我讨厌的
@@ -53,14 +50,11 @@ gitinfo: true
 
 ## 关于我的社交
 
-*   QQ: 1470511433
-*   MiTalk: 2322864818
-*   Telegram: [@crtlhw](https://t.me/crtlhw)
+*   Telegram: [@AsamaSaori](https://t.me/AsamaSaori)
 *   E-Mail: liuhongwu2003@outlook.com
 *   Wikipedia: [Electriccubes](https://zh.wikipedia.org/wiki/User:Electriccubes)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
 *   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes)
-*   Skype:
 
 ## 关于本站点的搭建
 
