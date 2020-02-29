@@ -50,7 +50,7 @@ gitinfo: true
 
 ## 关于我的社交
 
-*   Telegram: [@AsamaSaori](https://t.me/AsamaSaori)
+*   Telegram: [@AsamiSaori](https://t.me/AsamiSaori)
 *   E-Mail: liuhongwu2003@outlook.com
 *   Wikipedia: [Electriccubes](https://zh.wikipedia.org/wiki/User:Electriccubes)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
