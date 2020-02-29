@@ -23,7 +23,7 @@
     "ipfs-deploy": "^7.14.0",
     "readable-stream": "^3.5.0",
     "uglify-es": "^3.3.9",
-    "workbox-build": "^4.3.1"
+    "workbox-build": "^5.0.0"
   },
   "dependencies": {
     "gulp-clean-css": "^4.2.0",
