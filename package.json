@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "Coelacanthus's blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "A blog",
   "main": "index.js",
   "scripts": {
     "build": "git config --global core.quotePath false && hugo --gc --minify --cleanDestinationDir && ./node_modules/gulp/bin/gulp.js build",
@@ -11,8 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/ayalhw/blog.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "blog",
+    "hugo",
+    "hugo-theme-meme"
+  ],
+  "author": "AsamiSaori",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
     "url": "https://github.com/ayalhw/blog/issues"
   },
