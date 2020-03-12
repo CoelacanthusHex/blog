@@ -571,6 +571,16 @@ uglyURLs = false
     # 是否禁用 MathJax 的右键菜单
     disableMathJaxMenu = false
     
+    
+    ######################################
+    # Mermaid (https://github.com/mermaid-js/mermaid)
+
+    # 是否开启（全局设置）
+    enableMermaid = false
+    # 说明：文章的 Front Matter 中的 `mermaid`
+    #      的优先级高于此处
+
+    
     ######################################
     # 评论
 
