@@ -10,7 +10,7 @@ gitinfo: true
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
 
-### [thyzzs' blog](https://thyzzs.coding.me/)
+### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
 ### [KAYGB ](https://kaygb.top/)
