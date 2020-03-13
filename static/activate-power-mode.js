@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        (el.tagName === 'INPUT' && el.getAttribute('type') === 'text')) {
 	        var offset = __webpack_require__(1)(el, el.selectionStart);
 	        bcr = el.getBoundingClientRect();
-	        return {
+	        return {  
 	            x: offset.left + bcr.left,
 	            y: offset.top + bcr.top,
 	            color: getColor(el)
