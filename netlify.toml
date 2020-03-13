@@ -10,4 +10,10 @@
 [[redirects]]
   from = "https://lhwcrt.netlify.com/*"
   to = "https://blog.lhwcrt.top/:splat"
+  status = 301
+  force = true 
+  
+  from = "http://lhwcrt.netlify.com/*"
+  to = "https://blog.lhwcrt.top/:splat"
+  status = 301
   force = true 
