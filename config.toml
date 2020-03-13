@@ -1273,7 +1273,7 @@ uglyURLs = false
     # 404 页面
 
     # 视频封面
-    fofPoster = ""
+    fofPoster = "/images/404.webp"
 
     # 视频地址
     fofVideoWebm = ""
