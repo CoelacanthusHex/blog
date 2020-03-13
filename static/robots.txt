@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://io-oi.me/sitemap.xml 
+Sitemap: https://blog.lhwcrt.top/sitemap.xml 
