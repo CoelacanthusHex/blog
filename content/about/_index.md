@@ -33,8 +33,7 @@ gitinfo: true
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
-<!--
-*   心理性别认同与生理不一致。  <span class="spoiler">是个男生却想做女孩子呢</span>    <span class="spoiler">出过女装</span>-->
+*   <!--心理性别认同与生理不一致。  <span class="spoiler">是个男生却想做女孩子呢</span>-->    <span class="spoiler">出过女装</span>
 *   [十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
 
 ![我的十六型人格测试结果](/images/16-test.webp)
