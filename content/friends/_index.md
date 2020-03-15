@@ -16,6 +16,9 @@ gitinfo: true
 ### [KAYGB ](https://kaygb.top/)
 >   前端爱好者
 
+### [小方de博客 ](http://fang.blog.miri.site/)
+>   Minecraft公益服 $CO_3$ 腐竹，超强的大佬
+
 ### [MySpace](https://www.zkl2333.com/)
 >   一只大佬
 
