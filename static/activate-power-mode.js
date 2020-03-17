@@ -87,7 +87,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	function getCaret() {
 	    var el = document.activeElement;
 	    var bcr;
-	    if (el.tagName === 'TEXTAREA' ||
+		if (el.tagName === 'TEXTAREA' ||
+			el.tagName === 'textarea' ||
 	        (el.tagName === 'INPUT' && el.getAttribute('type') === 'text')) {
 	        var offset = __webpack_require__(1)(el, el.selectionStart);
 	        bcr = el.getBoundingClientRect();
