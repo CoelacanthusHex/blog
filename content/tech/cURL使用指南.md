@@ -8,7 +8,7 @@ slug: "curl-use-man"
 tags: [cURL, Tools]
 ---
 
-# 简介
+## 简介
 
 >   Command line tool and library for transferring data with URLs.
 
@@ -16,13 +16,13 @@ tags: [cURL, Tools]
 
 curl是一种命令行工具，作用是发出网络请求，然后得到和提取数据，显示在"标准输出"（stdout）上面。
 
-## 关于她支持的协议……
+### 关于她支持的协议……
 
 DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, Telnet and TFTP. curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload, proxies, HTTP/2, cookies, user+password authentication (Basic, Plain, Digest, CRAM-MD5, NTLM, Negotiate and Kerberos), file transfer resume, proxy tunneling and more.
 
 **PS：curl 已取代 wget 成为 Linux 系统预装的命令行下载工具**
 
-# 参数介绍
+## 参数介绍
 
 如果只是想简单了解用法的 [Click Here](#简单使用)
 
@@ -30,7 +30,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 不带有任何参数时，curl 默认发出 `GET` 请求。
 
-## -A
+### -A
 
 -A 参数指定客户端的 User-Agent。curl 默认的 User-Agent 是 `curl/[version]``。
 
@@ -44,7 +44,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
     $ curl -H 'User-Agent: php/1.0' https://example.com
 
-## -b
+### -b
 
 -b 参数用来向服务器发送 Cookie。
 
@@ -58,7 +58,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 上面命令读取本地文件 cookies.txt 里服务器设置的 Cookie（参见-c参数），将其发送到服务器。
 
-## -c
+### -c
 
 -c 参数将服务器设置的 Cookie 写入一个文件。
 
@@ -66,7 +66,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 上面命令将服务器的 HTTP 回应所设置 Cookie 写入文本文件 cookies.txt。
 
-## -d
+### -d
 
 -d 参数用于发送 POST 请求的数据体。
 
@@ -89,7 +89,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 上面代码中，发送的数据hello world之间有一个空格，需要进行 URL 编码。
 
-## -e
+### -e
 
 -e 参数用来设置 HTTP 的标头Referer，表示请求的来源。
 
@@ -101,7 +101,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
     $ curl -H 'Referer: https://example.com?q=example' https://www.example.com
 
-## -G
+### -G
 
 -G 参数用来构造 URL 的查询字符串。
 
@@ -113,7 +113,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
     $ curl -G --data-urlencode 'comment=hello world' https://www.example.com
 
-## -H
+### -H
 
 -H 参数添加 HTTP 请求的标头。
 
@@ -125,7 +125,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 上面命令添加 HTTP 请求的标头是Content-Type: application/json，然后用-d参数发送 JSON 数据。
 
-## -i
+### -i
 
 -i 参数打印出服务器回应的 HTTP 标头。
 
@@ -133,7 +133,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 上面命令收到服务器回应后，先输出服务器回应的标头，**然后空一行**，再输出网页的源码。
 
-## -I
+### -I
 
 -I 参数向服务器发出 HEAD 请求，然会将服务器返回的 HTTP 标头打印出来。
 
@@ -145,34 +145,34 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
     $ curl --head https://www.example.com
 
-## -k
+### -k
 
 -k 参数指定跳过 SSL 检测。
 
     $ curl -k https://www.example.com
 
 上面命令不会检查服务器的 SSL 证书是否正确。
-## -L
+### -L
 
 -L 参数会让 HTTP 请求跟随服务器的重定向。**curl 默认不跟随重定向。**
 
     $ curl -L -d 'tweet=hi' https://api.twitter.com/tweet
 
-## --limit-rate
+### --limit-rate
 
 --limit-rate 限制 HTTP 请求和回应的带宽，可以用来模拟慢网速的环境。~~个人觉得除了测试网站或服务没啥用~~
 
     $ curl --limit-rate 250k https://example.com
 
 上面命令将带宽限制在每秒 250KB。
-## -o
+### -o
 
 -o 参数将服务器的回应保存成文件，等同于wget命令。
 
     $ curl  https://www.example.com -o example.html
 
 上面命令将 www.example.com 保存成 example.html。
-## -O
+### -O
 
 -O 参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。
 
@@ -182,7 +182,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 用来下载还是 -O 参数比较常用啦
 
-## -s
+### -s
 
 -s 将不输出错误和进度信息。
 
@@ -194,7 +194,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
     $ curl -s -o /dev/null https://example.com
 
-## -S
+### -S
 
 -S 参数指定只输出错误信息，通常与 -s 一起使用。
 
@@ -202,7 +202,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 除非发生错误，上面命令没有任何输出。
 
-## -u
+### -u
 
 -u 参数用来设置服务器认证的用户名和密码。
 
@@ -220,7 +220,7 @@ curl 能够识别 URL 里面的用户名和密码。
 
 上面命令只设置了用户名，执行后，curl 会提示用户输入密码。
 
-## -v
+### -v
 
 -v 参数输出通信的整个过程，用于调试。
 
@@ -230,7 +230,7 @@ curl 能够识别 URL 里面的用户名和密码。
 
     $ curl --trace - https://www.example.com
 
-## -x
+### -x
 
 -x参数指定 HTTP 请求的代理。
 
@@ -244,7 +244,7 @@ curl 能够识别 URL 里面的用户名和密码。
 
 上面命令中，请求的代理使用 HTTP 协议。
 
-## -X
+### -X
 
 -X参数指定 HTTP 请求的方法。
 
@@ -252,9 +252,9 @@ curl 能够识别 URL 里面的用户名和密码。
 
 上面命令对 https://www.example.com 发出 POST 请求。
 
-# 简单使用
+## 简单使用
 
-## 获取网页源码（就是下载喵）
+### 获取网页源码（就是下载喵）
 
 直接在curl命令后加上网址，就可以看到网页源码。
 
@@ -314,11 +314,11 @@ curl 能够识别 URL 里面的用户名和密码。
 
     $ curl www.example.com -o [文件名]
 
-## 自动跳转
+### 自动跳转
 
 有的网址是自动跳转的。使用`-L`参数，curl就会跳转到新的网址。
 
-## HTTP认证
+### HTTP认证
 
 有些网站需要 HTTP 认证，这时 curl 需要用到 `--user` 参数。
 
