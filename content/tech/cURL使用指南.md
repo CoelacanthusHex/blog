@@ -1,5 +1,5 @@
 ---
-title: "CURL使用指南"
+title: "cURL使用指南"
 date: 2020-01-04T10:34:06+08:00
 draft: false
 toc: true
