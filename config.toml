@@ -1238,7 +1238,9 @@ uglyURLs = false
 
     # 是否开启复制
     enableCopy = true
-
+    
+    # 是否开启自动隐藏
+    enableCopyAutoHide = true
 
 
     ######################################
