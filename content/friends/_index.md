@@ -13,6 +13,12 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
+### [简记](https://moonbegonia.xyz/)
+>   %%%
+
+### [Starx's Home](https://www.ioflow.xyz/)
+>   让我们某天一起仰望星空吧。
+
 ### [xzOS](https://xzos.net/)
 >   UpgradeAll 作者
 
