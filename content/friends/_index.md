@@ -13,6 +13,9 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
+### [xzOS](https://xzos.net/)
+>   UpgradeAll 作者
+
 ### [KAYGB ](https://kaygb.top/)
 >   前端爱好者
 
