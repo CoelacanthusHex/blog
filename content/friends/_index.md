@@ -10,6 +10,9 @@ gitinfo: true
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
 
+### [华山抡剑](https://youaredalao.blog.luogu.org)
+>   %%% OIer dalao
+
 ### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
