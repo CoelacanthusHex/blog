@@ -5,11 +5,19 @@ draft: false
 gitinfo: true
 ---
 
-一只叫lhw的菜鸡
 
-<h3 font-family="STZhongsong,'Noto Serif SC' ">
-「多少无知罪愆 时过不境迁 永志不忘纪念 往事不如烟」
+<h2 font-family="STZhongsong,'Noto Serif SC' " class="div-center">
+    <div class="text-left">
+        「<br/>
+        &emsp;&emsp;多少无知罪愆<br/>
+        &emsp;&emsp;时过不境迁<br/>
+        &emsp;&emsp;永志不忘纪念<br/>
+        &emsp;&emsp;往事不如烟<br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;」
+    </div>
 </h3>
+
+<br/>
 
 ## 关于我的一些描述
 
@@ -28,7 +36,7 @@ gitinfo: true
 
 ## 关于我的精神方面
 
-*   双性恋，支持 `LGBT` 群体平权
+*   双性恋，支持 `LGBT` 群体平权 ![LGBT_flag](/images/LGBT.svg) <!--![Transgender_Pride_flag](/images/Transgender_Pride_flag.svg)-->
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
