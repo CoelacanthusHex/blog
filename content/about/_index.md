@@ -36,7 +36,7 @@ gitinfo: true
 
 ## 关于我的精神方面
 
-*   双性恋，支持 `LGBT` 群体平权 ![LGBT_flag](/images/LGBT.svg) <!--![Transgender_Pride_flag](/images/Transgender_Pride_flag.svg)-->
+*   双性恋，支持 `LGBT` 群体平权 ![LGBT_flag](/images/LGBT.svg) ![Transgender_Pride_flag](/images/Transgender_Pride_flag.svg)
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
