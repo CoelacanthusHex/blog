@@ -8,9 +8,8 @@ gitinfo: true
 一只叫lhw的菜鸡
 
 <h3 font-family="STZhongsong,'Noto Serif SC' ">
-爱是一个人的事情，而爱情是两个人的事情。所以，我爱你，与你无关。
+「多少无知罪愆 时过不境迁 永志不忘纪念 往事不如烟」
 </h3>
-<div align="right">——茨威格《一个陌生女人的来信》</div>
 
 ## 关于我的一些描述
 
@@ -18,8 +17,8 @@ gitinfo: true
 *	常用网名：~~electriccubes~~ ~~（已废弃，仅 Minecraft 仍在使用）~~ 现在 Minecraft 也换成 AsamiSaori 了、~~Transistor && TransistorLogic && GlowDiscourgeTube~~（停用，部分无法更改的论坛上仍用）、Coelacanthus（使用中，大概是不会换了）
 *	菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
 *	会一点 `C` & `C++` & `Lua` ，正在学习 `Rust`
-*   使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)，所用框架为 Fcitx5 ；手机上使用 Gboard
-*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，为了硬解滚到 `Chromium`，手机上使用 `Kiwi`
+*   ~~使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)，所用框架为 Fcitx5~~ 老K输入法真香；手机上使用 Gboard
+*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Ch不吃 `fontconfig` 滚回 `Firefox Nightly` ，手机上使用 `Kiwi`
 *   使用的手机是 `Redmi Note 8` with ~~`MIUI 11 @ Android Pie` by `Xiaomi`~~ ~~现在被我刷成了类原生~~ ~~愿你刷机半生，归来仍是MIUI（其实是 `MIUI.eu`~~ crDroid 真香
 *   无神论者
 *   ACG 及其相关宅文化爱好者
