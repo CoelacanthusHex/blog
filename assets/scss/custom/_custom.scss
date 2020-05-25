@@ -43,3 +43,16 @@ pre code {
     font-family: 'Noto Serif CJK SC', 'Noto Serif SC', serif;
     font-size: 80%;
 }
+
+.div-center {
+    margin: auto;
+    width: 50%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+[data-align="justify"] .post-body p.text-right {
+    text-align: right;
+}
