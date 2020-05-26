@@ -6,7 +6,7 @@ gitinfo: true
 ---
 
 
-<h2 font-family="STZhongsong,'Noto Serif SC' " class="div-center">
+<h3 font-family="STZhongsong,'Noto Serif SC' " class="div-center">
     <div class="text-left">
         「<br/>
         &emsp;&emsp;多少无知罪愆<br/>
