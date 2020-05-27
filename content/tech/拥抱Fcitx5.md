@@ -56,10 +56,23 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 
 有以下几种选择：
 - `kimpanel`(KDE)/`gnome-shell-extension-kimpanel`(Gnome)
-- [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color)，有多种颜色以及单行双行两种模式，Arch 官方源有打包![Fcitx5-Material-Color](https://raw.githubusercontent.com/hosxy/Fcitx5-Material-Color/master/screenshot/No-Preedit.png)
-- [黑色透明主题](https://github.com/hosxy/fcitx5-dark-transparent)![fcitx5-dark-transparent](https://raw.githubusercontent.com/hosxy/fcitx5-dark-transparent/master/screenshot-1.png)
-- [黑色主题](https://github.com/evansan/fcitx5-dark)![fcitx5-dark](https://raw.githubusercontent.com/evansan/fcitx5-dark/master/2019-01-27_02-33.png)
-- [Materia EXP主题](https://github.com/hosxy/Fcitx5-Materia-EXP)，系统使用暗色主题的用户请谨慎使用![Fcitx5-Materia-EXP](https://raw.githubusercontent.com/hosxy/Fcitx5-Materia-EXP/master/screenshot/screenshot.png)
+- [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color)，有多种颜色以及单行双行两种模式，Arch 官方源有打包
+![Fcitx5-Material-Color](https://raw.githubusercontent.com/hosxy/Fcitx5-Material-Color/master/screenshot/No-Preedit.png)
+- [黑色透明主题](https://github.com/hosxy/fcitx5-dark-transparent)
+![fcitx5-dark-transparent](https://raw.githubusercontent.com/hosxy/fcitx5-dark-transparent/master/screenshot-1.png)
+- [黑色主题](https://github.com/evansan/fcitx5-dark)
+![fcitx5-dark](https://raw.githubusercontent.com/evansan/fcitx5-dark/master/2019-01-27_02-33.png)
+- [Materia EXP 主题](https://github.com/hosxy/Fcitx5-Materia-EXP)，系统使用暗色主题的用户请谨慎使用
+![Fcitx5-Materia-EXP](https://raw.githubusercontent.com/hosxy/Fcitx5-Materia-EXP/master/screenshot/screenshot.png)
+- [Simple Blue 主题](https://github.com/weearc/fcitx5-skin-simple-blue)
+![fcitx5-skin-simple-blue](https://raw.githubusercontent.com/weearc/fcitx5-skin-simple-blue/master/screenshot/screenshot-input.png)
+- [Adwaita-dark](https://github.com/escape0707/fcitx5-adwaita-dark)，推荐 Gnome 用户使用
+![fcitx5-adwaita-dark](https://raw.githubusercontent.com/escape0707/fcitx5-adwaita-dark/master/img/fcitx5-adwaita-dark-theme.png)
+- 经典的[Material 主题](https://github.com/hrko99/fcitx-skin-material)，这个主题同时支持4和5 ~~我都没注意这个主题更新了 fcitx5 支持~~
 - 自制主题 ~~（顺便写份主题文档吧~~
 
 先写到这里，有需要再补充
+
+### Change log
+
+- 2020-05-27 15:17 Edit: 增加几个皮肤
