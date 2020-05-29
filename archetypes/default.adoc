@@ -1,0 +1,13 @@
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+toc: true
+gitinfo: true
+slug: ""
+tags: []
+---
+
+= {{ replace .Name "-" " " | title }}
+{{ .Site.Author.name }} {{ with .Site.Author.email }}<{{ . }}>{{ end }} 
+{{ dateFormat "2006-01-02" .Date }} 
