@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://blog.lhwcrt.top/"
-title = "Coelacanthus"
+title = "倚窗，听雨"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）

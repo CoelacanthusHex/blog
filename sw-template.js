@@ -2,7 +2,7 @@ const workboxVersion = '5.1.3';
 //importScripts(`https://storage.googleapis.com/workbox-cdn/releases/${workboxVersion}/workbox-sw.js`);
 importScripts(`https://cdn.jsdelivr.net/npm/workbox-sw@${workboxVersion}/build/workbox-sw.min.js`);
 workbox.core.setCacheNameDetails({
-    prefix: "Coelacanthus"
+    prefix: "倚窗，听雨"
 });
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
