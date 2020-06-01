@@ -277,7 +277,7 @@ uglyURLs = false
     # 如果否，则会使用你的站点标题作为默认值，并
     # 以文字的形式显示，下方可配置字号和字色。字
     # 体请到底部的字体部分配置。单位：em。
-    siteBrandFontSize = 1
+    siteBrandFontSize = 1.5
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -885,7 +885,7 @@ uglyURLs = false
     #      SVG，则可留空（""）品牌栏字体。
 
     # 品牌栏
-    fontFamilySiteBrand = "'Noto Serif SC', 'Noto Serif CJK SC', 'Source Code Pro', serif"
+    fontFamilySiteBrand = "STZhongsong, 'Noto Serif SC', 'Noto Serif CJK SC', 'Source Code Pro', serif"
     # 菜单栏
     fontFamilyMenu = ""
 	# 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
