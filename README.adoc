@@ -9,11 +9,11 @@ image:https://img.shields.io/badge/Hosted%20on-IPFS-65c2cb?&logo=ipfs[Hosted on 
 
 Click on any of the links below:
 
-1. https://blog.lhwcrt.top/
-2. https://ipfs.io/ipns/blog.lhwcrt.top/
-3. https://cloudflare-ipfs.com/ipns/blog.lhwcrt.top/
-4. https://gateway.pinata.cloud/ipns/blog.lhwcrt.top/
-5. or whichever https://ipfs.github.io/public-gateway-checker/[Public IPFS Gateway] you like...
+. https://blog.lhwcrt.top/
+. https://ipfs.io/ipns/blog.lhwcrt.top/
+. https://cloudflare-ipfs.com/ipns/blog.lhwcrt.top/
+. https://gateway.pinata.cloud/ipns/blog.lhwcrt.top/
+. or whichever https://ipfs.github.io/public-gateway-checker/[Public IPFS Gateway] you like...
 
 Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.lhwcrt.top/  
 when `ipfs daemon` is running on your machine!
