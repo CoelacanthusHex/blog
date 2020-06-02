@@ -19,8 +19,3 @@ Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.lhw
 when `ipfs daemon` is running on your machine!
 
 image:https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status[Netlify Status, link=https://app.netlify.com/sites/lhwcrt/deploys]
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-
-
-
