@@ -1,7 +1,7 @@
 [build]
   publish = "public"
-#  command = "npm run build && npm run ipfs-deploy"
-  command = "npm run build"
+  command = "yarn run build && npm run ipfs-deploy"
+#  command = "yarn run build"
 
 [context.production.environment]
   HUGO_VERSION = "0.72.0"
