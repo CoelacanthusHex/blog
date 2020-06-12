@@ -24,6 +24,8 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 - 肥猫大词库中的[一个讨论](https://github.com/felixonmars/fcitx5-pinyin-zhwiki/issues/6)促使Fcitx5引入了一项新功能——根据前缀生成候选项，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-prefix-input.webp)
 这个功能我觉得对于长词输入是很棒的
+- 添加了类似搜狗U模式的拆字模式，效果如图：
+![fcitx5-prefix-input](/images/fcitx5-chaizi.webp)
 - 还有一件事是 Fcitx5 可以使用 `fcitx`, `fcitx5`, `ibus` 的输入法模块（感觉黑科技
 
 在经历了一天的过渡之后，我的主力输入法从 Rime 迁移到了 Fcitx5,到目前为止体验良好
@@ -76,3 +78,4 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 ### Change log
 
 - 2020-05-27 15:17 Edit: 增加几个皮肤
+- 2020-06-13 18:27 Edit: 添加拆字模式介绍
