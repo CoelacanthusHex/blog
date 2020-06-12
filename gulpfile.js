@@ -4,8 +4,6 @@ const uglifyes = require('uglify-es');
 const composer = require('gulp-uglify/composer');
 const uglify = composer(uglifyes, console);
 const pipeline = require('readable-stream').pipeline;
-//const uglify = require('gulp-uglify')
-
 
 gulp.task('generate-service-worker', () => {
   return workbox.injectManifest({

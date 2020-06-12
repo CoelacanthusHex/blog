@@ -135,14 +135,15 @@ uglyURLs = false
     baseName = "rss"
 
 # lunr.js 的搜索索引
-[outputFormats.SearchIndex]
-    mediaType = "application/json"
-    baseName = "search"
+#[outputFormats.SearchIndex]
+#    mediaType = "application/json"
+#    baseName = "search"
     
 # Hugo 的输出控制
 [outputs]
     page = ["HTML"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
+    #home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
+    home = ["HTML", "SectionsAtom", "SectionsRSS"]
     section = ["HTML"]
     # 类别
     taxonomyTerm = ["HTML"]
@@ -228,10 +229,10 @@ uglyURLs = false
     [[menu.main]]
         weight = 9
         identifier = "lang-switcher"
-    [[menu.main]]
-        weight = 10
-        identifier = "search"
-        post = "search"
+    #[[menu.main]]
+    #    weight = 10
+    #    identifier = "search"
+    #    post = "search"
 
 
 
@@ -389,6 +390,9 @@ uglyURLs = false
 
     # 是否显示每一分类下的文章数
     displayPostsCount = true
+    
+    # 设置一个非负数来限制每一分类下展示的文章数
+    limitPostsLimit = -1
 
 
     ######################################
@@ -1296,7 +1300,7 @@ uglyURLs = false
 
     # 说明：需要开启 `SearchIndex` 的输出
 
-    enableLunrSearch = true
+    enableLunrSearch = false
     # 说明：https://lunrjs.com/
     
     
