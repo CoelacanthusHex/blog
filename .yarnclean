@@ -3,6 +3,7 @@ __tests__
 test
 tests
 powered-test
+benchmark
 
 # asset directories
 docs
@@ -10,10 +11,13 @@ doc
 website
 images
 assets
+.github
 
 # examples
 example
 examples
+example.js
+examples.js
 
 # code coverage directories
 coverage
@@ -27,6 +31,7 @@ Gruntfile.js
 # configs
 appveyor.yml
 circle.yml
+Jenkinsfile
 codeship-services.yml
 codeship-steps.yml
 wercker.yml
@@ -35,17 +40,47 @@ wercker.yml
 .editorconfig
 .*ignore
 .eslintrc
+.eslintrc.json
+.eslintrc.yml
+.eslintrc.yaml
 .jshintrc
+.jshintrc.json
+.jslintrc.yml
+.jslintrc.yaml
 .flowconfig
 .documentup.json
 .yarn-metadata.json
 .travis.yml
+.prettierrc
+.esmrc
+.jscs.json
+.jscsrc
+tslint.json
 
 # misc
 *.md
+*.markdown
+README.*
+readme.*
 LICENSE
+*.LICENSE
 LICENSE.*
 LICENSE-*.txt
+LICENCE
+*.LICENCE
+LICENCE.*
+LICENCE-*.txt
+CONTRIBUTING
+ChangeLog
+CHANGELOG
+CHANGES
+FUNDING.yml
+*.bak
+gulp.1
+bash
+fish
+powershell
+zsh
 
 # Mac OS
 .DS_Store
