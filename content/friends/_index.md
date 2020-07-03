@@ -16,6 +16,9 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
+### [Bambusoideae](https://bambusoideae.cn/)
+>   %%%
+
 ### [简记](https://moonbegonia.xyz/)
 >   %%%
 
