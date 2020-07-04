@@ -88,17 +88,17 @@ M17N 源有打包
 有以下几种选择：
 - `kimpanel`(KDE)/`gnome-shell-extension-kimpanel`(Gnome)
 - [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color)，有多种颜色以及单行双行两种模式，Arch 官方源有打包
-![Fcitx5-Material-Color](https://raw.githubusercontent.com/hosxy/Fcitx5-Material-Color/master/screenshot/No-Preedit.png)
+![Fcitx5-Material-Color](/images/Fcitx5-Material-Color-No-Preedit.webp)
 - [黑色透明主题](https://github.com/hosxy/fcitx5-dark-transparent)
-![fcitx5-dark-transparent](https://raw.githubusercontent.com/hosxy/fcitx5-dark-transparent/master/screenshot-1.png)
+![fcitx5-dark-transparent](/images/fcitx5-skin-dark-transparent.webp)
 - [黑色主题](https://github.com/evansan/fcitx5-dark)
-![fcitx5-dark](https://raw.githubusercontent.com/evansan/fcitx5-dark/master/2019-01-27_02-33.png)
+![fcitx5-dark](/images/fcitx5-skin-darkwebp)
 - [Materia EXP 主题](https://github.com/hosxy/Fcitx5-Materia-EXP)，系统使用暗色主题的用户请谨慎使用
-![Fcitx5-Materia-EXP](https://raw.githubusercontent.com/hosxy/Fcitx5-Materia-EXP/master/screenshot/screenshot.png)
+![Fcitx5-Materia-EXP](/images/Fcitx5-Materia-EXP.webp)
 - [Simple Blue 主题](https://github.com/weearc/fcitx5-skin-simple-blue)
-![fcitx5-skin-simple-blue](https://raw.githubusercontent.com/weearc/fcitx5-skin-simple-blue/master/screenshot/screenshot-input.png)
+![fcitx5-skin-simple-blue](/images/fcitx5-skin-simple-blue.webp)
 - [Adwaita-dark](https://github.com/escape0707/fcitx5-adwaita-dark)，推荐 Gnome 用户使用
-![fcitx5-adwaita-dark](https://raw.githubusercontent.com/escape0707/fcitx5-adwaita-dark/master/img/fcitx5-adwaita-dark-theme.png)
+![fcitx5-adwaita-dark](/images/fcitx5-skin-adwaita-dark.webp)
 - 经典的[Material 主题](https://github.com/hrko99/fcitx-skin-material)，这个主题同时支持4和5 ~~我都没注意这个主题更新了 fcitx5 支持~~（fcitx5 版本有人[在 AUR 上打了包](https://aur.archlinux.org/packages/fcitx5-skin-material/)，包名：`fcitx5-skin-material`
 - [base16 material darker 主题](https://github.com/btstream/fcitx5-skin-base16-material-darker)
 - 自制主题 ~~（顺便写份主题文档吧~~
