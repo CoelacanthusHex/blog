@@ -92,7 +92,7 @@ M17N 源有打包
 - [黑色透明主题](https://github.com/hosxy/fcitx5-dark-transparent)
 ![fcitx5-dark-transparent](/images/fcitx5-skin-dark-transparent.webp)
 - [黑色主题](https://github.com/evansan/fcitx5-dark)
-![fcitx5-dark](/images/fcitx5-skin-darkwebp)
+![fcitx5-dark](/images/fcitx5-skin-dark.webp)
 - [Materia EXP 主题](https://github.com/hosxy/Fcitx5-Materia-EXP)，系统使用暗色主题的用户请谨慎使用
 ![Fcitx5-Materia-EXP](/images/Fcitx5-Materia-EXP.webp)
 - [Simple Blue 主题](https://github.com/weearc/fcitx5-skin-simple-blue)
