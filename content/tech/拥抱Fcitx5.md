@@ -8,19 +8,19 @@ slug: "welcome-to-fcitx5"
 tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 ---
 
-2015年12月，~~计科杀手~~ csslayer 创建了[fcitx/fcitx5](https://github.com/fcitx/fcitx5)代码库，独自开始了对Fcitx5的开发。
+2015年12月，~~计科杀手~~ csslayer 创建了[fcitx/fcitx5](https://github.com/fcitx/fcitx5)代码库，独自开始了对 Fcitx5 的开发。
 
 如今五年过去了，Fcitx5 也日渐成熟。（个人感觉算法上相当不错
 
-今年年初，我从 fcitx-rime 换到 fcitx5-rime ，感觉并不明显 ~~（毕竟对于 Rime 用户来说从4到5最大的变化是界面~~
+今年年初，我从 `fcitx-rime` 换到 `fcitx5-rime` ，感觉并不明显 ~~（毕竟对于 Rime 用户来说从4到5最大的变化是界面~~
 
 然后，~~在 Arch Linux CN 众多群友的诱惑下,~~ 我决定尝试一下 Fcitx5 自带的拼音输入法。
 首次使用的体验是相当的棒的，Fcitx5 在默认配置下表现良好，云拼音也有百度，Google，Google CN 三种可选~~尽管我不怎么用云拼音~~，整句输入也是相当的棒，还有输入预测功能。
 
-但这并不是让我抛弃我在Rime积攒下的词库投靠~~老K输入法~~Fcitx5自带拼音的理由……真正的原因是最近发生的几件事……
+但这并不是让我抛弃我在 Rime 积攒下的词库投靠~~老K输入法~~Fcitx5自带拼音的理由……真正的原因是最近发生的几件事……
 
 - 首先是非常好的反馈体验，开发者老K对待用户非常友好，而且生产力十足
-- 然后是 Felix 爬了维基百科制作了[肥猫百万大词库](https://github.com/felixonmars/fcitx5-pinyin-zhwiki)，随后大佬 outloudvi 制作了[萌娘百科词库](https://github.com/outloudvi/fcitx5-pinyin-moegirl)，Fcitx5 的日用词库基本满足
+- 然后是 Felix 爬了维基百科制作了[肥猫百万大词库](https://github.com/felixonmars/fcitx5-pinyin-zhwiki)，随后大佬 outloudvi 制作了[萌娘百科词库](https://github.com/outloudvi/fcitx5-pinyin-moegirl)，Fcitx5 的日用词库基本满足（AUR 上皆有打包，且前者在 Arch CN 源有打包
 - 肥猫大词库中的[一个讨论](https://github.com/felixonmars/fcitx5-pinyin-zhwiki/issues/6)促使Fcitx5引入了一项新功能——根据前缀生成候选项，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-prefix-input.webp)
 这个功能我觉得对于长词输入是很棒的
@@ -28,21 +28,50 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 ![fcitx5-prefix-input](/images/fcitx5-chaizi.webp)
 - 还有一件事是 Fcitx5 可以使用 `fcitx`, `fcitx5`, `ibus` 的输入法模块（感觉黑科技
 
-在经历了一天的过渡之后，我的主力输入法从 Rime 迁移到了 Fcitx5,到目前为止体验良好
+在经历了一天的过渡之后，我的主力输入法从 Rime 迁移到了 Fcitx5, 到目前为止体验良好
+
+### 优势
+
+- 上述几条个人认为皆为优势
+- `fcitx5-rime` 支持加载动态库形式的 Rime 插件，在设置中填写插件名称即可使用，注意 octagram 插件名称与文件名并不一样（`fcitx-rime` 无此支持，`ibus-rime` 有此支持但是似乎配置文件有点问题（喜讯：Arch 官方仓库中的 `librime` 已经打包了 lua 和 octagram（即语料库）插件
+- 自带一套 $\LaTeX$ 简易输入表（虽然只能输入一小部分特殊字符
+- 更好的支持（Fcitx4 的功能开发已经停止
 
 ### 关于安装
 
 #### Arch
 
-开发者老K有一篇 [官方博文](https://www.csslayer.info/wordpress/fcitx-dev/%e5%a6%82%e4%bd%95%e7%8e%b0%e5%9c%a8%e5%b0%b1%e5%9c%a8-arch-linux-%e7%94%a8%e4%b8%8a-fcitx-5/) 可供参考，此外 Arch Linux CN 提供了Git版本的打包，虽然 Fcitx5 还没有发布正式版，但是Arch的`[community]`源已经提供了打包
+开发者老K有一篇 [官方博文](https://www.csslayer.info/wordpress/fcitx-dev/%e5%a6%82%e4%bd%95%e7%8e%b0%e5%9c%a8%e5%b0%b1%e5%9c%a8-arch-linux-%e7%94%a8%e4%b8%8a-fcitx-5/) 可供参考，此外 Arch Linux CN 提供了 Git 版本的打包，虽然 Fcitx5 还没有发布正式版，但是Arch的`[community]`源已经提供了打包
 
 #### Ubuntu
 
 李先生有一篇 [如何现在就在 Ubuntu 20.04 用上 Fcitx 5](https://plumz.me/archives/11740/)
 
+hosxy 大佬提供了[一个 PPA](https://launchpad.net/~hosxy/+archive/ubuntu/test)，将 Debian Sid 的 Fcitx5 port 到 Ubuntu 20.04 (Ubuntu 官方源中的 Fcitx5 是较旧版本，而 Fcitx5 最近几个月活跃开发并更新，很多东西都跟不上时代了 （ 与此相关的是一个 [bug fix](https://github.com/fcitx/libime/commit/0a186aadf8891df53dab6f832280fae30bd3d9d8) 修正了一个拼音：聒噪（guo zao）仅记录了古音“聒（gua）”
+
+若要尝试自行编译，请参考 Debian 官方包打包脚本
+
+PS: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/2)，另外最新版 `kcm-fcitx5` 依赖 Qt 5.14+ 版本
+
 #### Debian
 
 参考 [Ubuntu](#Ubuntu)
+
+#### Gentoo
+
+[Gentoo-zh Overlay](https://github.com/microcai/gentoo-zh) 有提供打包
+
+#### AOSC OS
+
+其官方有提供[打包](https://packages.aosc.io/packages/fcitx5)
+
+#### openSUSE
+
+M17N 源有打包
+
+#### Fedora and etc.
+
+目前似乎无人打包，自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
 
 ### 关于设置
 
@@ -70,8 +99,20 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 ![fcitx5-skin-simple-blue](https://raw.githubusercontent.com/weearc/fcitx5-skin-simple-blue/master/screenshot/screenshot-input.png)
 - [Adwaita-dark](https://github.com/escape0707/fcitx5-adwaita-dark)，推荐 Gnome 用户使用
 ![fcitx5-adwaita-dark](https://raw.githubusercontent.com/escape0707/fcitx5-adwaita-dark/master/img/fcitx5-adwaita-dark-theme.png)
-- 经典的[Material 主题](https://github.com/hrko99/fcitx-skin-material)，这个主题同时支持4和5 ~~我都没注意这个主题更新了 fcitx5 支持~~
+- 经典的[Material 主题](https://github.com/hrko99/fcitx-skin-material)，这个主题同时支持4和5 ~~我都没注意这个主题更新了 fcitx5 支持~~（fcitx5 版本有人[在 AUR 上打了包](https://aur.archlinux.org/packages/fcitx5-skin-material/)，包名：`fcitx5-skin-material`
+- [base16 material darker 主题](https://github.com/btstream/fcitx5-skin-base16-material-darker)
 - 自制主题 ~~（顺便写份主题文档吧~~
+
+以上主题在 AUR 皆有打包
+
+#### 关于配置工具
+
+开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `kcm-fcitx5` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `kcm-fcitx5` 并不会引入 KDE
+
+#### 倡议
+
+现在的问题是没有（很少有）其他发行版用户尝试 Fcitx5 来找出在其他发行版上的问题…… Arch 上的虫已经捉的差不多了……其他发行版上体验的改进需要你们的参与……
+
 
 先写到这里，有需要再补充
 
@@ -79,3 +120,4 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 
 - 2020-05-27 15:17 Edit: 增加几个皮肤
 - 2020-06-13 18:27 Edit: 添加拆字模式介绍
+- 2020-07-05 01:17 Edit: 增加几个皮肤，补充 PPA，添加倡议，补充说明一些编译相关问题，添加配置工具说明，补充一些发行版的安装方法
