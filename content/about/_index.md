@@ -81,4 +81,4 @@ when `ipfs daemon` is running on your machine!
 --->
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status)](https://app.netlify.com/sites/lhwcrt/deploys)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://blog.lhwcrt.top/images/cc-by-nc-sa-88x31.webp" /></a>
