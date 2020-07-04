@@ -1,5 +1,5 @@
 ---
-title: "拥抱Fcitx5"
+title: "拥抱 Fcitx5"
 date: 2020-05-26T23:46:00+08:00
 draft: false
 toc: false
