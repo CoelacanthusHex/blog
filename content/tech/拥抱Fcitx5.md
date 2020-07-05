@@ -5,7 +5,7 @@ draft: false
 toc: false
 gitinfo: true
 slug: "welcome-to-fcitx5"
-tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
+tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, 软件]
 ---
 
 2015年12月，~~计科杀手~~ csslayer 创建了[fcitx/fcitx5](https://github.com/fcitx/fcitx5)代码库，独自开始了对 Fcitx5 的开发。
@@ -36,6 +36,9 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, 软件]
 - 上述几条个人认为皆为优势
 - `fcitx5-rime` 支持加载动态库形式的 Rime 插件，在设置中填写插件名称即可使用，注意 octagram 插件名称与文件名并不一样（`fcitx-rime` 无此支持，`ibus-rime` 有此支持但是似乎配置文件有点问题（喜讯：Arch 官方仓库中的 `librime` 已经打包了 lua 和 octagram（即语料库）插件
 - 自带一套 $\LaTeX$ 简易输入表（虽然只能输入一小部分特殊字符
+- 笔画过滤: 参见 [Fcitx5_使用笔画过滤](https://wiki.archlinux.org/index.php?title=Fcitx5_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#%E4%BD%BF%E7%94%A8%E7%AC%94%E7%94%BB%E8%BF%87%E6%BB%A4)
+- 以词定字
+- 查看选中文字的 Unicode 编码：选中文字，然后使用快捷键 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>u</kbd> 可以查看选中文字的编码
 - 更好的支持（Fcitx4 的功能开发已经停止
 
 ### 关于安装
@@ -52,9 +55,11 @@ hosxy 大佬提供了[一个 PPA](https://launchpad.net/~hosxy/+archive/ubuntu/t
 
 若要尝试自行编译，请参考 Debian 官方包打包脚本
 
-PS: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/2)，另外最新版 `kcm-fcitx5` 依赖 Qt 5.14+ 版本
+PS1：Ubuntu 官方只为20.04及以后的版本提供了包
 
-#### Debian
+PS2: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/2)，另外最新版 `kcm-fcitx5` 依赖 Qt 5.14+ 版本
+
+#### Debian && Kali && etc.
 
 参考 [Ubuntu](#Ubuntu)
 
@@ -69,6 +74,12 @@ PS: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.co
 #### openSUSE
 
 M17N 源有打包
+
+#### Manjaro && other distributions based on Arch
+
+Manjaro Dev. 应该已经把肥猫的包偷过去了吧（
+
+Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 #### Fedora and etc.
 
@@ -87,7 +98,7 @@ M17N 源有打包
 #### 主题美化
 
 有以下几种选择：
-- `kimpanel`(KDE)/`gnome-shell-extension-kimpanel`(Gnome)
+- `kimpanel`(KDE)/`gnome-shell-extension-kimpanel`(Gnome) （同时这也应该是目前 Wayland 下唯一的方案）
 - [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color)，有多种颜色以及单行双行两种模式，Arch 官方源有打包
 ![Fcitx5-Material-Color](/images/Fcitx5-Material-Color-No-Preedit.webp)
 - [黑色透明主题](https://github.com/hosxy/fcitx5-dark-transparent)
@@ -122,3 +133,4 @@ M17N 源有打包
 - 2020-05-27 15:17 Edit: 增加几个皮肤
 - 2020-06-13 18:27 Edit: 添加拆字模式介绍
 - 2020-07-05 01:17 Edit: 增加几个皮肤，补充 PPA，添加倡议，补充说明一些编译相关问题，添加配置工具说明，补充一些发行版的安装方法
+- 2020-07-05 11:28 Edit: 补充部分特性
