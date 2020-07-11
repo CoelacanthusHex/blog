@@ -7,6 +7,9 @@ comment: true
 gitinfo: true
 ---
 
+### [MnFe](https://yutong.site/)
+>   超厉害又可爱的萌铁铁
+
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
 
@@ -63,6 +66,6 @@ gitinfo: true
 >   论坛里的 dalao 可强了，有问题来这里就对了
 
 
-#### 添加友链请发送邮件至liuhongwu2003@outlook.com
+#### 添加友链请发送邮件至 liuhongwu2003@outlook.com
 
 图标: ![](https://blog.lhwcrt.top/icon.png)
