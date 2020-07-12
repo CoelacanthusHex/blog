@@ -10,6 +10,9 @@ gitinfo: true
 ### [MnFe](https://yutong.site/)
 >   超厉害又可爱的萌铁铁
 
+### [三日月綾香](https://ayaka.shn.hk/)
+>   好耶，是可爱的三日月綾香姐姐
+
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
 
