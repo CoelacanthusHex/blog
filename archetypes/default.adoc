@@ -4,6 +4,7 @@ date: {{ .Date }}
 draft: true
 toc: true
 gitinfo: true
+mathjax: true
 slug: ""
 tags: []
 ---
