@@ -5,8 +5,10 @@ draft: false
 toc: false
 gitinfo: true
 slug: "welcome-to-fcitx5"
-tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, 软件]
+tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 ---
+
+## 起因
 
 2015年12月，~~计科杀手~~ csslayer 创建了[fcitx/fcitx5](https://github.com/fcitx/fcitx5)代码库，独自开始了对 Fcitx5 的开发。
 
@@ -21,13 +23,15 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, 软件]
 但这并不是让我抛弃我在 Rime 积攒下的词库投靠~~老K输入法~~Fcitx5自带拼音的理由……真正的原因是最近发生的几件事……
 
 - 首先是非常好的反馈体验，开发者老K对待用户非常友好，而且生产力十足
-- 然后是 Felix 爬了维基百科制作了[肥猫百万大词库](https://github.com/felixonmars/fcitx5-pinyin-zhwiki)，随后大佬 outloudvi 制作了[萌娘百科词库](https://github.com/outloudvi/fcitx5-pinyin-moegirl)，Fcitx5 的日用词库基本满足（AUR 上皆有打包，且前者在 Arch CN 源有打包
+- 然后是 Felix 爬了维基百科制作了[肥猫百万大词库](https://github.com/felixonmars/fcitx5-pinyin-zhwiki)，随后大佬 outloudvi 制作了[萌娘百科词库](https://github.com/outloudvi/fcitx5-pinyin-moegirl)，Fcitx5 的日用词库基本满足（AUR 上皆有打包，且在 Arch CN 源有打包
 - 肥猫大词库中的[一个讨论](https://github.com/felixonmars/fcitx5-pinyin-zhwiki/issues/6)促使Fcitx5引入了一项新功能——根据前缀生成候选项，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-prefix-input.webp)
 这个功能我觉得对于长词输入是很棒的
 - 添加了类似搜狗U模式的拆字模式，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-chaizi.webp)
 - 还有一件事是 Fcitx5 可以使用 `fcitx`, `fcitx5`, `ibus` 的输入法模块（感觉黑科技
+
+## 正文
 
 在经历了一天的过渡之后，我的主力输入法从 Rime 迁移到了 Fcitx5, 到目前为止体验良好
 
@@ -95,7 +99,7 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 - 安装肥猫百万大词库（墙裂推荐
 - Lua 插件！！！自带日期和时间，另外[推荐几个](https://github.com/glaumar/fcitx5-lua-scripts)，内含进制转换、简易计算器和密码生成器
 
-#### 主题美化
+### 主题美化
 
 有以下几种选择：
 - `kimpanel`(KDE)/`gnome-shell-extension-kimpanel`(Gnome) （同时这也应该是目前 Wayland 下唯一的方案）
@@ -115,22 +119,27 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 - [base16 material darker 主题](https://github.com/btstream/fcitx5-skin-base16-material-darker)
 - 自制主题 ~~（顺便写份主题文档吧~~
 
-以上主题在 AUR 皆有打包
+以上主题在 AUR 皆有打包(似乎目前已有主题在 AUR 上都有打包了
 
-#### 关于配置工具
+### 关于配置工具
 
 开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `kcm-fcitx5` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `kcm-fcitx5` 并不会引入 KDE
 
-#### 倡议
+### 关于 Rime 用户
+
+Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插件支持，几乎是你使用 librime 插件的唯一途径（Arch 官方的 librime 已经打包了 lua 和 octagram 插件
+
+### 倡议
 
 现在的问题是没有（很少有）其他发行版用户尝试 Fcitx5 来找出在其他发行版上的问题…… Arch 上的虫已经捉的差不多了……其他发行版上体验的改进需要你们的参与……
 
 
 先写到这里，有需要再补充
 
-### Change log
+## Change log
 
 - 2020-05-27 15:17 Edit: 增加几个皮肤
 - 2020-06-13 18:27 Edit: 添加拆字模式介绍
 - 2020-07-05 01:17 Edit: 增加几个皮肤，补充 PPA，添加倡议，补充说明一些编译相关问题，添加配置工具说明，补充一些发行版的安装方法
 - 2020-07-05 11:28 Edit: 补充部分特性
+- 2020-07-14 04:10 Edit: 更新部分包的状态，添加 Rime 相关问题

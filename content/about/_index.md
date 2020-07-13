@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "关于我"
 date: 2019-12-05T17:29:55+08:00
 draft: false
 gitinfo: true
@@ -26,7 +26,7 @@ gitinfo: true
 *	菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
 *	会一点 `C` & `C++` & `Lua` ，正在学习 `Rust`
 *   ~~使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)，所用框架为 Fcitx5~~ 老K输入法真香；手机上使用 Gboard
-*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Ch不吃 `fontconfig` 滚回 `Firefox Nightly` ，手机上使用 `Kiwi`
+*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Cr不吃 `fontconfig` 滚回 `Firefox Nightly` ~~硬解真香~~，手机上使用 `Kiwi`
 *   使用的手机是 `Redmi Note 8` with ~~`MIUI 11 @ Android Pie` by `Xiaomi`~~ ~~现在被我刷成了类原生~~ ~~愿你刷机半生，归来仍是MIUI（其实是 `MIUI.eu`~~ crDroid 真香
 *   无神论者
 *   ACG 及其相关宅文化爱好者
@@ -40,7 +40,7 @@ gitinfo: true
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
-*   <!--心理性别认同与生理不一致。  <span class="spoiler">是个男生却想做女孩子呢</span>-->    <span class="spoiler">出过女装</span>
+*   MtF
 *   [十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
 
 ![我的十六型人格测试结果](/images/16-test.webp)
@@ -57,9 +57,10 @@ gitinfo: true
 
 ## 关于我的社交
 
-*   E-Mail: liuhongwu2003@outlook.com
-*   Wikipedia: [Electriccubes](https://zh.wikipedia.org/wiki/User:Electriccubes)
+*   E-Mail: [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
+*   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
+*   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
 *   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes)
 
 ## 关于本站点的搭建
