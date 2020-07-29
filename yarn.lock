@@ -849,7 +849,7 @@
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
-  resolved "https://registry.npm.taobao.org/@sindresorhus/is/download/@sindresorhus/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
+  resolved "https://registry.npm.taobao.org/@sindresorhus/is/download/@sindresorhus/is-0.14.0.tgz?cache=0&sync_timestamp=1595758234190&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sindresorhus%2Fis%2Fdownload%2F%40sindresorhus%2Fis-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha1-n7OjzzEyMoFR81PeRjLgHlIQK+o=
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
@@ -883,9 +883,9 @@
   integrity sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=
 
 "@types/node@*":
-  version "14.0.24"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.24.tgz?cache=0&sync_timestamp=1595281257528&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.24.tgz#b0f86f58564fa02a28b68f8b55d4cdec42e3b9d6"
-  integrity sha1-sPhvWFZPoCooto+LVdTN7ELjudY=
+  version "14.0.26"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.26.tgz?cache=0&sync_timestamp=1595663492153&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.26.tgz#22a3b8a46510da8944b67bfc27df02c34a35331c"
+  integrity sha1-IqO4pGUQ2olEtnv8J98Cw0o1Mxw=
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -1477,9 +1477,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA=
 
 caniuse-lite@^1.0.30001093:
-  version "1.0.30001105"
-  resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001105.tgz?cache=0&sync_timestamp=1595394392159&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001105.tgz#d2cb0b31e5cf2f3ce845033b61c5c01566549abf"
-  integrity sha1-0ssLMeXPLzzoRQM7YcXAFWZUmr8=
+  version "1.0.30001107"
+  resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001107.tgz#809360df7a5b3458f627aa46b0f6ed6d5239da9a"
+  integrity sha1-gJNg33pbNFj2J6pGsPbtbVI52po=
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2105,9 +2105,9 @@ ejs@^2.6.1:
   integrity sha1-SGYSh1c9zFPjZsehrlLDoSDuybo=
 
 electron-to-chromium@^1.3.488:
-  version "1.3.504"
-  resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.504.tgz?cache=0&sync_timestamp=1595420033493&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felectron-to-chromium%2Fdownload%2Felectron-to-chromium-1.3.504.tgz#54d6288202f8453053c006eb862e2e3b7bc867a5"
-  integrity sha1-VNYoggL4RTBTwAbrhi4uO3vIZ6U=
+  version "1.3.510"
+  resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.510.tgz?cache=0&sync_timestamp=1595910980735&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felectron-to-chromium%2Fdownload%2Felectron-to-chromium-1.3.510.tgz#dee781ff8b595c0deb60172b75d50b6889757eda"
+  integrity sha1-3ueB/4tZXA3rYBcrddULaIl1fto=
 
 elliptic@^6.5.2:
   version "6.5.3"
@@ -4517,14 +4517,14 @@ parse-filepath@^1.0.1:
 
 parse-json@^2.2.0:
   version "2.2.0"
-  resolved "https://registry.npm.taobao.org/parse-json/download/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
+  resolved "https://registry.npm.taobao.org/parse-json/download/parse-json-2.2.0.tgz?cache=0&sync_timestamp=1595834688903&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparse-json%2Fdownload%2Fparse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   integrity sha1-9ID0BDTvgHQfhGkJn43qGPVaTck=
   dependencies:
     error-ex "^1.2.0"
 
 parse-json@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.npm.taobao.org/parse-json/download/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
+  resolved "https://registry.npm.taobao.org/parse-json/download/parse-json-4.0.0.tgz?cache=0&sync_timestamp=1595834688903&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparse-json%2Fdownload%2Fparse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
   integrity sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
   dependencies:
     error-ex "^1.3.1"
@@ -5104,7 +5104,7 @@ rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
 
 rollup@^1.31.1:
   version "1.32.1"
-  resolved "https://registry.npm.taobao.org/rollup/download/rollup-1.32.1.tgz?cache=0&sync_timestamp=1595393223006&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-1.32.1.tgz#4480e52d9d9e2ae4b46ba0d9ddeaf3163940f9c4"
+  resolved "https://registry.npm.taobao.org/rollup/download/rollup-1.32.1.tgz?cache=0&sync_timestamp=1595563379870&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-1.32.1.tgz#4480e52d9d9e2ae4b46ba0d9ddeaf3163940f9c4"
   integrity sha1-RIDlLZ2eKuS0a6DZ3erzFjlA+cQ=
   dependencies:
     "@types/estree" "*"
@@ -6001,14 +6001,14 @@ wordwrap@~0.0.2:
 
 workbox-background-sync@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-background-sync/download/workbox-background-sync-5.1.3.tgz#121c5cf439b627f6320ff490be65fd2bd440c6ea"
+  resolved "https://registry.npm.taobao.org/workbox-background-sync/download/workbox-background-sync-5.1.3.tgz?cache=0&sync_timestamp=1595818257183&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-background-sync%2Fdownload%2Fworkbox-background-sync-5.1.3.tgz#121c5cf439b627f6320ff490be65fd2bd440c6ea"
   integrity sha1-Ehxc9Dm2J/YyD/SQvmX9K9RAxuo=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-broadcast-update@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-broadcast-update/download/workbox-broadcast-update-5.1.3.tgz#312e0f065f06a6fb04a050143c84aa6ba0ed8add"
+  resolved "https://registry.npm.taobao.org/workbox-broadcast-update/download/workbox-broadcast-update-5.1.3.tgz?cache=0&sync_timestamp=1595818275544&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-broadcast-update%2Fdownload%2Fworkbox-broadcast-update-5.1.3.tgz#312e0f065f06a6fb04a050143c84aa6ba0ed8add"
   integrity sha1-MS4PBl8GpvsEoFAUPISqa6Dtit0=
   dependencies:
     workbox-core "^5.1.3"
@@ -6057,26 +6057,26 @@ workbox-build@^5.1.3:
 
 workbox-cacheable-response@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-cacheable-response/download/workbox-cacheable-response-5.1.3.tgz#79ec05c9f22796833d653e7cad43774a8f8bf7db"
+  resolved "https://registry.npm.taobao.org/workbox-cacheable-response/download/workbox-cacheable-response-5.1.3.tgz?cache=0&sync_timestamp=1595818257538&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-cacheable-response%2Fdownload%2Fworkbox-cacheable-response-5.1.3.tgz#79ec05c9f22796833d653e7cad43774a8f8bf7db"
   integrity sha1-eewFyfInloM9ZT58rUN3So+L99s=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-core@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-core/download/workbox-core-5.1.3.tgz#0607acd0018c149162777fe4aae08553bd1559f5"
+  resolved "https://registry.npm.taobao.org/workbox-core/download/workbox-core-5.1.3.tgz?cache=0&sync_timestamp=1595818257917&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-core%2Fdownload%2Fworkbox-core-5.1.3.tgz#0607acd0018c149162777fe4aae08553bd1559f5"
   integrity sha1-Bges0AGMFJFid3/kquCFU70VWfU=
 
 workbox-expiration@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-expiration/download/workbox-expiration-5.1.3.tgz#c793eef17513de86c9c1b8254eb2c9ba3ed17568"
+  resolved "https://registry.npm.taobao.org/workbox-expiration/download/workbox-expiration-5.1.3.tgz?cache=0&sync_timestamp=1595818276169&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-expiration%2Fdownload%2Fworkbox-expiration-5.1.3.tgz#c793eef17513de86c9c1b8254eb2c9ba3ed17568"
   integrity sha1-x5Pu8XUT3obJwbglTrLJuj7RdWg=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-google-analytics@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-google-analytics/download/workbox-google-analytics-5.1.3.tgz#dba0cadcf438d14389f2f2da0fd9c8cb605d35e6"
+  resolved "https://registry.npm.taobao.org/workbox-google-analytics/download/workbox-google-analytics-5.1.3.tgz?cache=0&sync_timestamp=1595818258108&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-google-analytics%2Fdownload%2Fworkbox-google-analytics-5.1.3.tgz#dba0cadcf438d14389f2f2da0fd9c8cb605d35e6"
   integrity sha1-26DK3PQ40UOJ8vLaD9nIy2BdNeY=
   dependencies:
     workbox-background-sync "^5.1.3"
@@ -6086,35 +6086,35 @@ workbox-google-analytics@^5.1.3:
 
 workbox-navigation-preload@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-navigation-preload/download/workbox-navigation-preload-5.1.3.tgz#8e49b935aaef16ac614d06db4a0677cbd59f9cae"
+  resolved "https://registry.npm.taobao.org/workbox-navigation-preload/download/workbox-navigation-preload-5.1.3.tgz?cache=0&sync_timestamp=1595818258904&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-navigation-preload%2Fdownload%2Fworkbox-navigation-preload-5.1.3.tgz#8e49b935aaef16ac614d06db4a0677cbd59f9cae"
   integrity sha1-jkm5NarvFqxhTQbbSgZ3y9WfnK4=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-precaching@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-precaching/download/workbox-precaching-5.1.3.tgz#08f0b48f4a390872a994c4a6ce8e43d08c6cba57"
+  resolved "https://registry.npm.taobao.org/workbox-precaching/download/workbox-precaching-5.1.3.tgz?cache=0&sync_timestamp=1595818254472&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-precaching%2Fdownload%2Fworkbox-precaching-5.1.3.tgz#08f0b48f4a390872a994c4a6ce8e43d08c6cba57"
   integrity sha1-CPC0j0o5CHKplMSmzo5D0Ixsulc=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-range-requests@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-range-requests/download/workbox-range-requests-5.1.3.tgz#f0fc6370ea549d002af1fe902b4ee94bfef6e006"
+  resolved "https://registry.npm.taobao.org/workbox-range-requests/download/workbox-range-requests-5.1.3.tgz?cache=0&sync_timestamp=1595818254628&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-range-requests%2Fdownload%2Fworkbox-range-requests-5.1.3.tgz#f0fc6370ea549d002af1fe902b4ee94bfef6e006"
   integrity sha1-8PxjcOpUnQAq8f6QK07pS/724AY=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-routing@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-routing/download/workbox-routing-5.1.3.tgz#9946da0e9ace45af3db09cc0b4bdc4696723e1f7"
+  resolved "https://registry.npm.taobao.org/workbox-routing/download/workbox-routing-5.1.3.tgz?cache=0&sync_timestamp=1595818254888&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-routing%2Fdownload%2Fworkbox-routing-5.1.3.tgz#9946da0e9ace45af3db09cc0b4bdc4696723e1f7"
   integrity sha1-mUbaDprORa89sJzAtL3EaWcj4fc=
   dependencies:
     workbox-core "^5.1.3"
 
 workbox-strategies@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-strategies/download/workbox-strategies-5.1.3.tgz#220cc9f5519ed76f2452ccb9407a5fd967c37110"
+  resolved "https://registry.npm.taobao.org/workbox-strategies/download/workbox-strategies-5.1.3.tgz?cache=0&sync_timestamp=1595818228667&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-strategies%2Fdownload%2Fworkbox-strategies-5.1.3.tgz#220cc9f5519ed76f2452ccb9407a5fd967c37110"
   integrity sha1-IgzJ9VGe128kUsy5QHpf2WfDcRA=
   dependencies:
     workbox-core "^5.1.3"
@@ -6122,7 +6122,7 @@ workbox-strategies@^5.1.3:
 
 workbox-streams@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-streams/download/workbox-streams-5.1.3.tgz#8f381d395ea2e57106b7b6542b9ffcd769a3047b"
+  resolved "https://registry.npm.taobao.org/workbox-streams/download/workbox-streams-5.1.3.tgz?cache=0&sync_timestamp=1595818255263&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-streams%2Fdownload%2Fworkbox-streams-5.1.3.tgz#8f381d395ea2e57106b7b6542b9ffcd769a3047b"
   integrity sha1-jzgdOV6i5XEGt7ZUK5/812mjBHs=
   dependencies:
     workbox-core "^5.1.3"
@@ -6130,12 +6130,12 @@ workbox-streams@^5.1.3:
 
 workbox-sw@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-sw/download/workbox-sw-5.1.3.tgz#7bffbf034f2f5b58e1734b5b86d240019a5332bb"
+  resolved "https://registry.npm.taobao.org/workbox-sw/download/workbox-sw-5.1.3.tgz?cache=0&sync_timestamp=1595818255535&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-sw%2Fdownload%2Fworkbox-sw-5.1.3.tgz#7bffbf034f2f5b58e1734b5b86d240019a5332bb"
   integrity sha1-e/+/A08vW1jhc0tbhtJAAZpTMrs=
 
 workbox-window@^5.1.3:
   version "5.1.3"
-  resolved "https://registry.npm.taobao.org/workbox-window/download/workbox-window-5.1.3.tgz#24a2acb2903b0ff2789a4ce32f355621e769eb23"
+  resolved "https://registry.npm.taobao.org/workbox-window/download/workbox-window-5.1.3.tgz?cache=0&sync_timestamp=1595818274688&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fworkbox-window%2Fdownload%2Fworkbox-window-5.1.3.tgz#24a2acb2903b0ff2789a4ce32f355621e769eb23"
   integrity sha1-JKKsspA7D/J4mkzjLzVWIedp6yM=
   dependencies:
     workbox-core "^5.1.3"
