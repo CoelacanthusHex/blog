@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "yarn run build && npm run ipfs-deploy"
+  command = "yarn run build && yarn run ipfs-deploy"
 #  command = "yarn run build"
 
 [context.production.environment]
