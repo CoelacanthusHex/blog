@@ -51,6 +51,8 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 
 开发者老K有一篇 [官方博文](https://www.csslayer.info/wordpress/fcitx-dev/%e5%a6%82%e4%bd%95%e7%8e%b0%e5%9c%a8%e5%b0%b1%e5%9c%a8-arch-linux-%e7%94%a8%e4%b8%8a-fcitx-5/) 可供参考，此外 Arch Linux CN 提供了 Git 版本的打包，虽然 Fcitx5 还没有发布正式版，但是Arch的`[community]`源已经提供了打包
 
+可 `sudo pacman -S fcitx5-im fcitx5-chinese-addons` 直接安装，另外 CN 源有词库可用 `sudo pacman -S fcitx5-pinyin-{zhwiki,moegirl}`
+
 #### Ubuntu
 
 李先生有一篇 [如何现在就在 Ubuntu 20.04 用上 Fcitx 5](https://plumz.me/archives/11740/)
@@ -123,7 +125,7 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 ### 关于配置工具
 
-开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `kcm-fcitx5` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `kcm-fcitx5` 并不会引入 KDE
+开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `fcitx5-configtool` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `fcitx5-configtool` 并不会引入 KDE
 
 ### 关于 Rime 用户
 
@@ -143,3 +145,4 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插�
 - 2020-07-05 01:17 Edit: 增加几个皮肤，补充 PPA，添加倡议，补充说明一些编译相关问题，添加配置工具说明，补充一些发行版的安装方法
 - 2020-07-05 11:28 Edit: 补充部分特性
 - 2020-07-14 04:10 Edit: 更新部分包的状态，添加 Rime 相关问题
+- 2020-08-07 11:04 Edit: 更新 `kcm-fcitx5` 到 `fcitx5-configtool` 的包名变更，添加词库安装方案（Arch）
