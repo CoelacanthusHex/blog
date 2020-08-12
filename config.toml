@@ -1184,6 +1184,9 @@ uglyURLs = false
     # 说明：「诗意人生」和「视频片段」首页布局
     #      的首页没有页脚
     
+    # 是否显示
+    displayFooter = true
+    
     # 是否在首页显示
     displayFooterInHome = true
 
