@@ -149,3 +149,4 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插�
 - 2020-07-05 11:28 Edit: 补充部分特性
 - 2020-07-14 04:10 Edit: 更新部分包的状态，添加 Rime 相关问题
 - 2020-08-07 11:04 Edit: 更新 `kcm-fcitx5` 到 `fcitx5-configtool` 的包名变更，添加词库安装方案（Arch）
+- 2020-08-12 18:17 Edit: 更新 Fedora 打包状态
