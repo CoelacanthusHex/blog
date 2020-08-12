@@ -89,7 +89,10 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 #### Fedora and etc.
 
-目前似乎无人打包，自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
+~~目前似乎无人打包，~~
+已经有打包者在尝试打包了 Ref: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
+
+自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
 
 ### 关于设置
 
