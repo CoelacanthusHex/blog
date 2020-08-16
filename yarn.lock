@@ -227,6 +227,13 @@ blakejs@^1.1.0:
   resolved "https://registry.npm.taobao.org/blakejs/download/blakejs-1.1.0.tgz#69df92ef953aa88ca51a32df6ab1c54a155fc7a5"
   integrity sha1-ad+S75U6qIylGjLfarHFShVfx6U=
 
+blob-to-it@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/blob-to-it/download/blob-to-it-0.0.1.tgz#27067ec8f8c4ed008d42eb2a7227fc9df3b7fa25"
+  integrity sha1-JwZ+yPjE7QCNQusqcif8nfO3+iU=
+  dependencies:
+    browser-readablestream-to-it "^0.0.1"
+
 borc@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/borc/download/borc-2.1.2.tgz#6ce75e7da5ce711b963755117dd1b187f6f8cf19"
@@ -261,6 +268,11 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
+
+browser-readablestream-to-it@0.0.1, browser-readablestream-to-it@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/browser-readablestream-to-it/download/browser-readablestream-to-it-0.0.1.tgz#90e5f37838115241686e219e040f155c087c1ca4"
+  integrity sha1-kOXzeDgRUkFobiGeBA8VXAh8HKQ=
 
 bs58@^4.0.1:
   version "4.0.1"
@@ -499,7 +511,7 @@ concat-stream@^2.0.0:
 
 configstore@^5.0.1:
   version "5.0.1"
-  resolved "https://registry.npm.taobao.org/configstore/download/configstore-5.0.1.tgz#d365021b5df4b98cdd187d6a3b0e3f6a7cc5ed96"
+  resolved "https://registry.npm.taobao.org/configstore/download/configstore-5.0.1.tgz?cache=0&sync_timestamp=1597431353810&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fconfigstore%2Fdownload%2Fconfigstore-5.0.1.tgz#d365021b5df4b98cdd187d6a3b0e3f6a7cc5ed96"
   integrity sha1-02UCG130uYzdGH1qOw4/anzF7ZY=
   dependencies:
     dot-prop "^5.2.0"
@@ -1004,14 +1016,19 @@ ipfs-cluster-api@0.0.9:
     qs "^6.5.1"
 
 ipfs-core-utils@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npm.taobao.org/ipfs-core-utils/download/ipfs-core-utils-0.3.0.tgz#4995b5e41df0716a4e448620ff608b27ae974cd1"
-  integrity sha1-SZW15B3wcWpORIYg/2CLJ66XTNE=
+  version "0.3.1"
+  resolved "https://registry.npm.taobao.org/ipfs-core-utils/download/ipfs-core-utils-0.3.1.tgz#d163c90fdd449a6acec267e1fd6c79c749502fc2"
+  integrity sha1-0WPJD91EmmrOwmfh/Wx5x0lQL8I=
   dependencies:
+    blob-to-it "0.0.1"
+    browser-readablestream-to-it "0.0.1"
     buffer "^5.6.0"
     cids "^0.8.3"
     err-code "^2.0.0"
     ipfs-utils "^2.2.2"
+    it-all "^1.0.1"
+    it-map "^1.0.0"
+    it-peekable "0.0.1"
 
 ipfs-deploy@^8.0.1:
   version "8.0.1"
@@ -1076,9 +1093,9 @@ ipfs-http-client@^45.0.0:
     stream-to-it "^0.2.0"
 
 ipfs-utils@^2.2.2:
-  version "2.3.1"
-  resolved "https://registry.npm.taobao.org/ipfs-utils/download/ipfs-utils-2.3.1.tgz#999951da4461b5901a5ad38329e247b5c14b7bd1"
-  integrity sha1-mZlR2kRhtZAaWtODKeJHtcFLe9E=
+  version "2.4.0"
+  resolved "https://registry.npm.taobao.org/ipfs-utils/download/ipfs-utils-2.4.0.tgz#113db5f5625b1bf0411a6d6dbd5317dfff5287f9"
+  integrity sha1-ET219WJbG/BBGm1tvVMX3/9Sh/k=
   dependencies:
     abort-controller "^3.0.0"
     any-signal "^1.1.0"
@@ -1088,6 +1105,7 @@ ipfs-utils@^2.2.2:
     is-electron "^2.2.0"
     iso-url "^0.4.7"
     it-glob "0.0.8"
+    it-to-stream "^0.1.2"
     merge-options "^2.0.0"
     nanoid "^3.1.3"
     node-fetch "^2.6.0"
@@ -1281,7 +1299,7 @@ iso-url@^0.4.7, iso-url@~0.4.7:
   resolved "https://registry.npm.taobao.org/iso-url/download/iso-url-0.4.7.tgz#de7e48120dae46921079fe78f325ac9e9217a385"
   integrity sha1-3n5IEg2uRpIQef548yWsnpIXo4U=
 
-it-all@^1.0.2:
+it-all@^1.0.1, it-all@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/it-all/download/it-all-1.0.2.tgz#4e86f4cd1a18daa629ddc035b7f3465a24eb30ff"
   integrity sha1-Tob0zRoY2qYp3cA1t/NGWiTrMP8=
@@ -1305,6 +1323,16 @@ it-last@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/it-last/download/it-last-1.0.2.tgz#4f4a38274d3e7acc185455d64b2494dfa0943573"
   integrity sha1-T0o4J00+eswYVFXWSySU36CUNXM=
+
+it-map@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/it-map/download/it-map-1.0.2.tgz#c390d972b5362cf0bef4f54b62f00cec2e2fd10e"
+  integrity sha1-w5DZcrU2LPC+9PVLYvAM7C4v0Q4=
+
+it-peekable@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/it-peekable/download/it-peekable-0.0.1.tgz#e3f91583d172444b9cd894ed2df6e26f0c176617"
+  integrity sha1-4/kVg9FyREuc2JTtLfbibwwXZhc=
 
 it-reader@^2.0.0:
   version "2.1.0"
@@ -1332,7 +1360,7 @@ it-to-buffer@^1.0.0:
   dependencies:
     buffer "^5.5.0"
 
-it-to-stream@^0.1.1:
+it-to-stream@^0.1.1, it-to-stream@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npm.taobao.org/it-to-stream/download/it-to-stream-0.1.2.tgz#7163151f75b60445e86b8ab1a968666acaacfe7b"
   integrity sha1-cWMVH3W2BEXoa4qxqWhmasqs/ns=
@@ -1454,9 +1482,9 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash@^4.17.19:
-  version "4.17.19"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.19.tgz?cache=0&sync_timestamp=1594226832494&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha1-5I3e2+MLMyF4PFtDAfvTU7weSks=
+  version "4.17.20"
+  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz?cache=0&sync_timestamp=1597336097104&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
 
 log-symbols@^3.0.0:
   version "3.0.0"
@@ -1731,9 +1759,9 @@ ndjson@^1.5.0:
     split2 "^2.1.0"
     through2 "^2.0.3"
 
-"neat-frame@https://github.com/agentofuser/neat-frame#wrap-ansi-options":
+"neat-frame@git+https://github.com/agentofuser/neat-frame.git#wrap-ansi-options":
   version "1.0.2"
-  resolved "https://github.com/agentofuser/neat-frame#b244ca11078bd35f63b2d7cb22d5e4b5c12ae2aa"
+  resolved "git+https://github.com/agentofuser/neat-frame.git#b244ca11078bd35f63b2d7cb22d5e4b5c12ae2aa"
   dependencies:
     inspect-with-kind "^1.0.5"
     merge-options "^1.0.1"
