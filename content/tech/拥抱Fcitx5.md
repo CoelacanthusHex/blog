@@ -108,7 +108,7 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 #### Fedora and etc.
 
 ~~目前似乎无人打包，~~
-已经有打包者在尝试打包了 Ref: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)，
+已经有打包者在尝试打包了[^1]，
 现在 Copr 有包了 [yanqiyu/fcitx5](https://copr.fedorainfracloud.org/coprs/yanqiyu/fcitx5/)
 
 
@@ -155,7 +155,13 @@ PS2: Ubuntu 20.04 打包的版本未打包配置工具。(不知道他们怎么�
 
 ### 关于 Rime 用户
 
-Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插件支持，几乎是你使用 librime 插件的唯一途径（Arch 官方的 librime 已经打包了 lua 和 octagram 插件
+Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` 插件支持，几乎是你使用 `librime` 插件的唯一途径（Arch 官方的 `librime` 已经打包了 `lua` 和 `octagram` 插件
+
+### FAQ
+
+- 在5月25日之前的 fcitx5 的主题代码中存在 bug [fcitx/fcitx5#65](https://github.com/fcitx/fcitx5/issues/65)，如果主题中直接使用了 RGB 颜色代码，那么显示时颜色会出现问题，表现出类似反色的效果。
+该问题在5月25日修复[^2]；
+如果是 [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color) 用户，可 checkout 至 [hosxy/Fcitx5-Material-Color#commit=e57e56](https://github.com/hosxy/Fcitx5-Material-Color/commit/e57e5674f003a3e9b2d10faf31fcf588023fed06) 或更新 fcitx5 使用。[^3]
 
 ### 倡议
 
@@ -175,3 +181,9 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插�
 - 2020-08-12 18:17 Edit: 更新 Fedora 打包状态
 - 2020-08-16 12:37 Edit: 更新 Fedora 打包状态（Copr），更新 openSUSE 打包状态（M17N），补充关于 Ubuntu 20.04 中配置工具问题的解释，添加符号表
 - 2020-08-16 14:20 Edit: 添加来自一个朋友的安装配置方法（Ubuntu）
+- 2020-08-16 19:59 Edit: 更新一个与主题显示有关的 bug
+
+---
+[^1]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
+[^2]: [fcitx/fcitx5#commit=bd83a9](https://github.com/fcitx/fcitx5/commit/bd83a9841e1dc3e7296174d32f5ee7655f680689)
+[^3]: 群内相关讨论链接：[https://t.me/loverime/17779](https://t.me/loverime/17779)
