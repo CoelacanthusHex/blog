@@ -30,6 +30,7 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 - 添加了类似搜狗U模式的拆字模式，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-chaizi.webp)
 - 还有一件事是 Fcitx5 可以使用 `fcitx`, `fcitx5`, `ibus` 的输入法模块（感觉黑科技
+- 我从 rime 移植过来一份[符号表](https://github.com/ayalhw/dotfiles/blob/master/fcitx5/.local/share/fcitx5/pinyin/symbolic.dict.txt)，这样输入就方便了很多
 
 ## 正文
 
@@ -57,7 +58,24 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 
 李先生有一篇 [如何现在就在 Ubuntu 20.04 用上 Fcitx 5](https://plumz.me/archives/11740/)
 
-hosxy 大佬提供了[一个 PPA](https://launchpad.net/~hosxy/+archive/ubuntu/test)，将 Debian Sid 的 Fcitx5 port 到 Ubuntu 20.04 (Ubuntu 官方源中的 Fcitx5 是较旧版本，而 Fcitx5 最近几个月活跃开发并更新，很多东西都跟不上时代了 （ 与此相关的是一个 [bug fix](https://github.com/fcitx/libime/commit/0a186aadf8891df53dab6f832280fae30bd3d9d8) 修正了一个拼音：聒噪（guo zao）仅记录了古音“聒（gua）”
+hosxy 大佬提供了[一个 PPA](https://launchpad.net/~hosxy/+archive/ubuntu/test)，将 Debian Sid 的 Fcitx5 port 到 Ubuntu 20.04 (Ubuntu 官方源中的 Fcitx5 是较旧版本，而 Fcitx5 最近几个月活跃开发并更新，很多东西都跟不上时代了 （ 与此相关的是一个 [bug fix](https://github.com/fcitx/libime/commit/0a186aadf8891df53dab6f832280fae30bd3d9d8) 修正了一个拼音：聒噪（guo zao）仅记录了古音“聒（gua）”，此外，Ubuntu 20.04 打包的版本未打包配置工具。
+
+
+来自一个朋友的安装配置方法（不能保证一定可行）：
+```
+用Ubuntu官方源安装fcitx5
+
+sudo apt install fcitx5 fcitx5-pinyin fcitx5-chinese-addons fcitx5-frontend-gtk2 fcitx5-frontend-gtk3 fcitx5-frontend-qt5
+
+然后再添加ppa安装kde-config-fcitx5
+
+sudo add-apt-repository ppa:hosxy/test
+
+sudo apt update
+
+然后千万不要升级任何软件包
+
+```
 
 若要尝试自行编译，请参考 Debian 官方包打包脚本
 
@@ -79,7 +97,7 @@ PS2: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.c
 
 #### openSUSE
 
-M17N 源有打包
+M17N 源有打包，但是似乎遇上了 `json-c` 的依赖问题，等待维护者更新中
 
 #### Manjaro && other distributions based on Arch
 
@@ -90,7 +108,9 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 #### Fedora and etc.
 
 ~~目前似乎无人打包，~~
-已经有打包者在尝试打包了 Ref: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
+已经有打包者在尝试打包了 Ref: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)，
+现在 Copr 有包了 [yanqiyu/fcitx5](https://copr.fedorainfracloud.org/coprs/yanqiyu/fcitx5/)
+
 
 自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
 
@@ -130,6 +150,9 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `fcitx5-configtool` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `fcitx5-configtool` 并不会引入 KDE
 
+PS1: ~~老K终于想起来把那个极易引起误解的 repo 名改掉了~~
+PS2: Ubuntu 20.04 打包的版本未打包配置工具。(不知道他们怎么想的)
+
 ### 关于 Rime 用户
 
 Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插件支持，几乎是你使用 librime 插件的唯一途径（Arch 官方的 librime 已经打包了 lua 和 octagram 插件
@@ -150,3 +173,5 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 librime 插�
 - 2020-07-14 04:10 Edit: 更新部分包的状态，添加 Rime 相关问题
 - 2020-08-07 11:04 Edit: 更新 `kcm-fcitx5` 到 `fcitx5-configtool` 的包名变更，添加词库安装方案（Arch）
 - 2020-08-12 18:17 Edit: 更新 Fedora 打包状态
+- 2020-08-16 12:37 Edit: 更新 Fedora 打包状态（Copr），更新 openSUSE 打包状态（M17N），补充关于 Ubuntu 20.04 中配置工具问题的解释，添加符号表
+- 2020-08-16 14:20 Edit: 添加来自一个朋友的安装配置方法（Ubuntu）
