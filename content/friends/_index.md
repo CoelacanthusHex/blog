@@ -16,6 +16,9 @@ gitinfo: true
 ### [ChungZH](https://chungzh.cn/)
 >   OIer, 独立开发者，自己写了个编辑器，他的 bucket 里有 lemon 哦！
 
+### [KiteAB](https://kiteab.ga/)
+>   自称是个普通的小学生，实际上是个大佬呢
+
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
 
