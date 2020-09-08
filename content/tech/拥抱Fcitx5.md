@@ -113,7 +113,9 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 现在 Copr 有包了 [yanqiyu/fcitx5](https://copr.fedorainfracloud.org/coprs/yanqiyu/fcitx5/)，
 
-目前已在 [Fedora 32 testing 有包](https://bodhi.fedoraproject.org/updates/FEDORA-2020-5465c02630)[^fedora-32-packgae-in-telegram]，
+~~目前已在 [Fedora 32 testing 有包](https://bodhi.fedoraproject.org/updates/FEDORA-2020-5465c02630)[^fedora-32-packgae-in-telegram]，~~
+
+目前已在 [Fedora 32 stable 有包](https://bodhi.fedoraproject.org/updates/FEDORA-2020-5465c02630)，
 
 打包者写有一篇介绍博客 [如何下周就在 Fedora 32 用上 Fcitx 5](https://yanqiyu.info/2020/08/30/fcitx5-fedora/)（这文章名颇有 Fcitx5 博客一贯风格
 
@@ -189,6 +191,7 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-08-16 14:20 Edit: 添加来自一个朋友的安装配置方法（Ubuntu）
 - 2020-08-16 19:59 Edit: 更新一个与主题显示有关的 bug
 - 2020-08-31 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 testing）
+- 2020-09-08 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 stable）
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
