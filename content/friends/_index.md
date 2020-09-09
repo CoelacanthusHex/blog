@@ -13,6 +13,9 @@ gitinfo: true
 ### [三日月綾香](https://ayaka.shn.hk/)
 >   好耶，是可爱的三日月綾香姐姐
 
+### [Antares](https://antares.moe/)
+>   ~~AC 塞高~~
+
 ### [ChungZH](https://chungzh.cn/)
 >   OIer, 独立开发者，自己写了个编辑器，他的 bucket 里有 lemon 哦！
 
