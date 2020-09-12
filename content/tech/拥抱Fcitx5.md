@@ -2,7 +2,7 @@
 title: "拥抱 Fcitx5"
 date: 2020-05-26T23:46:00+08:00
 draft: false
-toc: false
+toc: true
 gitinfo: true
 slug: "welcome-to-fcitx5"
 tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
@@ -159,7 +159,19 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 开发者明确表示不会考虑开发基于 GTK 的图形配置工具，但在 `fcitx5-configtool` 中可以同时编译出 KCM 版本和纯 Qt 版本的配置工具（至于会不会依赖 KDE 就看你的发行版拆不拆包了（Arch 的做法是 KDE 相关依赖作为可选依赖，因此其他桌面环境用户安装 `fcitx5-configtool` 并不会引入 KDE
 
 PS1: ~~老K终于想起来把那个极易引起误解的 repo 名改掉了~~
+
 PS2: Ubuntu 20.04 打包的版本未打包配置工具。(不知道他们怎么想的)
+
+### 关于从 Fcitx4 迁移
+
+最新版本的 `fcitx5-configtool` 已经添加了迁移工具[^fcitx5-migrator]，可执行文件名为 `fcitx5-migrator`，GUI 工具。
+
+目前支持 pinyin, skk, rime, kkc, table(码表输入)和全局设置的迁移。
+
+<video src="/videos/fcitx5-migrator.webm" loop controls preload=metadata>
+    <source src="/videos/fcitx5-migrator.mp4" type="video/mp4">
+    <p>Your browser doesn't support HTML5 video.</p>
+</video>
 
 ### 关于 Rime 用户
 
@@ -192,10 +204,12 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-08-16 19:59 Edit: 更新一个与主题显示有关的 bug
 - 2020-08-31 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 testing）
 - 2020-09-08 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 stable）
+- 2020-09-12 12:45 Edit: 添加迁移工具（fcitx5-configtool/fcitx5-migrator）
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
-[^2]: [fcitx/fcitx5#commit=bd83a9](https://github.com/fcitx/fcitx5/commit/bd83a9841e1dc3e7296174d32f5ee7655f680689)
+[^2]: [fcitx/fcitx5@bd83a9](https://github.com/fcitx/fcitx5/commit/bd83a9841e1dc3e7296174d32f5ee7655f680689)
 [^3]: 群内相关讨论链接：[https://t.me/loverime/17779](https://t.me/loverime/17779)
 [^fedora-32-packgae-in-telegram]: 群内相关讨论链接：[https://t.me/fedorazh/65263](https://t.me/fedorazh/65263)
+[^fcitx5-migrator]: [fcitx/fcitx5-configtool@8f113a](https://github.com/fcitx/fcitx5-configtool/commit/8f113a78e334ecc962d5aa92022887ca077df588)
 
