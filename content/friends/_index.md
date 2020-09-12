@@ -19,6 +19,9 @@ gitinfo: true
 ### [Antares](https://antares.moe/)
 >   ~~AC 塞高~~
 
+### [Karuboniru's Blog](https://yanqiyu.info/)
+>   某学不懂物理的学生
+
 ### [一叶知秋](https://blog.rain.cx/)
 >   秋雨落的个人博客（感觉和咱爱好差不多呢
 
@@ -86,4 +89,4 @@ gitinfo: true
 
 #### 添加友链请发送邮件至 [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com)
 
-图标: ![](https://blog.lhwcrt.top/icon.png)
+图标: [Link](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)](/icon.webp)
