@@ -168,7 +168,8 @@ PS2: Ubuntu 20.04 打包的版本未打包配置工具。(不知道他们怎么�
 
 目前支持 pinyin, skk, rime, kkc, table(码表输入)和全局设置的迁移。
 
-<video src="/videos/fcitx5-migrator.webm" loop controls preload=metadata>
+<video loop controls preload=metadata>
+    <source src="/videos/fcitx5-migrator.webm" type="video/webm">
     <source src="/videos/fcitx5-migrator.mp4" type="video/mp4">
     <p>Your browser doesn't support HTML5 video.</p>
 </video>
