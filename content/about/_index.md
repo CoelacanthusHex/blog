@@ -62,6 +62,7 @@ gitinfo: true
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
 *   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes)
+*   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">Coelacanthus</a>
 
 ## 关于本站点的搭建
 
