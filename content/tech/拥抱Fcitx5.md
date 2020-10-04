@@ -97,7 +97,7 @@ PS2: 若尝试在 Ubuntu 18.04 编译，请注意[依赖问题](https://github.c
 
 #### openSUSE
 
-M17N 源有打包，但是似乎遇上了 `json-c` 的依赖问题，等待维护者更新中
+M17N 源有打包，~~但是似乎遇上了 `json-c` 的依赖问题，等待维护者更新中~~已修复
 
 #### Manjaro && other distributions based on Arch
 
@@ -184,6 +184,8 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 该问题在5月25日修复[^2]；
 如果是 [Material Color 主题](https://github.com/hosxy/Fcitx5-Material-Color) 用户，可 checkout 至 [hosxy/Fcitx5-Material-Color#commit=e57e56](https://github.com/hosxy/Fcitx5-Material-Color/commit/e57e5674f003a3e9b2d10faf31fcf588023fed06) 或更新 fcitx5 使用。[^3]
 
+- 在10月2日之前的 Fcitx5 中，词库不会预先加载，而是会在第一次切换到对应输入法时加载，这使得使用较大词库时最初几秒不可用，此问题在10月2日修复[^4], 现在 Fcitx5 会在启动时预先加载默认的输入法的词库。
+
 ### 倡议
 
 现在的问题是没有（很少有）其他发行版用户尝试 Fcitx5 来找出在其他发行版上的问题…… Arch 上的虫已经捉的差不多了……其他发行版上体验的改进需要你们的参与……
@@ -206,6 +208,8 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-08-31 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 testing）
 - 2020-09-08 00:46 Edit: 更新 Fedora 打包状态（Fedora 32 stable）
 - 2020-09-12 12:45 Edit: 添加迁移工具（fcitx5-configtool/fcitx5-migrator）
+- 2020-09-29 11:57 Edit: 更新 openSUSE 打包状态（M17N）
+- 2020-10-04 15:58 Edit: 更新关于词典预加载的问题
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
@@ -213,4 +217,5 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 [^3]: 群内相关讨论链接：[https://t.me/loverime/17779](https://t.me/loverime/17779)
 [^fedora-32-packgae-in-telegram]: 群内相关讨论链接：[https://t.me/fedorazh/65263](https://t.me/fedorazh/65263)
 [^fcitx5-migrator]: [fcitx/fcitx5-configtool@8f113a](https://github.com/fcitx/fcitx5-configtool/commit/8f113a78e334ecc962d5aa92022887ca077df588)
+[^4]: [fcitx/fcitx5@982e8cf](https://github.com/fcitx/fcitx5/commit/982e8cf184489c879c91e992ba1e6257535dfdb5)
 
