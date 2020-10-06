@@ -36,11 +36,10 @@ gitinfo: true
 
 ## 关于我的精神方面
 
-*   双性恋，支持 `LGBT` 群体平权 ![LGBT_flag](/images/LGBT.svg) ![Transgender_Pride_flag](/images/Transgender_Pride_flag.svg)
+*   MtF，泛性恋，支持 `LGBT` 群体平权 ![LGBT Flag](/images/LGBT_Flag.svg) ![Transgender Pride Flag](/images/Transgender_Pride_Flag.svg) ![Pansexual Pride Flag](/images/Pansexual_Pride_Flag.svg)
 *   为了自由、和平以及性别平等，全世界人类，联合起来！
 *   是个`抖m`呢
 *   是一个`长发控`、`白丝控`，同时还是个`足控`
-*   MtF
 *   [十六型人格测试](https://www.16personalities.com/ch/)大概是INFP-T：“调停者”
 
 ![我的十六型人格测试结果](/images/16-test.webp)
@@ -61,12 +60,12 @@ gitinfo: true
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
-*   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes)
+<!--- *   V2EX: [electriccubes](https://www.v2ex.com/member/electriccubes) --->
 *   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">Coelacanthus</a>
 
 ## 关于本站点的搭建
 
-[![Generator is Hugo](/images/hugo_badge.svg)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.svg)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.svg)](https://github.com/ayalhw/blog) [![Built on Netlify](/images/netlify_badge.svg)](https://www.netlify.com/)
+[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/ayalhw/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
 <!--
 [![Hosted on IPFS](https://img.shields.io/badge/Hosted%20on-IPFS-65c2cb?&logo=ipfs)](https://ipfs.io/)
 
