@@ -82,8 +82,8 @@ gitinfo: true
 ### [络壳 LockShell](https://lockshell.com/)
 >   %%%
 
-### [Mushroom11s Blog](https://www.mushroom11s.com/)
->   Mushroom11s Blog
+### [噜啦](https://lula.fun/)
+>   生命不息，折腾不止
 
 
 ### [Arch Linux 中文论坛](https://bbs.archlinuxcn.org/index.php)
