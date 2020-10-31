@@ -9,13 +9,13 @@ image:https://img.shields.io/badge/Hosted%20on-IPFS-65c2cb?&logo=ipfs[Hosted on 
 
 Click on any of the links below:
 
-. https://blog.lhwcrt.top/
-. https://ipfs.io/ipns/blog.lhwcrt.top/
-. https://cloudflare-ipfs.com/ipns/blog.lhwcrt.top/
-. https://gateway.pinata.cloud/ipns/blog.lhwcrt.top/
+. https://blog.coelacanthus.moe/
+. https://ipfs.io/ipns/blog.coelacanthus.moe/
+. https://cloudflare-ipfs.com/ipns/blog.coelacanthus.moe/
+. https://gateway.pinata.cloud/ipns/blog.coelacanthus.moe/
 . or whichever https://ipfs.github.io/public-gateway-checker/[Public IPFS Gateway] you like...
 
-Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.lhwcrt.top/  
+Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.coelacanthus.moe/  
 when `ipfs daemon` is running on your machine!
 
 image:https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status[Netlify Status, link=https://app.netlify.com/sites/lhwcrt/deploys]

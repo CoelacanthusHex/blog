@@ -63,4 +63,4 @@ printf("%d\n",max(f[l][x], f[r - (1<<x)+1][x]));
 
 #### 线段树
 
-参见[线段树笔记](https://blog.lhwcrt.top/404.html)
+参见[线段树笔记](https://blog.coelacanthus.moe/404.html)
