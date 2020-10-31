@@ -71,15 +71,15 @@ gitinfo: true
 
 Click on any of the links below:
 
-1. https://blog.lhwcrt.top/
-2. https://ipfs.io/ipns/blog.lhwcrt.top/
-3. https://cloudflare-ipfs.com/ipns/blog.lhwcrt.top/
-4. https://gateway.pinata.cloud/ipns/blog.lhwcrt.top/
+1. https://blog.coelacanthus.moe/
+2. https://ipfs.io/ipns/blog.coelacanthus.moe/
+3. https://cloudflare-ipfs.com/ipns/blog.coelacanthus.moe/
+4. https://gateway.pinata.cloud/ipns/blog.coelacanthus.moe/
 5. or whichever [Public IPFS Gateway](https://ipfs.github.io/public-gateway-checker/) you like...
 
-Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.lhwcrt.top/
+Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.coelacanthus.moe/
 when `ipfs daemon` is running on your machine!
 --->
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status)](https://app.netlify.com/sites/lhwcrt/deploys)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://blog.lhwcrt.top/images/cc-by-nc-sa-88x31.webp" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://blog.coelacanthus.moe/images/cc-by-nc-sa-88x31.webp" /></a>
