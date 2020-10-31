@@ -644,7 +644,7 @@ uglyURLs = false
     trackingCodeType = "gtag"
     # 说明：gtag 或 analytics
 
-    trackingID = "G-L3RLT295X8"
+    trackingID = "UA-154017714-2"
 
 
     ######################################
