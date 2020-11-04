@@ -44,7 +44,7 @@ tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 - 笔画过滤: 参见 [Fcitx5_使用笔画过滤](https://wiki.archlinux.org/index.php?title=Fcitx5_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#%E4%BD%BF%E7%94%A8%E7%AC%94%E7%94%BB%E8%BF%87%E6%BB%A4)
 - 以词定字
 - 查看选中文字的 Unicode 编码：选中文字，然后使用快捷键 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>u</kbd> 可以查看选中文字的编码
-- 更好的支持（Fcitx4 的功能开发已经停止
+- 更好的支持（Fcitx4 已经停止支持
 
 ### 关于安装
 
@@ -210,6 +210,7 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-09-12 12:45 Edit: 添加迁移工具（fcitx5-configtool/fcitx5-migrator）
 - 2020-09-29 11:57 Edit: 更新 openSUSE 打包状态（M17N）
 - 2020-10-04 15:58 Edit: 更新关于词典预加载的问题
+- 2020-11-04 15:04 Edit: Fcitx5 发 5.0 正式版啦
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
