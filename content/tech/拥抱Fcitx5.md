@@ -105,6 +105,10 @@ Manjaro Dev. 应该已经把肥猫的包偷过去了吧（
 
 Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
+#### NixOS
+
+已提交请求，位于 [NixOS/nixpkgs#102626](https://github.com/NixOS/nixpkgs/issues/102626)
+
 #### Fedora and etc.
 
 ~~目前似乎无人打包，~~
@@ -117,7 +121,7 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 目前已在 [Fedora 32 stable 有包](https://bodhi.fedoraproject.org/updates/FEDORA-2020-5465c02630)，
 
-打包者写有一篇介绍博客 [如何下周就在 Fedora 32 用上 Fcitx 5](https://yanqiyu.info/2020/08/30/fcitx5-fedora/)（这文章名颇有 Fcitx5 博客一贯风格
+打包者写有一篇介绍博客 [如何下周就在 Fedora 32 用上 Fcitx 5](https://yanqiyu.info/2020/08/30/fcitx5-fedora/)（这文章名颇有 Fcitx5 博客一贯风格，还有一篇 [如何更加优雅的在 fedora 上安装 fcitx5](https://yanqiyu.info/2020/11/06/fcitx5-fedora-updated/)
 
 
 自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
@@ -211,6 +215,7 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-09-29 11:57 Edit: 更新 openSUSE 打包状态（M17N）
 - 2020-10-04 15:58 Edit: 更新关于词典预加载的问题
 - 2020-11-04 15:04 Edit: Fcitx5 发 5.0 正式版啦
+- 2020-11-06 21:37 Edit: 添加 NixOS 打包状态，更新 Fedora 打包状态
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
