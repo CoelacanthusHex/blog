@@ -6,6 +6,7 @@ toc: true
 gitinfo: true
 slug: "visual-basic-will-die"
 tags: ['Visual Basic', 'History']
+summary: "Visual Basic 的诞生，发展与没落"
 ---
 
 ## 一切的开端
