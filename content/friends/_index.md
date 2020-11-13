@@ -19,6 +19,9 @@ gitinfo: true
 ### [RainbowBird](https://blog.luoling8192.top/)
 >   超可爱
 
+### [小陈的窝](https://be233.com/)
+>   be233\~
+
 ### [Antares](https://antares.moe/)
 >   ~~AC 塞高~~
 
