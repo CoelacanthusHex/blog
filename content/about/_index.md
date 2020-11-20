@@ -21,7 +21,7 @@ gitinfo: true
 
 ## 关于我的一些描述
 
-*   `Linux` 党，主力机是 `Arch Linux`，使用 `Grub 2` 引导，`systemd` 管理进程，~~`linux-ck`~~ `linux-zen with cjktty patch` 内核，`yay` 作为 AUR Helper
+*   `Linux` 党，主力机是 `Arch Linux`，使用 `Grub 2` 引导，`systemd` 管理进程，~~`linux-ck`~~ `linux-zen` 内核，`paru` 作为 AUR Helper
 *	常用网名：~~electriccubes~~ ~~（已废弃，仅 Minecraft 仍在使用）~~ 现在 Minecraft 也换成 CoelacanthusHex 了、~~Transistor && TransistorLogic && GlowDiscourgeTube~~（停用，部分无法更改的论坛上仍用）、Coelacanthus（使用中，大概是不会换了）
 *	菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
 *	会一点 `C` & `C++` & `Lua` ，正在学习 `Rust`
