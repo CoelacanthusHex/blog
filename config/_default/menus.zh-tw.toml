@@ -1,40 +1,40 @@
 #[[main]]
-#    url = "/"
+#    url = "/zh-tw/"
 #    name = "首頁"
 #    weight = 1
 #    pre = "internal"
 #    post = "home"
 #    identifier = "home"
 [[main]]
-    url = "/archives/"
+    url = "/zh-tw/archives/"
     name = "歸檔"
     weight = 2
     pre = "internal"
     post = "archive"
     identifier = "archives"
 #[[main]]
-#    url = "/posts/"
+#    url = "/zh-tw/posts/"
 #    name = "文章"
 #    weight = 3
 #    pre = "internal"
 #    post = "archive"
 #    identifier = "posts"
 [[main]]
-    url = "/tags/"
+    url = "/zh-tw/tags/"
     name = "標籤"
     weight = 5
     pre = "internal"
     post = "tags"
     identifier = "tags"
 [[main]]
-    url = "/friends/"
+    url = "/zh-tw/friends/"
     name = "友鏈"
     weight = 6
     pre = "internal"
     post = "archive"
     identifier = "friends"
 [[main]]
-    url = "/about/"
+    url = "/zh-tw/about/"
     name = "關於"
     weight = 7
     pre = "internal"
