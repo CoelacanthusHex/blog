@@ -1,6 +1,7 @@
 ---
 title: "Friends"
 date: 2019-12-07T15:04:13+08:00
+katex: true
 draft: false
 toc: false
 comment: true
@@ -62,13 +63,13 @@ gitinfo: true
 >   前端爱好者
 
 ### [小方de博客 ](http://fang.blog.miri.site/)
->   Minecraft公益服 $CO_3$ 腐竹，超强的大佬
+>   Minecraft 公益服 $CO_3$ 腐竹，超强的大佬
 
 ### [MySpace](https://www.zkl2333.com/)
 >   一只大佬
 
 ### [zhang0peter的个人博客](https://zhang0peter.com/)
->   学生，喜欢使用Python。  即将入职拼多多。 
+>   学生，喜欢使用 Python。  即将入职拼多多。 
 
 ### [肥鱼Blog](https://www.feiyuyu.net)
 >   但盼风雨来，能留你在此。
