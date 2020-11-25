@@ -7,23 +7,7 @@
     var sentence = document.querySelector("#poem_sentence");
     var info = document.querySelector("#poem_info");
     sentence.innerHTML = result.data.content.replace(/。$/g, "");
-    info.innerHTML =
-      "【" +
-      result.data.origin.dynasty +
-      "】" +
-      result.data.origin.author +
-      "《" +
-      result.data.origin.title +
-      "》";
+    info.innerHTML = "【" + result.data.origin.dynasty + "】" + result.data.origin.author + "《" + result.data.origin.title + "》";
   });
 </script>
 
-<!-- 输入礼花特效 -->
-<!-- script async src="/activate-power-mode.js"></script>
-<script>
-  let input = document.querySelector('textarea');
-  input.oninput = POWERMODE;
-  POWERMODE.colorful = true; // 控制开启/开启礼花特效
-  POWERMODE.shake = false; // 控制开启/关闭屏幕震动特效
-  //document.body.addEventListener("input", POWERMODE);
-</script -->
