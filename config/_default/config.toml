@@ -44,6 +44,7 @@ disablePathToLower = false
 relativeURLs = true
 uglyURLs = false
 
+
 # URL 结构
 [permalinks]
     #categories = "/categories/:slug/"
@@ -175,62 +176,6 @@ uglyURLs = false
 #               的值：`theme-switcher`、
 #               `lang-switcher`、`search`）
 
-[menu]
-    ## 菜单栏
-    #[[menu.main]]
-    #    url = "/"
-    #    name = "首页"
-    #    weight = 1
-    #    pre = "internal"
-    #    post = "home"
-    [[menu.main]]
-        url = "/archives/"
-        name = "归档"
-        weight = 2
-        pre = "internal"
-        post = "archive"
-    #[[menu.main]]
-    #    url = "/posts/"
-    #    name = "文章"
-    #    weight = 3
-    #    pre = "internal"
-    #    post = "archive"
-    #[[menu.main]]
-    #    url = "/categories/"
-    #    name = "分类"
-    #   weight = 4
-    #    pre = "internal"
-    #    post = "th"
-    [[menu.main]]
-        url = "/tags/"
-        name = "标签"
-        weight = 5
-        pre = "internal"
-        post = "tags"
-    [[menu.main]]
-        url = "/friends/"
-        name = "友链"
-        weight = 6
-        pre = "internal"
-        post = "archive"
-    [[menu.main]]
-        url = "/about/"
-        name = "关于"
-        weight = 7
-        pre = "internal"
-        post = "user-circle"
-    [[menu.main]]
-        weight = 8
-        identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 9
-        identifier = "lang-switcher"
-    #[[menu.main]]
-    #    weight = 10
-    #    identifier = "search"
-    #    post = "search"
-
-
 
 ##########################################
 # 主题配置
@@ -309,7 +254,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["爱是一个人的事情，而爱情是两个人的事情。所以，我爱你，与你无关。"]
+    homePoetry = ["爱是一个人的事情", "而爱情是两个人的事情", "所以", "我爱你，与你无关。"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -1230,7 +1175,7 @@ uglyURLs = false
     # 多语言
 
     # 是否开启多语言按钮
-    enableLangToggle = false
+    enableLangToggle = true
 
     # 是否在首页隐藏多语言按钮
     hideLangToggleInHome = false
