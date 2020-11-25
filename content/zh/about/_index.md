@@ -26,8 +26,8 @@ gitinfo: true
 *	菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
 *	会一点 `C` & `C++` & `Lua` ，正在学习 `Rust`
 *   ~~使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)，所用框架为 Fcitx5~~ 老K输入法真香；手机上使用 Gboard
-*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Cr不吃 `fontconfig` 滚回 `Firefox Nightly` ~~硬解真香~~，手机上使用 `Kiwi`
-*   使用的手机是 `Redmi Note 8` with ~~`MIUI 11 @ Android Pie` by `Xiaomi`~~ ~~现在被我刷成了类原生~~ ~~愿你刷机半生，归来仍是MIUI（其实是 `MIUI.eu`~~ crDroid 真香
+*   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Cr不吃 `fontconfig` 滚回 `Firefox Nightly` ~~硬解真香~~，手机上同样使用
+*   使用的手机是 `Redmi Note 8` with ~~`MIUI 11 @ Android Pie` by `Xiaomi`~~ ~~现在被我刷成了类原生~~ 愿你刷机半生，归来仍是MIUI（其实是 `MIUI.eu`
 *   无神论者
 *   ACG 及其相关宅文化爱好者
 *   游戏方面比较喜欢 `Minecraft` ~~然而极度讨厌网易代理的中国版~~ ，2018年寒假入的正版

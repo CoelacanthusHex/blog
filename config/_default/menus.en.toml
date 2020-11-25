@@ -1,0 +1,52 @@
+#[[main]]
+#    url = "/en/"
+#    name = "首页"
+#    weight = 1
+#    pre = "internal"
+#    post = "home"
+#    identifier = "home"
+[[main]]
+    url = "/en/archives/"
+    name = "Archives"
+    weight = 2
+    pre = "internal"
+    post = "archive"
+    identifier = "archives"
+#[[main]]
+#    url = "/en/posts/"
+#    name = "文章"
+#    weight = 3
+#    pre = "internal"
+#    post = "archive"
+#    identifier = "posts"
+[[main]]
+    url = "/en/tags/"
+    name = "Tags"
+    weight = 5
+    pre = "internal"
+    post = "tags"
+    identifier = "tags"
+[[main]]
+    url = "/en/friends/"
+    name = "Friends"
+    weight = 6
+    pre = "internal"
+    post = "archive"
+    identifier = "friends"
+[[main]]
+    url = "/en/about/"
+    name = "About"
+    weight = 7
+    pre = "internal"
+    post = "user-circle"
+    identifier = "about"
+[[main]]
+    weight = 8
+    identifier = "theme-switcher"
+[[main]]
+    weight = 9
+    identifier = "lang-switcher"
+[[main]]
+    weight = 10
+    identifier = "search"
+    post = "search"
