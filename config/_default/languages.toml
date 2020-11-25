@@ -1,0 +1,15 @@
+[zh]
+    contentDir = "content/zh"
+    languageName = "简体中文"
+    languageCode = "zh-CN"
+    weight = 1
+[zh-tw]
+    contentDir = "content/zh-tw"
+    languageName = "繁体中文"
+    languageCode = "zh-TW"
+    weight = 2
+[en]
+    contentDir = "content/en"
+    languageName = "English"
+    languageCode = "en-US"
+    weight = 3
