@@ -136,15 +136,15 @@ uglyURLs = false
     baseName = "rss"
 
 # lunr.js 的搜索索引
-#[outputFormats.SearchIndex]
-#    mediaType = "application/json"
-#    baseName = "search"
+[outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "search"
     
 # Hugo 的输出控制
 [outputs]
     page = ["HTML"]
-    #home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS"]
+    home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
+    #home = ["HTML", "SectionsAtom", "SectionsRSS"]
     section = ["HTML"]
     term = ["HTML"]
 
@@ -1261,7 +1261,7 @@ uglyURLs = false
 
     # 说明：需要开启 `SearchIndex` 的输出
 
-    enableLunrSearch = false
+    enableLunrSearch = true
     # 说明：https://lunrjs.com/
     
     
