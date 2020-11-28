@@ -130,6 +130,10 @@ Parabola 有包，看签名应该 x86_64 的包是从 Arch 拿过去的
 
 自行编译请注意[依赖问题](https://github.com/fcitx/fcitx5-qt/issues/7)
 
+#### Flatpak
+
+有 Flatpak 版本啦，参见 [如何现在就用上 Fcitx 5 (Flatpak)](https://www.csslayer.info/wordpress/fcitx-dev/fcitx5-on-flatpak/)
+
 ### 关于设置
 
 推荐以下设置：
@@ -220,6 +224,7 @@ Fcitx5 相比 Fcitx4 增加了对于动态库形式（即 .so）的 `librime` �
 - 2020-10-04 15:58 Edit: 更新关于词典预加载的问题
 - 2020-11-04 15:04 Edit: Fcitx5 发 5.0 正式版啦
 - 2020-11-06 21:37 Edit: 添加 NixOS 打包状态，更新 Fedora 打包状态
+- 2020-11-29 00:01 Edit: 添加 Flatpak 打包状态
 
 ---
 [^try-package-on-fedora]: [https://t.me/fedorazh/63659](https://t.me/fedorazh/63659)
