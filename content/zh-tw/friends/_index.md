@@ -94,6 +94,6 @@ gitinfo: true
 >   论坛里的 dalao 可强了，有问题来这里就对了
 
 
-#### 新增友鏈請傳送郵件至 [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com)
+#### 新增友鏈請傳送郵件至 [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
 
 圖示: [Link](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)](/icon.webp)
