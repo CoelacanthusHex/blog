@@ -94,6 +94,6 @@ gitinfo: true
 >   论坛里的 dalao 可强了，有问题来这里就对了
 
 
-#### Please send an email to [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com) if you apply for friend link.
+#### Please send an email to [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com) if you apply for friend link.
 
 Icon: [Link](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)](/icon.webp)

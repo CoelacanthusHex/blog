@@ -27,7 +27,7 @@ gitinfo: true
 
 ![My sixteen personality test results](/images/16-test.webp)
 
-*   Depression
+*   Bipolar Disorder
 *   I feel lonely when I am alone, but it’s more painful to be with someone I don’t like
 
 ## About what I hate
@@ -39,7 +39,7 @@ gitinfo: true
 
 ## About my social
 
-*   E-Mail: [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com)
+*   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   Zhihu: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
