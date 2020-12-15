@@ -56,7 +56,7 @@ gitinfo: true
 
 ## 关于我的社交
 
-*   E-Mail: [liuhongwu2003@outlook.com](mailto:liuhongwu2003@outlook.com)
+*   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
 *   GitHub: [@ayalhw](https://github.com/ayalhw/)
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
