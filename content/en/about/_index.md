@@ -9,6 +9,7 @@ gitinfo: true
 
 *   `Linux` user, the main machine is `Arch Linux`, using `Grub 2` to boot, `systemd` to manage the process, ~~`linux-ck`~~ `linux-zen` kernel, `paru` as AUR Helper
 *   Common nickname: ~~electriccubes~~~~ (deprecated, only Minecraft is still in use)~~ Now Minecraft has also been replaced by CoelacanthusHex, ~~Transistor && TransistorLogic && GlowDiscourgeTube~~ (disabled, some forums that cannot be changed It is still used), Coelacanthus (in use, probably will not be changed)
+*   English name? Maybe it will be Celeste Liu or Iris Liu. Or just call me ID Coelacanthus? I haven't even made a decision yet...
 *   OIer
 *   Know a little `C` & `C++` & `Lua`, and I am learning `Rust`
 *   ~~The input method used is [`Rime` input method engine](https://rime.im/), the framework used is Fcitx5~~ The Fcitx5 input method is really sweet; use Gboard on the phone
