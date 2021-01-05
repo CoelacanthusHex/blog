@@ -23,6 +23,7 @@ gitinfo: true
 
 *   `Linux` 黨，主力機是 `Arch Linux`，使用 `Grub 2` 引導，`systemd` 管理程序，~~`linux-ck`~~ `linux-zen` 核心，`paru` 作為 AUR Helper
 *	常用網名：~~electriccubes~~ ~~（已廢棄，僅 Minecraft 仍在使用）~~ 現在 Minecraft 也換成 CoelacanthusHex 了、~~Transistor && TransistorLogic && GlowDiscourgeTube~~（停用，部分無法更改的論壇上仍用）、Coelacanthus（使用中，大概是不會換了）
+*	英文名？也许是Celeste Liu或Iris Liu。或者直接叫我 Coelacanthus？ 我甚至现在还没有作出决定……
 *	菜雞 OIer，被~~學長~~學姐吊打<span class="spoiler">就連女裝也被學姐吊打</span>
 *	會一點 `C` & `C++` & `Lua` ，正在學習 `Rust`
 *   ~~使用的輸入法是 [`Rime` 中州韻輸入法引擎](https://rime.im/)，所用框架為 Fcitx5~~ 老K輸入法真香；手機上使用 Gboard
