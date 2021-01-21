@@ -571,7 +571,7 @@ uglyURLs = false
 
 	## Utterances
     enableUtterances = true
-    utterancesRepo = "ayalhw/blog_comment"
+    utterancesRepo = "CoelacanthusHex/blog_comment"
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
     utterancesThemeDark = "photon-dark"
@@ -993,9 +993,9 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = "https://github.com/ayalhw/blog"
+    repoURL = "https://github.com/CoelacanthusHex/blog"
     # 编辑地址
-    repoEditURL = "https://github.com/ayalhw/blog/blob/master"
+    repoEditURL = "https://github.com/CoelacanthusHex/blog/blob/master"
 
     # Git 的图标
     gitIcon = "code-branch"

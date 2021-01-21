@@ -58,14 +58,14 @@ gitinfo: true
 ## 关于我的社交
 
 *   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
-*   GitHub: [@ayalhw](https://github.com/ayalhw/)
+*   GitHub: [@CoelacanthusHex](https://github.com/CoelacanthusHex/)
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
 *   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">Coelacanthus</a>
 
 ## 关于本站点的搭建
 
-[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/ayalhw/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
+[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/CoelacanthusHex/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
 <!--
 [![Hosted on IPFS](https://img.shields.io/badge/Hosted%20on-IPFS-65c2cb?&logo=ipfs)](https://ipfs.io/)
 
