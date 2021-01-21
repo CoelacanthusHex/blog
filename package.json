@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayalhw/blog.git"
+    "url": "git+https://github.com/CoelacanthusHex/blog.git"
   },
   "keywords": [
     "blog",
@@ -19,9 +19,9 @@
   "author": "Coelacanthus",
   "license": "CC-BY-NC-SA-4.0",
   "bugs": {
-    "url": "https://github.com/ayalhw/blog/issues"
+    "url": "https://github.com/CoelacanthusHex/blog/issues"
   },
-  "homepage": "https://github.com/ayalhw/blog#readme",
+  "homepage": "https://github.com/CoelacanthusHex/blog#readme",
   "devDependencies": {
     "ipfs-deploy": "^8.0.1"
   }

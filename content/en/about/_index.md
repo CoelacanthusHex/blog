@@ -41,14 +41,14 @@ gitinfo: true
 ## About my social
 
 *   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
-*   GitHub: [@ayalhw](https://github.com/ayalhw/)
+*   GitHub: [@CoelacanthusHex](https://github.com/CoelacanthusHex/)
 *   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
 *   Zhihu: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
 *   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">Coelacanthus</a>
 
 ## About the construction of this site
 
-[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/ayalhw/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
+[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/CoelacanthusHex/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status)](https://app.netlify.com/sites/lhwcrt/deploys)
 
