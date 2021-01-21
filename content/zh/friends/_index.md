@@ -96,4 +96,4 @@ gitinfo: true
 
 #### 添加友链请发送邮件至 [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
 
-图标: [Link](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)](/icon.webp)
+图标: [Link](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.webp)](/icon.webp)

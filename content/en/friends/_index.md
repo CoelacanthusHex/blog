@@ -96,4 +96,4 @@ gitinfo: true
 
 #### Please send an email to [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com) if you apply for friend link.
 
-Icon: [Link](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/ayalhw/blog@master/static/icon.webp)](/icon.webp)
+Icon: [Link](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.webp)   ![[icon.webp](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.webp)](/icon.webp)

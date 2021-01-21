@@ -34,7 +34,7 @@ summary: "Fcitx5 迁移及使用杂记"
 - 添加了类似搜狗U模式的拆字模式，效果如图：
 ![fcitx5-prefix-input](/images/fcitx5-chaizi.webp)
 - 还有一件事是 Fcitx5 可以使用 `fcitx`, `fcitx5`, `ibus` 的输入法模块（感觉黑科技
-- 我从 rime 移植过来一份[符号表](https://github.com/ayalhw/dotfiles/blob/master/fcitx5/.local/share/fcitx5/pinyin/symbolic.dict.txt)，这样输入就方便了很多
+- 我从 rime 移植过来一份[符号表](https://github.com/CoelacanthusHex/dotfiles/blob/master/fcitx5/.local/share/fcitx5/pinyin/symbolic.dict.txt)，这样输入就方便了很多
 
 ## 正文
 
