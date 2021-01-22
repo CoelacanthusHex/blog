@@ -47,6 +47,9 @@ gitinfo: true
 ### [thyzzs' blog](https://thyzzs.top/)
 >   %%%
 
+### [HelloWorld的小博客](https://mzdluo123.github.io/)
+>   %%%
+
 ### [Bambusoideae](https://bambusoideae.cn/)
 >   %%%
 
