@@ -59,9 +59,9 @@ gitinfo: true
 
 *   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
 *   GitHub: [@CoelacanthusHex](https://github.com/CoelacanthusHex/)
-*   GitLab: [@coelacanthus](https://gitlab.com/coelacanthus)
+*   GitLab: [@CoelacanthusHex](https://gitlab.com/CoelacanthusHex)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
-*   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">Coelacanthus</a>
+*   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">CoelacanthusHex</a>
 
 ## 关于本站点的搭建
 
