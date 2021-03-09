@@ -14,8 +14,14 @@ gitinfo: true
 ### [MnFe](https://yutong.site/)
 >   超厉害又可爱的萌铁铁
 
+### [GNAQ](https://gnaq.cat/)
+>   GNAQ Not A QAQ
+
 ### [三日月綾香](https://ayaka.shn.hk/)
 >   好耶，是可爱的三日月綾香姐姐
+
+### [zjr](https://zjrua.com.cn)
+>   zjrua!
 
 ### [RainbowBird](https://blog.luoling8192.top/)
 >   超可爱
