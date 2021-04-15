@@ -549,6 +549,9 @@ uglyURLs = false
     enableComments = true
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
+    
+    # 直接加载评论，不需要手动点击按钮加载
+    autoLoadComments = true
 
     ## Disqus
     enableDisqus = false
@@ -581,6 +584,23 @@ uglyURLs = false
     utterancesThemeDark = "photon-dark"
     utterancesLabel = ""
     # 说明：https://utteranc.es/
+    
+    ## Gitalk
+    enableGitalk = false
+    gitalkClientID = "your_client_id"
+    gitalkClientSecret = "your_client_secret"
+    gitalkRepo = "your_repository"
+    gitalkOwner = "your_gitalk_owner"
+    gitalkAdmin = ["your_gitalk_admin"]
+    gitalkLable = ["Gitalk"]
+    gitalkDistractionFreeMode = false
+    gitalkPerPage = 10
+    gitalkLanguage = "en"
+    gitalkPagerDirection = "last"
+    gitalkCreateIssueManually = false
+    gitalkProxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"
+    gitalkEnableHotKey = true
+    # 说明：https://github.com/gitalk/gitalk
 
     ######################################
     # Google Analytics
@@ -615,6 +635,14 @@ uglyURLs = false
     ## 广告单元
     enableGoogleAdUnits = false
     googleAdSlot = ""
+    
+    ######################################
+    # Yandex.Metrika
+    # https://metrika.yandex.ru/
+
+    # 说明：仅在生产环境（production）下渲染
+
+    yandexMetrikaId = ""
 
 
     ######################################
