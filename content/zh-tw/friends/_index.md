@@ -8,6 +8,9 @@ comment: true
 gitinfo: true
 ---
 
+### [静静](https://leanhe.dev/)
+>   好耶，是静静
+
 ### [可橙](https://kenchiu.net/)
 >   好耶，是可爱的可橙姐姐
 
