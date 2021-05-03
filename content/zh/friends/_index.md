@@ -65,7 +65,7 @@ gitinfo: true
 ### [简记](https://moonbegonia.xyz/)
 >   %%%
 
-### [Starx's Home](https://www.ioflow.xyz/)
+### [Starx's Home](https://www.starx.ink/)
 >   让我们某天一起仰望星空吧。
 
 ### [xzOS](https://xzos.net/)
