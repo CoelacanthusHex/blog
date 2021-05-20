@@ -41,6 +41,9 @@ gitinfo: true
 ### [一叶知秋](https://blog.rain.cx/)
 >   秋雨落的个人博客（感觉和咱爱好差不多呢
 
+### [NyaCat](https://nyac.at/)
+>   凌莞小可爱
+
 ### [ChungZH](https://chungzh.cn/)
 >   OIer, 独立开发者，自己写了个编辑器，他的 bucket 里有 lemon 哦！
 
