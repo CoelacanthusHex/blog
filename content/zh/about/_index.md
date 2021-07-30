@@ -62,6 +62,7 @@ gitinfo: true
 *   GitLab: [@CoelacanthusHex](https://gitlab.com/CoelacanthusHex)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
 *   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">CoelacanthusHex</a>
+	PGP Key: [CoelacanthusHex/pub-key](https://github.com/CoelacanthusHex/pub-key)
 
 ## 关于本站点的搭建
 
