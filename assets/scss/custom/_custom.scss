@@ -61,3 +61,23 @@ pre code {
 a.brand {
 	font-weight: 600;
 }
+
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #999;
+  font-size: 2em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+blockquote {
+  margin: 1em auto;
+  color: #555;
+  border-left: 4px solid #999;
+  position: relative;
+  line-height: 1.6;
+  padding-left: 30px;
+}
+
