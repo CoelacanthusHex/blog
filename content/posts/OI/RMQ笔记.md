@@ -6,6 +6,8 @@ toc: true
 gitinfo: true
 mathjax: true
 slug: "rmq-note"
+aliases:
+  - "/tech/rmq-note"
 tags: [OI, RMQ, ST表, 线段树]
 ---
 

@@ -6,6 +6,8 @@ gitinfo: true
 indentFirstParagraph: true
 indent: true
 slug: "noip-2020-travel"
+aliases:
+  - "/tech/noip-2020-travel"
 tags: ["NOIP", "OI"]
 ---
 

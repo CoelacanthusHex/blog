@@ -6,6 +6,8 @@ toc: true
 gitinfo: true
 katex: true
 slug: "weechat-get-started"
+aliases:
+  - "/tech/weechat-get-started"
 tags: ["Weechat", "IRC"]
 ---
 

@@ -5,6 +5,8 @@ draft: false
 toc: true
 gitinfo: true
 slug: "curl-use-man"
+aliases:
+  - "/tech/curl-use-man"
 tags: [cURL, Tools]
 ---
 
