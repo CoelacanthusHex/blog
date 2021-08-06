@@ -6,6 +6,8 @@ toc: true
 gitinfo: true
 mathjax: true
 slug: "a-new-rime-simp-pinyin-schema"
+aliases:
+  - "/tech/a-new-rime-simp-pinyin-schema"
 tags: [IME, Rime]
 summary: "一个新的 Rime 简体中文拼音输入方案: 极光拼音"
 ---

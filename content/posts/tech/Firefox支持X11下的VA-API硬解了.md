@@ -5,6 +5,8 @@ draft: false
 toc: true
 gitinfo: true
 slug: "firefox-80-support-vaapi-in-x11"
+aliases:
+  - "/tech/firefox-80-support-vaapi-in-x11"
 tags: [Firefox, 'VA-API', 'Hardware Acceleration']
 ---
 
