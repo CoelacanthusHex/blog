@@ -24,6 +24,8 @@ enableGitalk = true
 enableMathJax = true
 enableAutoDarkMode = true
 enableReadingTime = true
+customCSS = true
+customJS = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
@@ -38,6 +40,7 @@ description = "My HomePage Description"  # will set 'og:description'
   client_secret = "4cc1bbc0f83e27824715ff8402634722613033ca"
 [taxonomies]
    tag = "tags"
+   sections = "sections"
    series = "series"
 
 [[menu.main]]
