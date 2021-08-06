@@ -7,6 +7,8 @@ draft: false
 toc: true
 gitinfo: true
 slug: "welcome-to-fcitx5"
+aliases:
+  - "/tech/welcome-to-fcitx5"
 tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
 #description: "Fcitx5 迁移及使用杂记"
 summary: "Fcitx5 迁移及使用杂记"

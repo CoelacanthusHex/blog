@@ -6,6 +6,8 @@ toc: false
 gitinfo: true
 mathjax: false
 slug: "some-thought-02-foss"
+aliases:
+  - "/tech/some-thought-02-foss"
 tags: [OSS, FOSS]
 ---
 
