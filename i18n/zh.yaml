@@ -1,0 +1,42 @@
+- id: format_date
+  translation: '{{ .Format "2006-01-02" }}'
+- id: format_date_tosec
+  translation: '{{ .Format "2006-01-02 15:04" }}'
+- id: last_mod_on
+  translation: 最后修改：
+- id: published_on
+  translation: 发布时间：
+- id: next_link
+  translation: 下回
+- id: prev_link
+  translation: 上回
+- id: no_newer_posts
+  translation: 这就是最新的文章了。
+- id: no_older_posts
+  translation: 没有更黑的黑历史啦。
+- id: click_to_open
+  translation: 点击展开：
+- id: ruby_rp_start
+  translation: （读作：
+- id: ruby_rp_end
+  translation: ）
+- id: comments_disabled
+  translation: 此篇文章的评论功能已经停用。
+- id: comments_activate_js
+  translation: 请开启 JavaScript 以便使用评论服务。
+- id: hugo_theme
+  translation: Hugo Theme
+- id: ported_from
+  translation: 移植自
+- id: by
+  translation: by
+- id: draft
+  translation: 草稿
+- id: toc_title
+  translation: 目录
+- id: series_start
+  translation: 本文属于
+- id: series_end
+  translation: 系列：
+- id: series_current
+  translation: （本文）
