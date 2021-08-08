@@ -3,6 +3,8 @@ title: "关于我"
 date: 2019-12-05T17:29:55+08:00
 draft: false
 gitinfo: true
+_build:
+  list: never
 ---
 
 
