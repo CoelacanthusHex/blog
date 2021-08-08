@@ -60,7 +60,7 @@
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons|Roboto+Slab");
 </script>
 
-{{ if .Params.enableMathJax }}
+{{ if or .Site.Params.enableMathJax .Params.MathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
 
