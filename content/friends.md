@@ -6,6 +6,8 @@ draft: false
 toc: false
 comment: true
 gitinfo: true
+_build:
+  list: never
 ---
 
 ### [静静](https://leanhe.dev/)
