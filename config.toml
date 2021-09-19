@@ -42,6 +42,11 @@ description = "My HomePage Description"  # will set 'og:description'
    tag = "tags"
    sections = "sections"
    series = "series"
+[params.utterances]
+   repo="CoelacanthusHex/blog_comment"
+   term="pathname"
+   label=""
+   theme="github-light"
 
 [[menu.main]]
 url = "/posts"
