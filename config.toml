@@ -20,8 +20,9 @@ googleAnalytics = "UA-154017714-2"
 
 [params]
 subtitle = "倚窗，听雨"
-enableGitalk = true
-enableMathJax = true
+enableGitalk = false
+enableUtterances = true
+enableLaTeX = true
 enableAutoDarkMode = true
 enableReadingTime = true
 customCSS = true
