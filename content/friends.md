@@ -49,6 +49,9 @@ _build:
 ### [ChungZH](https://chungzh.cn/)
 >   OIer, 独立开发者，自己写了个编辑器，他的 bucket 里有 lemon 哦！
 
+### [Senioria](https://91khr.github.io/out/)
+>	超可爱的小刺猬
+
 ### [KiteAB](https://kiteab.ga/)
 >   自称是个普通的小学生，实际上是个大佬呢
 
