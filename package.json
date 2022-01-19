@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/CoelacanthusHex/blog#readme",
   "devDependencies": {
-    "ipfs-deploy": "^8.0.1"
+    "ipfs-deploy": "^11.0.1"
   }
 }
