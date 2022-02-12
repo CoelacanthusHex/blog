@@ -28,6 +28,9 @@ _build:
 ### [GNAQ](https://gnaq.cat/)
 >   GNAQ Not A QAQ
 
+### [安然姐姐](https://h3a.moe/)
+>   I don't care much about this, pretending we're back where we started.
+
 ### [三日月綾香](https://ayaka.shn.hk/)
 >   好耶，是可爱的三日月綾香姐姐
 
