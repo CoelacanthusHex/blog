@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "git config --global core.quotePath false && hugo --gc --minify --cleanDestinationDir",
-    "ipfs-deploy": "./node_modules/ipfs-deploy/bin/ipfs-deploy.js -p infura public -p pinata public -u pinata -d cloudflare -C -O"
+    "ipfs-deploy": "./node_modules/ipfs-deploy/src/cli.js -p infura public -p pinata public -u pinata -d cloudflare -C -O"
   },
   "repository": {
     "type": "git",
