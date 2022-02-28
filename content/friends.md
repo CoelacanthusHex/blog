@@ -19,6 +19,9 @@ _build:
 ### [鱼塔](https://blog.yuuta.moe/)
 >   可爱又强强的鱼鱼塔
 
+### [宝硕博客](https://blog.baoshuo.ren/?utm_source=friends)
+>   学习，就是发现自己越来越菜的过程。
+
 ### [MnFe](https://yutong.site/)
 >   超厉害又可爱的萌铁铁
 
