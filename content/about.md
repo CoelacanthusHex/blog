@@ -23,14 +23,13 @@ _build:
 
 ## 关于我的一些描述
 
-*   `Linux` 党，主力机是 `Arch Linux`，使用 `Grub 2` 引导，`systemd` 管理进程，~~`linux-ck`~~ `linux-zen` 内核，`paru` 作为 AUR Helper
-*	常用网名：~~electriccubes~~ ~~（已废弃，仅 Minecraft 仍在使用）~~ 现在 Minecraft 也换成 CoelacanthusHex 了、~~Transistor && TransistorLogic && GlowDiscourgeTube~~（停用，部分无法更改的论坛上仍用）、Coelacanthus（使用中，大概是不会换了）
-*	英文名？也许是Celeste Liu或Iris Liu。或者直接叫我 Coelacanthus？ 我甚至现在还没有作出决定……
-*	菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
-*	会一点 `C` & `C++` & `Lua` ，正在学习 `Rust`
+*   `Linux` 党，主力机是 `Arch Linux`，`paru` 作为 AUR Helper
+*   常用网名：~~electriccubes~~ ~~（已废弃，仅 Minecraft 仍在使用）~~ 现在 Minecraft 也换成 CoelacanthusHex 了、~~Transistor && TransistorLogic && GlowDiscourgeTube~~（停用，部分无法更改的论坛上仍用）、Coelacanthus（使用中，大概是不会换了）
+*   英文名？也许是 Celeste Liu。或者直接叫我 Coelacanthus？ 我甚至现在还没有作出决定……
+*   菜鸡 OIer，被~~学长~~学姐吊打<span class="spoiler">就连女装也被学姐吊打</span>
+*   会一点 `C` & `C++` & `Perl`，正在学习 `Rust`
 *   ~~使用的输入法是 [`Rime` 中州韵输入法引擎](https://rime.im/)，所用框架为 Fcitx5~~ 老K输入法真香；手机上使用 Gboard
 *   使用的浏览器是 ~~`Firefox Developer Edition`~~, ~~现在是 `Firefox Nightly` 了~~，~~为了硬解滚到 `Chromium`~~，因为Cr不吃 `fontconfig` 滚回 `Firefox Nightly` ~~硬解真香~~，手机上同样使用
-*   使用的手机是 `Redmi Note 8` with ~~`MIUI 11 @ Android Pie` by `Xiaomi`~~ ~~现在被我刷成了类原生~~ 愿你刷机半生，归来仍是MIUI（其实是 `MIUI.eu`
 *   无神论者
 *   ACG 及其相关宅文化爱好者
 *   游戏方面比较喜欢 `Minecraft` ~~然而极度讨厌网易代理的中国版~~ ，2018年寒假入的正版
@@ -60,29 +59,13 @@ _build:
 ## 关于我的社交
 
 *   E-Mail: [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
-*   GitHub: [@CoelacanthusHex](https://github.com/CoelacanthusHex/)
+*   GitHub: [@CoelacanthusHex](https://github.com/CoelacanthusHex)
 *   GitLab: [@CoelacanthusHex](https://gitlab.com/CoelacanthusHex)
 *   知乎: [Coelacanthus](https://www.zhihu.com/people/coelacanthus)
-*   Mastodon: <a rel="me" href="https://hub.mtf.party/@coelacanthus">CoelacanthusHex</a>
-*	PGP Key: [CoelacanthusHex/pub-key](https://github.com/CoelacanthusHex/pub-key)
+*   Mastodon: [Coelacanthus](https://mastodon.social/@Coelacanthus)
+*   Matrix: [Coelacanthus](https://matrix.to/#/@coelacanthus:mozilla.org)
+*   PGP Key: [CoelacanthusHex/pub-key](https://github.com/CoelacanthusHex/pub-key)
 
-## 关于本站点的搭建
+## Credit
 
-[![Generator is Hugo](/images/hugo_badge.webp)](https://github.com/gohugoio/hugo) [![Theme is MemE](/images/meme_badge.webp)](https://github.com/reuixiy/hugo-theme-meme) [![Source on GitHub](/images/github_badge.webp)](https://github.com/CoelacanthusHex/blog) [![Built on Netlify](/images/netlify_badge.webp)](https://www.netlify.com/)
-<!--
-[![Hosted on IPFS](https://img.shields.io/badge/Hosted%20on-IPFS-65c2cb?&logo=ipfs)](https://ipfs.io/)
-
-Click on any of the links below:
-
-1. https://blog.coelacanthus.moe/
-2. https://ipfs.io/ipns/blog.coelacanthus.moe/
-3. https://cloudflare-ipfs.com/ipns/blog.coelacanthus.moe/
-4. https://gateway.pinata.cloud/ipns/blog.coelacanthus.moe/
-5. or whichever [Public IPFS Gateway](https://ipfs.github.io/public-gateway-checker/) you like...
-
-Guess what? You can even browse this site at http://127.0.0.1:8080/ipns/blog.coelacanthus.moe/
-when `ipfs daemon` is running on your machine!
---->
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c76c076e-f7a0-4de8-9aab-11521c3466a2/deploy-status)](https://app.netlify.com/sites/lhwcrt/deploys)
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0" src="https://blog.coelacanthus.moe/images/cc-by-nc-sa-88x31.webp" /></a>
+[![](https://blog.coelacanthus.moe/images/cc-by-nc-sa-88x31.webp)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
