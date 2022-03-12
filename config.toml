@@ -4,7 +4,6 @@ languageCode = "zh-CN"
 title = "倚窗，听雨"
 copyright = "Coelacanthus. 本站遵循 CC BY-NC-SA 4.0 协议"
 theme = "diary"
-googleAnalytics = "UA-154017714-2"
 
 [markup]
   [markup.highlight]
