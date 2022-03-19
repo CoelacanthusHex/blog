@@ -1,70 +1,152 @@
-baseURL = "https://blog.coelacanthus.moe/"
-DefaultContentLanguage = "zh" # Theme's display language, supports: en, fr, zh, zh-hant
-languageCode = "zh-CN"
+# The URL the site will be built for
+base_url = "https://blog.coelacanthus.moe"
+
+# Used in RSS by default
 title = "倚窗，听雨"
-copyright = "Coelacanthus. 本站遵循 CC BY-NC-SA 4.0 协议"
-theme = "diary"
+description = ""
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "perldoc"
-    tabWidth = 4
+# The default language, used in RSS
+# TODO: I would love to support more languages and make this easy to handle
+# with other facets of the theme.
+default_language = "zh-CN"
 
-[params]
-subtitle = "倚窗，听雨"
-enableGitalk = false
-enableUtterances = true
-enableLaTeX = true
-enableAutoDarkMode = true
-enableReadingTime = true
-customCSS = true
-customJS = true
+# Whether to generate a RSS feed automatically
+generate_feed = true
+# 'atom.xml' (default if unspecified) and 'rss.xml' are officially supported
+# values for feed_filename in this theme. All other filenames will assume a
+# link type of 'application/rss+xml'.
+feed_filename = "rss.xml"
 
-# Twitter Card and Open Graph settings
-enableOpenGraph = true
-enableTwitterCards = true
-title = "倚窗，听雨" # will set 'og:site_name'
-description = "My HomePage Description"  # will set 'og:description'
+# Theme name to use.
+# NOTE: should not need to mess with this if you are using zerm directly, i.e. cloning the
+# repository at root and not using as directed by the Zola docs via themes/ directory.
+theme = "zerm"
 
-[params.gitalk]
-  owner = "CoelacanthusHex"
-  repo = "blog_comment"
-  client_id = "b343cfa0317b02c81a33"
-  client_secret = "4cc1bbc0f83e27824715ff8402634722613033ca"
-[taxonomies]
-   tag = "tags"
-   sections = "sections"
-   series = "series"
-[params.utterances]
-   repo="CoelacanthusHex/blog_comment"
-   term="pathname"
-   label=""
-   theme="github-light"
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
 
-[[menu.main]]
-url = "/posts"
-name = "Archive"
-weight = 1
-[[menu.main]]
-url = "/tags"
-name = "Tags"
-weight = 3
-[[menu.main]]
-url = "/friends"
-name = "Friends"
-weight = 4
-[[menu.main]]
-url = "/about"
-name = "About"
-weight = 4
-[[menu.main]]
-url = "/index.xml"
-name = "RSS Feed"
-weight = 6
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Built in taxonomies of zerm.
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+]
+
+[extra]
+# Put all your custom variables here
+#
+# Many configurations are taken directly from Terminal's config.toml
+# ---------------------------------------------------------
+
+# Author name to be added to posts, if enabled.
+author = "Coelacanthus"
+
+# Show author's name in blog post meta data.
+show_author = false
+
+# Show categories a blog post is marked with in its meta data.
+show_categories = true
+
+# Show tags a blog post is marked with in its meta data.
+show_tags = true
+
+# Theme color. You can have any color you want, so long as it's...
+# ["orange", "blue", "red", "green", "pink"]
+theme_color = "coelacanthus"
+
+# Custom css to style over the defaults. This is useful when you only have a
+# few small tweaks to make rather than a major rehaul to the theme.
+# It would be best to make this a proper .sass or .scss file in sass/ rather
+# than placing in static/
+# custom_css = "custom.css"
+
+# How many menu items to show on desktop. if you set this to 0, only submenu
+# button will be visible.
+show_menu_items = 4
+
+# set theme to full screen width.
+full_width = false
+
+# center theme with default width.
+center = true
+
+# set a custom favicon. Must be placed in root of static/ directory...
+# favicon = ""
+
+
+# Set a custom preview image for your website when posted as a link.
+# Must be placed in root of static/ directory...
+# og_preview_img = ""
+
+# Copyright notice if desired. Defaults to
+# copyright = "copyright notice here"
+
+# What is displayed in the top left corner of the website. Default is zerm.
+logo_text = "倚窗，听雨"
+
+# Link in logo. Default returns you to $BASE_URL.
+logo_home_link = "/"
+
+# Menu items to display. You define a url and the name of the menu item.
+# NOTE: `$BASE_URL/` must be included in the url name.
+main_menu = [
+    { url="/about", name="About" },
+    { url="/friends", name="Friends" },
+#    { url="/contact/", name="Contact" },
+#    { url="https://google.com", name="Google", external=true },
+]
+
+# Displayed as title of drop-down menu when size of main_menu > show_menu_items.
+menu_more = "show more"
+
+# Displayed after teaser text for a blog post.
+read_more = "read more"
+
+# not currently used from previous theme, but leaving here for now in case I
+# feel like adding it.
+read_other_posts = "read other posts"
+
+
+# Enable math typesetting with KaTeX
+# Show math in pages with `math=true` in the TOML frontmatter
+enable_katex = true
+
+# Options for disqus
+disqus = { enabled=true, short_name="coelacanthus-blog" }
+
+# generate Table of Contents for all articles
+# Table of Contents can be generated for individual articles
+# by adding `ToC = true` in [extra] section in frontmatter
+# ToC = true
+
+# Configuration of the Markdown rendering
+[markdown]
+# When set to "true", all code blocks are highlighted.
+highlight_code = true
+
+# A list of directories used to search for additional `.sublime-syntax` files.
+extra_syntaxes = []
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "axar"
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = false
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = false
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = false
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = false
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false

@@ -1,18 +1,14 @@
----
-title: "拥抱 Fcitx5"
++++
+title = "拥抱 Fcitx5"
 #subtitle: "Fcitx5 迁移及使用杂记"
-date: 2020-05-26T23:46:00+08:00
-katex: true
-draft: false
-toc: true
-gitinfo: true
-slug: "welcome-to-fcitx5"
-aliases:
-  - "/tech/welcome-to-fcitx5"
-tags: [Linux, Fcitx, Fcitx5, IME, Tools, Guide, Rime, 软件]
-#description: "Fcitx5 迁移及使用杂记"
-summary: "Fcitx5 迁移及使用杂记"
----
+date = 2020-05-26T23:46:00+08:00
+draft = false
+slug = "welcome-to-fcitx5"
+description = "Fcitx5 迁移及使用杂记"
+[taxonomies]
+tags = ["Linux", "Fcitx", "Fcitx5", "IME", "Tools", "Guide", "Rime", "软件"]
+categories = ["Tech"]
++++
 
 ## 起因
 

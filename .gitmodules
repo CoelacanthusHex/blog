@@ -7,3 +7,6 @@
 [submodule "themes/diary"]
 	path = themes/diary
 	url = https://github.com/AmazingRise/hugo-theme-diary.git
+[submodule "themes/zerm"]
+	path = themes/zerm
+	url = https://github.com/ejmg/zerm.git
