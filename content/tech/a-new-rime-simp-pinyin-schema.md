@@ -1,16 +1,13 @@
----
-title: "一个新的 Rime 简体中文拼音输入方案: 极光拼音"
-date: 2020-08-12T16:34:14+08:00
-draft: false
-toc: true
-gitinfo: true
-mathjax: true
-slug: "a-new-rime-simp-pinyin-schema"
-aliases:
-  - "/tech/a-new-rime-simp-pinyin-schema"
-tags: [IME, Rime]
-summary: "一个新的 Rime 简体中文拼音输入方案: 极光拼音"
----
++++
+title = "一个新的 Rime 简体中文拼音输入方案: 极光拼音"
+date = 2020-08-12T16:34:14+08:00
+draft = false
+slug = "a-new-rime-simp-pinyin-schema"
+description = "一个新的 Rime 简体中文拼音输入方案: 极光拼音"
+[taxonomies]
+tags = ["IME", "Rime"]
+categories = ["Tech"]
++++
 
 ## TL;DR;
 
