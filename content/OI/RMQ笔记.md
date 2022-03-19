@@ -1,15 +1,12 @@
----
-title: "RMQ笔记"
-date: 2019-12-12T18:45:58+08:00
-draft: true
-toc: true
-gitinfo: true
-mathjax: true
-slug: "rmq-note"
-aliases:
-  - "/tech/rmq-note"
-tags: [OI, RMQ, ST表, 线段树]
----
++++
+title = "RMQ笔记"
+date = 2019-12-12T18:45:58+08:00
+draft = true
+slug = "rmq-note"
+[taxonomies]
+tags = ["OI", "RMQ", "ST表", "线段树"]
+categories = ["OI"]
++++
 
 ### 简介
 

@@ -1,15 +1,12 @@
----
-title: "NOIP 2020 游记"
-date: 2021-02-07T08:14:36+08:00
-draft: false
-gitinfo: true
-indentFirstParagraph: true
-indent: true
-slug: "noip-2020-travel"
-aliases:
-  - "/tech/noip-2020-travel"
-tags: ["NOIP", "OI"]
----
++++
+title = "NOIP 2020 游记"
+date = 2021-02-07T08:14:36+08:00
+draft = false
+slug = "noip-2020-travel"
+[taxonomies]
+tags = ["NOIP", "OI"]
+categories = ["OI"]
++++
 
 今年（去年？毕竟我咕了这么久）的 NOIP 大概是我经历过的最痛苦的一次 NOIP。（虽然我也就参加过两届 NOIP 复赛就是了）。
 

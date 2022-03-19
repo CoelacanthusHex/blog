@@ -1,14 +1,12 @@
----
-title: "cURL使用指南"
-date: 2020-01-04T10:34:06+08:00
-draft: false
-toc: true
-gitinfo: true
-slug: "curl-use-man"
-aliases:
-  - "/tech/curl-use-man"
-tags: [cURL, Tools]
----
++++
+title = "cURL使用指南"
+date = 2020-01-04T10:34:06+08:00
+draft = false
+slug = "curl-use-man"
+[taxonomies]
+tags = ["cURL", "Tools"]
+categories = ["Tech"]
++++
 
 ## 简介
 
@@ -26,7 +24,7 @@ DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3
 
 ## 参数介绍
 
-如果只是想简单了解用法的 [Click Here](#简单使用)
+如果只是想简单了解用法的 [Click Here](#simple-use)
 
 参数介绍部分参考自 [curl 的用法指南 by 阮一峰](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
 
@@ -254,7 +252,7 @@ curl 能够识别 URL 里面的用户名和密码。
 
 上面命令对 https://www.example.com 发出 POST 请求。
 
-## 简单使用
+## 简单使用 {#simple-use}
 
 ### 获取网页源码（就是下载喵）
 
