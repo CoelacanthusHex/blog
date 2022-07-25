@@ -1,0 +1,9 @@
+<!-- https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks -->
+<!-- https://pawelgrzybek.com/native-lazy-loading-of-images-on-hugo-based-website/ -->
+<!-- layouts/_default/_markup/render-image.html -->
+
+<img
+  src="{{ .Destination | safeURL }}"
+  alt="{{ .Text }}"
+  loading="lazy"
+/>

@@ -1,13 +1,15 @@
-+++
-title = "传奇VB的西山日落"
-date = 2020-03-14T20:06:52+08:00
-draft = false
-slug = "visual-basic-will-die"
-description = "Visual Basic 的诞生，发展与没落"
-[taxonomies]
-tags = ['Visual Basic', 'History']
-categories = ["Tech"]
-+++
+---
+title: "传奇VB的西山日落"
+date: 2020-03-14T20:06:52+08:00
+draft: false
+toc: true
+gitinfo: true
+slug: "visual-basic-will-die"
+aliases:
+  - "/tech/visual-basic-will-die"
+tags: ['Visual Basic', 'History']
+summary: "Visual Basic 的诞生，发展与没落"
+---
 
 ## 一切的开端
 
