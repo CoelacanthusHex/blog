@@ -1,12 +1,14 @@
-+++
-title = "Firefox 支持 X11 下的 VA-API 硬解了"
-date = 2020-07-05T23:42:35+08:00
-draft = false
-slug = "firefox-80-support-vaapi-in-x11"
-[taxonomies]
-tags = ["Firefox", 'VA-API', 'Hardware Acceleration']
-categories = ["Tech"]
-+++
+---
+title: "Firefox 支持 X11 下的 VA-API 硬解了"
+date: 2020-07-05T23:42:35+08:00
+draft: false
+toc: true
+gitinfo: true
+slug: "firefox-80-support-vaapi-in-x11"
+aliases:
+  - "/tech/firefox-80-support-vaapi-in-x11"
+tags: [Firefox, 'VA-API', 'Hardware Acceleration']
+---
 
 ## TL;DL
 
