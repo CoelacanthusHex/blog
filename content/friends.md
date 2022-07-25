@@ -64,8 +64,8 @@ _build:
 ### [Senioria](https://91khr.github.io/out/)
 >	超可爱的小刺猬
 
-### [KiteAB](https://kiteab.ga/)
->   自称是个普通的小学生，实际上是个大佬呢
+### [KiteAB](https://blog.kiteab.me)
+>   自称是个普通的小学生
 
 ### [sxyugao](https://sxyugao.top/)
 >   一名来自浙江 OIer dalao
