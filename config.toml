@@ -33,11 +33,6 @@ enableTwitterCards = true
 title = "倚窗，听雨" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
-[params.gitalk]
-  owner = "CoelacanthusHex"
-  repo = "blog_comment"
-  client_id = "b343cfa0317b02c81a33"
-  client_secret = "4cc1bbc0f83e27824715ff8402634722613033ca"
 [taxonomies]
    tag = "tags"
    sections = "sections"

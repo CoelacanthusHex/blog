@@ -3,10 +3,8 @@ $color-accent: #1976d2;
 $back-container-background: #fcfcfc;
 $front-container-background: #ffffff;
 
-$default-font-list: "Roboto Slab","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-$mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
-  monospace;
-$sans-preferred-font-list: "Montserrat", "Roboto Slab", "Source Sans Pro", "Helvetica", $default-font-list;
+$default-font-list: "Andika","Roboto Slab","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",monospace;
 $sans-preferred-font-list: $default-font-list;
 
 $side-container-width: 25%; //280px;
