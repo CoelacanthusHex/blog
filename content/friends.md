@@ -16,6 +16,9 @@ _build:
 ### [可橙](https://kenchiu.net/)
 >   好耶，是可爱的可橙姐姐
 
+### [kernel.bin](https://kernelbin.cn/)
+>   `initrd kernel.bin`
+
 ### [鱼塔](https://blog.yuuta.moe/)
 >   可爱又强强的鱼鱼塔
 
