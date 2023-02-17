@@ -136,6 +136,6 @@ _build:
 >   论坛里的 dalao 可强了，有问题来这里就对了
 
 
-#### 添加友链请发送邮件至 [coelacanthus@outlook.com](mailto:coelacanthus@outlook.com)
+#### 添加友链请发送邮件至 [coelacanthusHex@gmail.com](mailto:coelacanthusHex@gmail.com)
 
 图标: [Link](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.svg)   ![[icon.svg](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/icon.svg)](/icon.svg)
