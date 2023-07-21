@@ -13,6 +13,9 @@ _build:
 ### [肥猫](https://felixc.at/)
 >   Arch Linux 维护者，大家的肥猫菊苣
 
+### [XYenChi](https://xyenchi.github.io/)
+>   延迟小姐姐
+
 ### [静静](https://leanhe.dev/)
 >   好耶，是静静
 
