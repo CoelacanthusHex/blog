@@ -5,6 +5,7 @@ $front-container-background: #ffffff;
 
 $default-font-list: "Andika","Roboto Slab","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 $mono-font-list: "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",monospace;
+//$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
 $sans-preferred-font-list: $default-font-list;
 
 $side-container-width: 25%; //280px;
@@ -54,6 +55,10 @@ $h-diff: 3px;
   background: rgba($color-accent, 0.4);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: $back-container-background;
   padding: 0;
@@ -72,7 +77,9 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -114,8 +121,8 @@ button {
 }
 
 table {
-    table-layout: fixed;
-    overflow-x: scroll;
+  table-layout: fixed;
+  overflow-x: scroll;
 }
 
 button {
@@ -125,7 +132,7 @@ button {
 
 code {
   color: $dark-accent;
-  background: rgba($color-accent, 0.07) !important;
+  background: rgba($color-accent, 0.07);
   padding: 2px 5px;
   border-radius: 3px;
   font-family: $mono-font-list;
@@ -139,11 +146,14 @@ pre {
   border-radius: 5px;
   font-family: $mono-font-list;
   * {
-    background: none !important;
+    background: none;
     font-family: $mono-font-list !important;
   }
   code {
     padding: 0;
+    * {
+      color: inherit;
+    }
   }
 }
 
@@ -367,8 +377,8 @@ a {
             font-size: $single-column-nav-link-size;
             padding: 2px;
             li {
-                list-style: none;
-                padding-left: 8px; 
+              list-style: none;
+              padding-left: 8px;
             }
             a {
               text-decoration: none;
@@ -432,7 +442,6 @@ a {
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
-    transition: all 0.2s linear;
     color: $deep-dark-accent;
     .nav-title {
       font-size: $nav-title-size;
@@ -464,13 +473,12 @@ a {
       padding: 8px 28px 8px 30px;
       cursor: hand;
       cursor: pointer;
-      transition: all 0.2s linear;
       color: $deep-dark-accent;
       .nav-link-subitem {
         font-size: $nav-link-size - 3px;
         li {
-            list-style: none;
-            padding-left: 2px; 
+          list-style: none;
+          padding-left: 2px;
         }
         a {
           text-decoration: none;
@@ -502,7 +510,7 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  
+  height: 100vh;
   width: $extra-container-width;
   /*text-align: right;*/
   font-family: $sans-preferred-font-list;
@@ -510,10 +518,11 @@ a {
   //overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   /*padding: 50px 0;*/
   .pagination {
-    position: fixed;
+    // position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -586,7 +595,7 @@ a {
   padding-left: $side-container-width;
   padding-right: $extra-container-width;
   width: 100%;
-  
+
   min-height: 100vh;
   @media screen and (max-width: $single-column-max-width) {
     padding: 0;
@@ -705,9 +714,9 @@ a {
         }
 
         //transition: all 0.2s linear;
-        * {
-          transition: all 0.2s linear;
-        }
+        // * {
+        //   transition: all 0.2s linear;
+        // }
         &:not(.post-item-wrapper-no-hover):hover {
           text-decoration: none;
           background: rgba(0, 0, 0, 0.03);
@@ -764,7 +773,6 @@ a {
     padding: 15px;
   }
   .post {
-
     padding: 0 0 20px 0;
     .post-head-wrapper {
       margin-top: -20px;
@@ -939,30 +947,27 @@ a {
       }
     }
   }
-
-
-
-  
 }
 
 #single-column-footer {
-    display: none;
+  display: none;
 
-    @media screen and (max-width: $single-column-max-width) {
-      display: block !important;
-      text-align: center;
-      font-size: $single-column-nav-footer-size;
-      font-family: $sans-preferred-font-list;
-      padding: 40px 20px 40px 20px;
-    }
+  @media screen and (max-width: $single-column-max-width) {
+    display: block !important;
+    text-align: center;
+    font-size: $single-column-nav-footer-size;
+    font-family: $sans-preferred-font-list;
+    padding: 40px 20px 40px 20px;
+  }
 }
 
 .toc {
   float: right;
   border-radius: 5px;
   margin-left: 30px;
-  margin-right: 60px;
+  margin-right: 30px;
   margin-top: 30px;
+  min-width: 200px;
   max-width: 260px;
   max-height: 80vh;
   overflow: auto;
@@ -977,10 +982,10 @@ a {
     margin: 0;
     line-height: 1.7em;
   }
-  .toc-content{
+  .toc-content {
     padding: 20px;
   }
-  .toc-active{
+  .toc-active {
     color: darken($color-accent, 40%) !important;
   }
   @media screen and (max-width: $single-column-max-width) {
@@ -993,7 +998,7 @@ a {
     * {
       /*font-size: $single-column-toc-size;*/
     }
-    .toc-content{
+    .toc-content {
       padding: 10px;
     }
   }
@@ -1001,6 +1006,10 @@ a {
 
 .pagination {
   display: none;
+
+  .pagination-action {
+    -webkit-appearance: none; // Fix bootstrap set the appearance to button.
+  }
 
   @media screen and (max-width: $single-column-max-width) {
     display: flex !important;
@@ -1057,8 +1066,7 @@ a {
   color: $dark-accent;
 }
 
-mjx-container
-{
+mjx-container {
   overflow-y: hidden !important;
 }
 
@@ -1084,4 +1092,15 @@ mjx-container
 
 .vcontent p {
   color: black !important;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  .tag {
+    margin: 10px;
+  }
 }
