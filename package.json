@@ -4,7 +4,7 @@
   "description": "A blog",
   "main": "index.js",
   "scripts": {
-    "build": "git config --global core.quotePath false && hugo --gc --minify --cleanDestinationDir",
+    "build": "git config --global core.quotePath false && hugo --gc --minify --cleanDestinationDir && cp public/atom.xml public/index.xml",
     "ipfs-deploy": "./node_modules/ipfs-deploy/src/cli.js -p c4rex -u c4rex -d cloudflare -C public"
   },
   "repository": {
