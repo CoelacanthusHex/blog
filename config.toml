@@ -6,16 +6,16 @@ copyright = "Coelacanthus. 本站遵循 CC BY-NC-SA 4.0 协议"
 theme = "diary"
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "perldoc"
-    tabWidth = 4
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = "perldoc"
+tabWidth = 4
 
 [params]
 subtitle = "倚窗，听雨"
@@ -34,14 +34,14 @@ title = "倚窗，听雨" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [taxonomies]
-   tag = "tags"
-   sections = "sections"
-   series = "series"
+tag = "tags"
+sections = "sections"
+series = "series"
 [params.utterances]
-   repo="CoelacanthusHex/blog_comment"
-   term="pathname"
-   label=""
-   theme="github-light"
+repo="CoelacanthusHex/blog_comment"
+term="pathname"
+label=""
+theme="github-light"
 
 [[menu.main]]
 url = "/posts"
@@ -60,6 +60,25 @@ url = "/about"
 name = "About"
 weight = 4
 [[menu.main]]
-url = "/index.xml"
+url = "/atom.xml"
 name = "RSS Feed"
 weight = 6
+
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
+
+[outputFormats.Atom]
+# https://validator.w3.org/feed/docs/atom.html#whatIsAtom
+name = "Atom"
+mediaType = "application/atom+xml"
+baseName = "atom" # generated file = <baseName>.<mediaType."application/atom+xml".suffixes[0]> = atom.xml
+isPlainText = false
+rel = "alternate"
+isHTML = false
+noUgly = true
+permalinkable = false
+
+[outputs]
+# <domain>/atom.xml
+home = ["HTML", "ATOM"]     # default = ["HTML", "RSS"]
+
