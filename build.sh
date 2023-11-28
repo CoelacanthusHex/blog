@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yarn run build && yarn run ipfs-deploy
+yarn run build #&& yarn run ipfs-deploy
