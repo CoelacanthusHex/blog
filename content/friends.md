@@ -16,6 +16,9 @@ _build:
 ### [XYenChi](https://xyenchi.github.io/)
 >   延迟小姐姐
 
+### [洛灵](https://blog.luoling.moe/)
+>   以梦为马，不负韶华
+
 ### [静静](https://leanhe.dev/)
 >   好耶，是静静
 
