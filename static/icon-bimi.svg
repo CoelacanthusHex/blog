@@ -2,10 +2,12 @@
 <svg
     width="512"
     height="512"
-    version="1.1"
+    version="1.2"
+    baseProfile="tiny-ps"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
 >
+    <title>Coelacanthus</title>
     <g transform="scale(1.28)">
 		<rect
 			x="0"
