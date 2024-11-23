@@ -13,6 +13,9 @@ _build:
 ### [肥猫](https://felixc.at/)
 >   Arch Linux 维护者，大家的肥猫菊苣
 
+### [Estela ad Astra](https://blog.estela.moe/)
+>   是可爱又强强的山前姐姐
+
 ### [XYenChi](https://xyenchi.github.io/)
 >   延迟小姐姐
 
