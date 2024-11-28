@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+	width="512"
+	height="512"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:svg="http://www.w3.org/2000/svg"
+>
+	<g transform="translate(256 256) scale(0.8, 0.8) translate(-256 -256)">
+		<rect
+			x="23"
+			y="38"
+			width="466"
+			height="436"
+			fill="#f45b8d"
+		/>
+		<rect
+			x="70"
+			y="85"
+			width="372"
+			height="340"
+			fill="white"
+		/>
+
+		<path
+			d="
+			M 198,256
+			L 138,195
+			A 18.385 18.385 0 0 1 164,169
+			L 234,241.5
+			A 22.627 22.627 0 0 1 234,273.5
+			L 164,343
+			A 18.385 18.385 0 0 1 138,317
+			L 198,256
+			Z
+			"
+			fill="black"
+		/>
+		<path
+			d="
+			M 254,312
+			L 354,312
+			A 5 5 0 0 1 354,347
+			L 254,347
+			A 5 5 0 0 1 254,312
+			Z
+			"
+			fill="black"
+		/>
+	</g>
+</svg>
+<!-- vim: set ts=4 sts=4 sw=4 noet: -->
