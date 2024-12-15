@@ -26,6 +26,7 @@ enableAutoDarkMode = true
 enableReadingTime = true
 customCSS = true
 customJS = true
+favicon = "avatar.svg"
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
