@@ -105,4 +105,4 @@ _build:
 
 #### 添加友链请发送邮件至 uwu#coelacanthus.name (Replace # with @)
 
-图标: [Link](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/avatar.svg)   ![[avatar.svg](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/avatar.svg)](/avatar.svg)
+图标: [Link](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/avatar.min.svg)   ![[avatar.svg](https://cdn.jsdelivr.net/gh/CoelacanthusHex/blog@master/static/avatar.min.svg)](/avatar.min.svg)
