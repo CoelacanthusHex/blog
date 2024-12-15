@@ -3,7 +3,7 @@
   "short_name": "倚窗，听雨",
   "icons": [
     {
-      "src": "./icon.svg",
+      "src": "./avatar.svg",
       "sizes": "any"
     }
   ],
