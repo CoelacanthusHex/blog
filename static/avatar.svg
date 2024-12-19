@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
+	version="1.1"
 	width="512"
 	height="512"
-	version="1.1"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:svg="http://www.w3.org/2000/svg"
 >
+	<title>Coelacanthus' Avatar</title>
+	<desc>
+		Coelacanthus' avatar mode with love and magic!
+	</desc>
+	<metadata
+		id="metadata"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:cc="http://creativecommons.org/ns#"
+	>
+		<rdf:RDF>
+			<cc:Work
+				rdf:about=""
+			>
+				<dc:title>Coelacanthus' Avatar</dc:title>
+				<cc:license
+					rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
+				/>
+			</cc:Work>
+			<cc:License
+				rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
+			>
+				<cc:permits
+					rdf:resource="http://creativecommons.org/ns#Reproduction"
+				/>
+				<cc:permits
+					rdf:resource="http://creativecommons.org/ns#Distribution"
+				/>
+				<cc:requires
+					rdf:resource="http://creativecommons.org/ns#Notice"
+				/>
+				<cc:requires
+					rdf:resource="http://creativecommons.org/ns#Attribution"
+				/>
+				<cc:permits
+					rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+				/>
+				<cc:requires
+					rdf:resource="http://creativecommons.org/ns#ShareAlike"
+				/>
+			</cc:License>
+		</rdf:RDF>
+	</metadata>
 	<g>
 		<rect
 			x="23"
@@ -24,26 +67,26 @@
 
 		<path
 			d="
-			M 198,256
-			L 138,195
-			A 18.385 18.385 0 0 1 164,169
-			L 234,241.5
-			A 22.627 22.627 0 0 1 234,273.5
-			L 164,343
-			A 18.385 18.385 0 0 1 138,317
-			L 198,256
-			Z
+				M 198,256
+				L 138,195
+				A 18.385 18.385 0 0 1 164,169
+				L 234,241.5
+				A 22.627 22.627 0 0 1 234,273.5
+				L 164,343
+				A 18.385 18.385 0 0 1 138,317
+				L 198,256
+				Z
 			"
 			fill="black"
 		/>
 		<path
 			d="
-			M 254,312
-			L 354,312
-			A 5 5 0 0 1 354,347
-			L 254,347
-			A 5 5 0 0 1 254,312
-			Z
+				M 254,312
+				L 354,312
+				A 5 5 0 0 1 354,347
+				L 254,347
+				A 5 5 0 0 1 254,312
+				Z
 			"
 			fill="black"
 		/>
