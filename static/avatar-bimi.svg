@@ -9,9 +9,6 @@
 	xmlns:svg="http://www.w3.org/2000/svg"
 >
 	<title>Coelacanthus' Avatar</title>
-	<desc>
-		Coelacanthus' avatar mode with love and magic!
-	</desc>
 	
 	<g transform="translate(256 256) scale(0.8, 0.8) translate(-256 -256)">
 		<rect

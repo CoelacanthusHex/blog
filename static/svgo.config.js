@@ -11,6 +11,8 @@ module.exports = {
           // FIXME: This change has been included in 4.0.0
           // @see https://github.com/svg/svgo/pull/1461
           removeViewBox: false,
+          // Required by BIMI.
+          removeTitle: false,
         },
       },
     },
