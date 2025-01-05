@@ -22,7 +22,7 @@ _build:
 
 ## 关于我的社交
 
-*   E-Mail: [CoelacanthusHex@gmail.com](mailto:CoelacanthusHex@gmail.com)
+*   E-Mail: <object class="svg-email-protection" data="svg-email-protection.svg" type="image/svg+xml"></object>
 *   GitHub: [CoelacanthusHex](https://github.com/CoelacanthusHex)
 *   GitLab: [CoelacanthusHex](https://gitlab.com/CoelacanthusHex)
 *   Mastodon: [Coelacanthus](https://mastodon.yuuta.moe/@Coelacanthus)
