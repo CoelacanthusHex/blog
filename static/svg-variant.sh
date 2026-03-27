@@ -14,15 +14,10 @@
 # 
 # With uniform scaling factor k:
 #   (k × 59648)² + (k × 55808)² = 65536²
-#   k² × (59648² + 55808²) = 65536²
-#   k² × 6672414848 = 4294967296
-#   k² = 4294967296 / 6672414848
-#   k = 65536 / 81684.86
-# 
-# Scaling factor
-#   = 65536 / √(59648² + 55808²)
-#   = 65536 / √6672416768
-#   ≈ 0.8023028743
+#        k² × (59648² + 55808²) = 65536²
+#                            k² = 65536² / (59648² + 55808²)
+#                             k = 65536 / √(59648² + 55808²)
+#                             k ≈ 0.8023028743
 
 sed 's|<g>|<g transform="translate(32768 32768) scale(0.8, 0.8) translate(-32768 -32768)">|' avatar.svg > avatar-round.svg
 sed 's|<g>|<g transform="translate(32768 32768) scale(0.7, 0.7) translate(-32768 -32768)">|' avatar.svg > avatar-round-smaller.svg
