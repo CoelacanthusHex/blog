@@ -3,52 +3,89 @@
 	version="1.1"
 	width="512"
 	height="512"
-	viewBox="0 0 512 512"
+	viewBox="0 0 65536 65536"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:svg="http://www.w3.org/2000/svg"
 >
 	<title>Coelacanthus' Avatar</title>
 	<desc>
-		Coelacanthus' avatar mode with love and magic!
+		Coelacanthus' avatar made with love and magic!
 	</desc>
 	
 	<g>
 		<rect
-			x="23"
-			y="38"
-			width="466"
-			height="436"
+			x="2944"
+			y="4864"
+			width="59648"
+			height="55808"
 			fill="#f45b8d"
 		/>
 		<rect
-			x="70"
-			y="85"
-			width="372"
-			height="340"
+			x="8960"
+			y="10880"
+			width="47616"
+			height="43520"
 			fill="white"
 		/>
 
+		<!-- ">" shape calculation:
+			Thickness t = 4480 (equal to horizontal line)
+			Quarter circle radius R = t/2 = 2240
+			Semicircle radius r = 2240
+			Perpendicular offset = t/√2 = 3167.11
+			
+			Vertex V = (25348, 32640)
+			Quarter circle center C = V + R√2·(1,0) = (28515.11, 32640)
+			
+			Branch directions:
+			- Upper: (-1/√2, -1/√2) at 45° up-left
+			- Lower: (-1/√2, 1/√2) at 45° down-left
+			- Angle between branches: 90°
+			
+			Perpendicular directions (toward opening):
+			- Upper: (1/√2, -1/√2)
+			- Lower: (1/√2, 1/√2)
+			
+			Constraint: lowest point at y = 44416
+			Semicircle center_y = (P_lower_inner_y + P_lower_outer_y)/2
+			P_lower_outer_y = P_lower_inner_y + 3167.11
+			center_y = P_lower_inner_y + 1583.56
+			Lowest point: center_y + r = P_lower_inner_y + 1583.56 + 2240 = 44416
+			P_lower_inner_y = 40592.44
+			
+			Branch length: L/√2 = 40592.44 - 32640 = 7952.44
+			
+			Upper branch:
+			- Inner edge: V + L·(-1/√2, -1/√2) = (17395.56, 24687.56)
+			- Outer edge at V: C + R·(1/√2, -1/√2) = (30098.67, 31056.44)
+			- Outer edge at end: (17395.56, 24687.56) + t·(1/√2, -1/√2) = (20562.67, 21520.45)
+			
+			Lower branch:
+			- Inner edge: V + L·(-1/√2, 1/√2) = (17395.56, 40592.44)
+			- Outer edge at V: C + R·(1/√2, 1/√2) = (30098.67, 34223.56)
+			- Outer edge at end: (17395.56, 40592.44) + t·(1/√2, 1/√2) = (20562.67, 43759.55)
+		-->
 		<path
 			d="
-				M 198,256
-				L 138,195
-				A 18.385 18.385 0 0 1 164,169
-				L 234,241.5
-				A 22.627 22.627 0 0 1 234,273.5
-				L 164,343
-				A 18.385 18.385 0 0 1 138,317
-				L 198,256
+				M 30098.67,31056.44
+				L 20562.67,21520.45
+				A 2240 2240 0 0 0 17395.56,24687.56
+				L 25348,32640
+				L 17395.56,40592.44
+				A 2240 2240 0 0 0 20562.67,43759.55
+				L 30098.67,34223.56
+				A 2240 2240 0 0 0 30098.67,31056.44
 				Z
 			"
 			fill="black"
 		/>
 		<path
 			d="
-				M 254,312
-				L 354,312
-				A 5 5 0 0 1 354,347
-				L 254,347
-				A 5 5 0 0 1 254,312
+				M 32512,39936
+				L 45312,39936
+				A 640 640 0 0 1 45312,44416
+				L 32512,44416
+				A 640 640 0 0 1 32512,39936
 				Z
 			"
 			fill="black"
