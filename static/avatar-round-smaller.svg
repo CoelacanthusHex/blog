@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
-	version="1.2"
-	baseProfile="tiny-ps"
+	version="1.1"
 	width="512"
 	height="512"
 	viewBox="0 0 65536 65536"
@@ -9,8 +8,11 @@
 	xmlns:svg="http://www.w3.org/2000/svg"
 >
 	<title>Coelacanthus' Avatar</title>
+	<desc>
+		Coelacanthus' avatar made with love and magic!
+	</desc>
 	
-	<g transform="translate(32768 32768) scale(0.8, 0.8) translate(-32768 -32768)">
+	<g transform="translate(32768 32768) scale(0.7, 0.7) translate(-32768 -32768)">
 		<rect
 			x="2944"
 			y="4864"
