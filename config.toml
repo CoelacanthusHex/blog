@@ -16,6 +16,9 @@ lineNumbersInTable = true
 noClasses = true
 style = "perldoc"
 tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
 subtitle = "倚窗，听雨"
