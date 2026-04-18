@@ -6,7 +6,7 @@ draft: false
 toc: false
 comment: true
 gitinfo: true
-_build:
+build:
   list: never
 ---
 
