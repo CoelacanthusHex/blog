@@ -9,3 +9,7 @@ resources
 
 # ipfs-deploy
 .env
+
+static/.ninja_build/
+static/build.ninja
+static/ssimulacra2
