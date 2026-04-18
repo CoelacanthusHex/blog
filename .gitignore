@@ -9,3 +9,6 @@ resources
 
 # ipfs-deploy
 .env
+
+static/.ninja_build/
+static/build.ninja

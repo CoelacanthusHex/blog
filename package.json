@@ -23,6 +23,22 @@
   },
   "homepage": "https://github.com/CoelacanthusHex/blog#readme",
   "devDependencies": {
-    "ipfs-deploy": "^12.0.1"
+    "@eslint/js": "^10.0.1",
+    "@ninjutsu-build/core": "^0.9.0",
+    "@tsconfig/bun": "^1.0.10",
+    "@types/bun": "latest",
+    "@types/shell-quote": "^1.7.5",
+    "eslint": "^10.2.1",
+    "ipfs-deploy": "^12.0.1",
+    "jiti": "^2.6.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.58.2",
+    "xml-trueformat": "^0.9.5"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.5.1",
+    "option-t": "^56.1.1",
+    "p-limit": "^7.3.0",
+    "shell-quote": "^1.8.3"
   }
 }

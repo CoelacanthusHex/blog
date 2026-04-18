@@ -9,4 +9,4 @@ pushd static
     ln -sfr avatar.jxl icon.jxl
 popd
 
-yarn run build #&& yarn run ipfs-deploy
+bun run build #&& bun run ipfs-deploy
