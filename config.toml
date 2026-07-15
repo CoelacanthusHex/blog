@@ -37,6 +37,15 @@ enableTwitterCards = true
 title = "倚窗，听雨" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
+[params.author]
+name = "Coelacanthus"
+avatar = "/avatar.min.svg"
+
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/CoelacanthusHex"
+rel = "me"
+
 [taxonomies]
 tag = "tags"
 sections = "sections"

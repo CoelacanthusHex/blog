@@ -1,0 +1,19 @@
+<div class="h-card" style="display: none;">
+    <img class="u-photo" src="{{ .Site.Params.author.avatar }}" alt="{{ .Site.Params.author.name }}" />
+    <a class="p-name u-url" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Params.author.name }}</a>
+    {{ if .Site.Params.author.email }}
+        <a class="u-email" href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a>
+    {{ end }}
+    {{ if .Site.Params.author.bio }}
+        <p class="p-note {{ if not (.Site.Params.showBio | default true) }} {{ end }}">{{ .Site.Params.author.bio }}</p>
+    {{ end }}
+    {{ if .Site.Params.author.gender }}
+        <p class="p-gender-identity">{{ .Site.Params.author.gender }}</p>
+    {{ end }}
+
+    {{ if isset .Site.Params "social" }}
+        <div class="social-links">
+            {{ partial "social.html" . }}
+        </div>
+    {{ end }}
+</div>
