@@ -2,13 +2,8 @@
 // configure-img.ts — generates build.ninja for avatar image pipeline.
 // Run with: bun run static/configure-img.ts
 // Then build with: ninja -C static
-// FIXME: @ninjutsu-build/core 0.9.0 does not ship type definitions (dist/core.d.ts).
-// A hand-crafted .d.ts has been added manually to node_modules/@ninjutsu-build/core/dist/core.d.ts
-// and "types" added to its package.json as a workaround.
-// Track: https://github.com/elliotgoodrich/ninjutsu-build/issues/112
-// Remove the workaround once a fixed version is released.
 
-import { NinjaBuilder, orderOnlyDeps, implicitDeps } from "@ninjutsu-build/core";
+import { NinjaBuilder, implicitDeps } from "@ninjutsu-build/core";
 import { writeFileSync, mkdirSync, renameSync } from "node:fs";
 import which from "which";
 import { resolve } from "node:path";
