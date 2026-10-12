@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MPL-2.0
 // gen-avatar-xmp.ts — generates an XMP sidecar from avatar.metadata.svg.
-// Run with: bun run gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]
+// Run with: pnpm tsx gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]
 // Inputs:  avatar.metadata.svg
 // Outputs: avatar-meta.xmp (.ninja_build/)
 
@@ -138,7 +138,7 @@ ${derivedFrom}
 function main(): void {
   const args = process.argv.slice(2);
   if (args.length < 2) {
-    throw new Error("Usage: bun run static/gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]");
+    throw new Error("Usage: pnpm tsx static/gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]");
   }
   const [inputSvgArg, outputXmpArg, primaryLocaleArg] = args;
   const inputSvg = asStringOrEmpty(inputSvgArg);

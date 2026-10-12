@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 // svg-merge.ts — merges *.image.svg + avatar.metadata.svg into full *.svg files,
 // then minifies them with svgo.
-// Run with: bun run svg-merge.ts
+// Run with: pnpm tsx svg-merge.ts
 // Inputs:  avatar.image.svg (static/),
 //          avatar-maskable.image.svg, avatar-maskable-shadow.image.svg (.ninja_build/),
 //          avatar-bimi.svg (static/), avatar.metadata.svg (static/)

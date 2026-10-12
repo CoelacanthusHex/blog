@@ -2,7 +2,7 @@
 // compare-quality.ts — print PSNR+SSIM+XPSNR+VMAF+SSIMU2+size table from .quality/.ssimu2 files,
 // and optionally write a gnuplot script for a bpp-vs-SSIMU2 Pareto-front scatter plot (PDF output).
 // Each .quality file contains ffmpeg stderr output + a final line with file size (bytes).
-// Usage: bun run compare-quality.ts [--script <out.gnuplot>] <file1.quality> [file2.quality ...]
+// Usage: pnpm tsx compare-quality.ts [--script <out.gnuplot>] <file1.quality> [file2.quality ...]
 // Filenames encode variant/size/format: .ninja_build/VARIANT-NxN.FMT.quality
 
 import { readFile, writeFile } from "node:fs/promises";
@@ -184,7 +184,7 @@ async function main(): Promise<void> {
 
   const args = argv.filter((a: string) => a.endsWith(".quality") || a.endsWith(".ssimu2"));
   if (args.length === 0) {
-    console.error("Usage: bun run compare-quality.ts [--script <out.gnuplot>] <file.quality>...");
+    console.error("Usage: pnpm tsx compare-quality.ts [--script <out.gnuplot>] <file.quality>...");
     process.exit(1);
   }
 
