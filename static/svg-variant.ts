@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MPL-2.0
 // svg-variant.ts — generates image-only SVG variants from avatar.image.svg.
-// Run with: bun run svg-variant.ts
+// Run with: pnpm tsx svg-variant.ts
 // Inputs:  avatar.image.svg
 // Outputs: avatar-maskable.image.svg, avatar-maskable-shadow.image.svg, avatar-bimi.svg
 

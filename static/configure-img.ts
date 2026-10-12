@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MPL-2.0
 // configure-img.ts — generates build.ninja for avatar image pipeline.
-// Run with: bun run static/configure-img.ts
+// Run with: pnpm tsx static/configure-img.ts
 // Then build with: ninja -C static
 
 import { NinjaBuilder, implicitDeps } from "@ninjutsu-build/core";

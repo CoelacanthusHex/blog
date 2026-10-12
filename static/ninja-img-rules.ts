@@ -46,7 +46,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   ninja.comment("=== Rules ===");
 
   const genXmp = ninja.rule("gen_xmp", {
-    command: "bun run gen-avatar-xmp.ts $in $out $locale",
+    command: "pnpm tsx gen-avatar-xmp.ts $in $out $locale",
     description: "generate XMP sidecar",
     out: needs<string>(),
     in: needs<string>(),
@@ -147,7 +147,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const svgVariants = ninja.rule("svg_variants", {
-    command: "bun run svg-variant.ts",
+    command: "pnpm tsx svg-variant.ts",
     description: "generate SVG image-only variants",
     out: needs<readonly string[]>(),
     in: needs<readonly string[]>(),
@@ -156,7 +156,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const svgMerge = ninja.rule("svg_merge", {
-    command: "bun run svg-merge.ts",
+    command: "pnpm tsx svg-merge.ts",
     description: "merge SVG image + metadata variants",
     out: needs<readonly string[]>(),
     in: needs<readonly string[]>(),
@@ -165,7 +165,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const reconfigure = ninja.rule("reconfigure_img", {
-    command: "bun run configure-img.ts",
+    command: "pnpm tsx configure-img.ts",
     description: "reconfigure build.ninja",
     out: needs<string>(),
     in: needs<readonly string[]>(),
@@ -215,7 +215,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const reportQuality = ninja.rule("report_quality", {
-    command: "bun run compare-quality.ts $in 2>&1 | tee $out",
+    command: "pnpm tsx compare-quality.ts $in 2>&1 | tee $out",
     description: "report quality comparison",
     out: needs<string>(),
     in: needs<readonly string[]>(),
@@ -225,7 +225,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   /** gen_quality_script: writes a gnuplot script from .quality/.ssimu2 data.
    *  Only emitted when ./ssimulacra2 is available, since SSIMU2 is the Y axis. */
   const genQualityScript = ninja.rule("gen_quality_script", {
-    command: "bun run compare-quality.ts --script $out $in",
+    command: "pnpm tsx compare-quality.ts --script $out $in",
     description: "generate quality plot script",
     out: needs<string>(),
     in: needs<readonly string[]>(),
