@@ -14,20 +14,22 @@
     <!-- SPDX-FileCopyrightText: 2019 Coelacanthus -->
     <!-- SPDX-License-Identifier: LicenseRef-AllRightsReserved -->
     <g id="artwork">
-        <rect
-            x="2944"
-            y="4864"
-            width="59648"
-            height="55808"
-            fill="#f45b8d"
-        />
-        <rect
-            x="8960"
-            y="10880"
-            width="47616"
-            height="43520"
-            fill="white"
-        />
+        <g id="border">
+            <rect id="outer-border"
+                x="2944"
+                y="4864"
+                width="59648"
+                height="55808"
+                fill="#f45b8d"
+            />
+            <rect id="inner-border"
+                x="8960"
+                y="10880"
+                width="47616"
+                height="43520"
+                fill="white"
+            />
+        </g>
 
         <!-- ">" shape calculation:
             Thickness t = 4480 (equal to horizontal line)
@@ -66,31 +68,33 @@
             - Outer edge at V: C + R·(1/√2, 1/√2) = (30098.67, 34223.56)
             - Outer edge at end: (17395.56, 40592.44) + t·(1/√2, 1/√2) = (20562.67, 43759.55)
         -->
-        <path
-            d="
-                M 30098.67,31056.44
-                L 20562.67,21520.45
-                A 2240 2240 0 0 0 17395.56,24687.56
-                L 25348,32640
-                L 17395.56,40592.44
-                A 2240 2240 0 0 0 20562.67,43759.55
-                L 30098.67,34223.56
-                A 2240 2240 0 0 0 30098.67,31056.44
-                Z
-            "
-            fill="black"
-        />
-        <path
-            d="
-                M 32512,39936
-                L 45312,39936
-                A 640 640 0 0 1 45312,44416
-                L 32512,44416
-                A 640 640 0 0 1 32512,39936
-                Z
-            "
-            fill="black"
-        />
+        <g id="squinting-smile-terminal">
+            <path id="prompt"
+                d="
+                    M 30098.67,31056.44
+                    L 20562.67,21520.45
+                    A 2240 2240 0 0 0 17395.56,24687.56
+                    L 25348,32640
+                    L 17395.56,40592.44
+                    A 2240 2240 0 0 0 20562.67,43759.55
+                    L 30098.67,34223.56
+                    A 2240 2240 0 0 0 30098.67,31056.44
+                    Z
+                "
+                fill="black"
+            />
+            <path id="cursor"
+                d="
+                    M 32512,39936
+                    L 45312,39936
+                    A 640 640 0 0 1 45312,44416
+                    L 32512,44416
+                    A 640 640 0 0 1 32512,39936
+                    Z
+                "
+                fill="black"
+            />
+        </g>
     </g>
 </svg>
 <!-- vim: set ts=4 sts=4 sw=4 et: -->
