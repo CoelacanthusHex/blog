@@ -7,7 +7,7 @@ import { NinjaBuilder, implicitDeps } from "@ninjutsu-build/core";
 import { writeFileSync, mkdirSync, renameSync } from "node:fs";
 import which from "which";
 import { resolve } from "node:path";
-import { type Nullable, isNotNull } from "option-t/nullable";
+import { isNotNull } from "option-t/nullable";
 import { isNotUndefined } from "option-t/undefinable";
 import { unwrapOrElseForUndefinable } from "option-t/undefinable/unwrap_or_else";
 import { type AvatarMeta } from "./avatar-meta-types.ts";
@@ -44,7 +44,6 @@ type VariantPrefix =
   | "avatar-maskable-shadow-white-bg";
 
 const SIZES = [16, 32, 48, 80, 120, 128, 192, 200, 256, 400, 512, 640, 1000, 1024, 2048, 4096, 8192] as const;
-type Size = (typeof SIZES)[number];
 
 type Comparator<T> = (a: T, b: T) => number;
 
@@ -62,9 +61,9 @@ function sortVariants(values: readonly Variant[]): Variant[] {
 
 const ICO_SIZES: readonly number[] = [16, 32, 48] as const;
 const FAVICON_VARIANT = "avatar-maskable" as const;
-const CANONICAL_SIZE = 16384;
-const MAX_STEP_RATIO = 32;
 const MASKABLE_SIZES: readonly number[] = [192, 512] as const;
+const TRANSPARENT_BACKGROUND_ARGS = ["--export-background-opacity=0"] as const;
+const WHITE_BACKGROUND_ARGS = ["--export-background=white", "--export-background-opacity=1"] as const;
 
 const RESERVED_PHONY_TARGETS = new Set([
   "png", "webp", "jxl", "jpeg", "favicon", "metadata", "ci-golden", "maskable", "full",
@@ -72,12 +71,12 @@ const RESERVED_PHONY_TARGETS = new Set([
 ]);
 
 const VARIANTS: readonly Variant[] = [
-  { prefix: "avatar",                        svg: relPath("avatar.image.svg"),                              bg: [],                                  cicpPreset: "srgb" },
-  { prefix: "avatar-white-bg",               svg: relPath("avatar.image.svg"),                              bg: ["--background-color", "white"],     cicpPreset: "srgb" },
-  { prefix: "avatar-maskable",                  svg: buildPath("avatar-maskable.image.svg"),                      bg: [],                                  cicpPreset: "srgb" },
-  { prefix: "avatar-maskable-white-bg",         svg: buildPath("avatar-maskable.image.svg"),                      bg: ["--background-color", "white"],     cicpPreset: "srgb" },
-  { prefix: "avatar-maskable-shadow",          svg: buildPath("avatar-maskable-shadow.image.svg"),              bg: [],                                  cicpPreset: "srgb" },
-  { prefix: "avatar-maskable-shadow-white-bg", svg: buildPath("avatar-maskable-shadow.image.svg"),              bg: ["--background-color", "white"],     cicpPreset: "srgb" },
+  { prefix: "avatar",                        svg: relPath("avatar.image.svg"),                              bg: TRANSPARENT_BACKGROUND_ARGS, cicpPreset: "srgb" },
+  { prefix: "avatar-white-bg",               svg: relPath("avatar.image.svg"),                              bg: WHITE_BACKGROUND_ARGS,       cicpPreset: "srgb" },
+  { prefix: "avatar-maskable",                  svg: buildPath("avatar-maskable.image.svg"),                      bg: TRANSPARENT_BACKGROUND_ARGS, cicpPreset: "srgb" },
+  { prefix: "avatar-maskable-white-bg",         svg: buildPath("avatar-maskable.image.svg"),                      bg: WHITE_BACKGROUND_ARGS,       cicpPreset: "srgb" },
+  { prefix: "avatar-maskable-shadow",          svg: buildPath("avatar-maskable-shadow.image.svg"),              bg: TRANSPARENT_BACKGROUND_ARGS, cicpPreset: "srgb" },
+  { prefix: "avatar-maskable-shadow-white-bg", svg: buildPath("avatar-maskable-shadow.image.svg"),              bg: WHITE_BACKGROUND_ARGS,       cicpPreset: "srgb" },
 ];
 
 function registerOutput(registry: Set<NinjaPath>, output: NinjaPath): void {
@@ -125,15 +124,6 @@ function makeMetaArgsFile(m: AvatarMeta): string {
   return lines.join("\n") + "\n";
 }
 
-function intermediateFor(size: Size, sizes: readonly Size[]): Nullable<Size> {
-  if (CANONICAL_SIZE / size <= MAX_STEP_RATIO) return null;
-  const candidate = [...sizes]
-    .filter((s) => s >= size * 8 && s <= size * MAX_STEP_RATIO)
-    .sort(numberComparator)
-    .at(-1);
-  return candidate ?? null;
-}
-
 function writeManifestAtomically(path: string, content: string): void {
   const tmp = `${path}.tmp`;
   writeFileSync(tmp, content);
@@ -172,9 +162,12 @@ const hasSsimulacra2 = isNotNull(which.sync(filePath("ssimulacra2"), { nothrow: 
 if (!isNotNull(which.sync("exiftool", { nothrow: true }))) {
   throw new Error("exiftool is required but not found in PATH");
 }
+if (!isNotNull(which.sync("inkscape", { nothrow: true }))) {
+  throw new Error("inkscape is required but not found in PATH");
+}
 
 const {
-  genXmp, rsvgConvert, magickEwa, pngOptimize, embedMetadata, reflinkCopy,
+  genXmp, inkscapeRender, pngOptimize, embedMetadata, reflinkCopy,
   cjxl, cwebp, cjpegli, magickIco, symlinkRule,
   svgVariants, svgMerge, reconfigure,
   checkMissingDepsRule, checkCommandsRule,
@@ -205,6 +198,7 @@ for (const output of svgVariantOutputs) {
 void svgVariants({
   out: [...svgVariantOutputs],
   in: ["avatar.image.svg", "svg-variant.ts"],
+  [implicitDeps]: ["svg-meta.ts"],
 });
 
 const svgMergeOutputs = [
@@ -223,49 +217,21 @@ for (const output of svgMergeOutputs) {
 void svgMerge({
   out: [...svgMergeOutputs],
   in: [buildPath("avatar-maskable.image.svg"), buildPath("avatar-maskable-shadow.image.svg"), "avatar.image.svg", "avatar-bimi.svg", "avatar.metadata.svg", "svg-merge.ts"],
+  [implicitDeps]: ["svg-meta.ts"],
 });
 
 const icoLayerStamps = new Map<number, string>();
-const xmpOut = genXmp({ out: xmpFile, in: relPath("avatar.metadata.svg"), locale: primaryLocale });
+const xmpOut = genXmp({
+  out: xmpFile,
+  in: relPath("avatar.metadata.svg"),
+  locale: primaryLocale,
+  [implicitDeps]: ["gen-avatar-xmp.ts", "svg-meta.ts", "avatar-meta-types.ts", "write-stable.ts"],
+});
 
 for (const v of sortVariants(VARIANTS)) {
   ninja.comment(`--- ${v.prefix} ---`);
 
-  const canonicalPng = buildPath(`${v.prefix}-canonical.png`);
-  registerOutput(outputRegistry, canonicalPng);
-  rsvgConvert({
-    out: canonicalPng,
-    in: relPath(v.svg),
-    bg: v.bg.join(" "),
-    size: CANONICAL_SIZE.toString(),
-  });
-
-  const pngMap = new Map<number, NinjaPath>();
-  const sortedSizes = [...SIZES].sort((a, b) => b - a);
-  const canonicalSizes = sortedSizes.filter((s) => !isNotNull(intermediateFor(s, SIZES)));
-  const intermediateSizes = sortedSizes.filter((s) => isNotNull(intermediateFor(s, SIZES)));
-
-  for (const size of canonicalSizes) {
-    const rawPng = buildPath(`${v.prefix}-${String(size)}x${String(size)}.raw.png`);
-    registerOutput(outputRegistry, rawPng);
-    magickEwa({ out: rawPng, in: canonicalPng, size: `${String(size)}x${String(size)}` });
-    pngMap.set(size, rawPng);
-  }
-
-  for (const size of intermediateSizes) {
-    const src = intermediateFor(size, SIZES);
-    if (!isNotNull(src)) throw new Error(`No intermediate found for size ${String(size)}`);
-    const srcPng = unwrapOrElseForUndefinable(
-      pngMap.get(src),
-      () => { throw new Error(`Intermediate ${String(src)} not rasterized yet for size ${String(size)}`); }
-    );
-    const rawPng = buildPath(`${v.prefix}-${String(size)}x${String(size)}.raw.png`);
-    registerOutput(outputRegistry, rawPng);
-    magickEwa({ out: rawPng, in: srcPng, size: `${String(size)}x${String(size)}` });
-    pngMap.set(size, rawPng);
-  }
-
-  for (const size of [...SIZES].sort((a, b) => a - b)) {
+  for (const size of [...SIZES].sort(numberComparator)) {
     const base = `${v.prefix}-${String(size)}x${String(size)}`;
     const rawPng   = buildPath(`${base}.raw.png`);    // raster output (image-only dep)
     const pubPng   = relPath(`${base}.png`);           // public PNG (final reflink)
@@ -279,6 +245,14 @@ for (const v of sortVariants(VARIANTS)) {
     registerOutput(outputRegistry, jpeg);
 
     // === Image-only chain (no metadata deps) ===
+
+    registerOutput(outputRegistry, rawPng);
+    inkscapeRender({
+      out: rawPng,
+      in: v.svg,
+      bg: v.bg.join(" "),
+      size: String(size),
+    });
 
     const optPng = buildPath(`${base}.opt.png`);
     registerOutput(outputRegistry, optPng);

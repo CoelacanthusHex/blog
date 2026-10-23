@@ -6,8 +6,7 @@ import { type NinjaBuilder, needs } from "@ninjutsu-build/core";
 import { cpus } from "node:os";
 
 export interface PoolDepths {
-  readonly rsvg: number;
-  readonly magick: number;
+  readonly inkscape: number;
   readonly heavy: number;
   readonly exiftool: number;
 }
@@ -21,15 +20,13 @@ function envInt(name: string, fallback: number): number {
 
 export function computePoolDepths(): PoolDepths {
   const cpu = cpus().length || 4;
-  const rsvg = 1;
-  const magick = Math.max(1, Math.min(2, Math.floor(cpu / 8) || 1));
+  const inkscape = 1;
   const heavy = Math.max(1, Math.min(4, Math.floor(cpu / 4) || 1));
   // exiftool: I/O-bound Perl process, ~50-100ms startup. Allow more concurrency than heavy
   // but cap to avoid memory pressure from many Perl interpreters.
   const exiftool = Math.max(1, Math.min(8, Math.floor(cpu / 2) || 4));
   return {
-    rsvg: envInt("IMG_POOL_RSVG", rsvg),
-    magick: envInt("IMG_POOL_MAGICK", magick),
+    inkscape: envInt("IMG_POOL_INKSCAPE", inkscape),
     heavy: envInt("IMG_POOL_HEAVY", heavy),
     exiftool: envInt("IMG_POOL_EXIFTOOL", exiftool),
   };
@@ -38,8 +35,7 @@ export function computePoolDepths(): PoolDepths {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   ninja.comment("=== Pools ===");
-  const rsvgPool     = ninja.pool("rsvg",     { depth: pools.rsvg });
-  const magickPool   = ninja.pool("magick",   { depth: pools.magick });
+  const inkscapePool = ninja.pool("inkscape", { depth: pools.inkscape });
   const heavyPool    = ninja.pool("heavy",    { depth: pools.heavy });
   const exiftoolPool = ninja.pool("exiftool", { depth: pools.exiftool });
 
@@ -54,23 +50,20 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
     restat: 1,
   });
 
-  const rsvgConvert = ninja.rule("rsvg_convert", {
-    command: "rsvg-convert $in $bg -w $size -h $size -a -o $out",
-    description: "rsvg-convert $in -> $out ($size x $size)",
+  const inkscapeRender = ninja.rule("inkscape_render", {
+    command: [
+      "INKSCAPE_PROFILE_DIR=$builddir/inkscape-profile inkscape",
+      "--batch-process --export-area-page --export-type=png",
+      "--export-width=$size --export-height=$size",
+      "--export-png-color-mode=RGBA_8 --export-png-antialias=3 --export-png-use-dithering=false",
+      "$bg --export-filename=$out $in",
+    ].join(" "),
+    description: "inkscape $in -> $out ($size x $size)",
     out: needs<string>(),
     in: needs<string>(),
     bg: "",
     size: needs<string>(),
-    pool: rsvgPool,
-  });
-
-  const magickEwa = ninja.rule("magick_ewa", {
-    command: "magick $in -colorspace RGB -filter MagicKernelSharp2021 -distort Resize $size +repage -colorspace sRGB -depth 8 -define png:compression-level=9 -define png:compression-strategy=1 $out",
-    description: "magick resize $in -> $out ($size)",
-    out: needs<string>(),
-    in: needs<string>(),
-    size: needs<string>(),
-    pool: magickPool,
+    pool: inkscapePool,
   });
 
   const pngOptimize = ninja.rule("png_optimize", {
@@ -279,7 +272,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   return {
-    genXmp, rsvgConvert, magickEwa, pngOptimize, embedMetadata, reflinkCopy,
+    genXmp, inkscapeRender, pngOptimize, embedMetadata, reflinkCopy,
     cjxl, cwebp, cjpegli, magickIco, symlinkRule,
     svgVariants, svgMerge, reconfigure,
     checkMissingDepsRule, checkCommandsRule,
