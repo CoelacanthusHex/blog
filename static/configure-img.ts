@@ -13,11 +13,11 @@ import { unwrapOrElseForUndefinable } from "option-t/undefinable/unwrap_or_else"
 import { type AvatarMeta } from "./avatar-meta-types.ts";
 import { extractAvatarMeta, toExifDateTime } from "./svg-meta.ts";
 import { writeStableSync } from "./write-stable.ts";
-import { computePoolDepths, defineImgRules } from "./ninja-img-rules.ts";
+import { JPEG2000_DEFAULT_RESOLUTIONS, computePoolDepths, defineImgRules } from "./ninja-img-rules.ts";
 
 /** Ninja-relative path (may contain $builddir variables). Never an absolute filesystem path. */
 type NinjaPath = string & { readonly __ninjaPath: unique symbol };
-type BitmapFormat = "png" | "jxl" | "jpg" | "webp";
+type BitmapFormat = "png" | "jxl" | "jpg" | "jp2" | "webp";
 
 const DIR = import.meta.dirname;
 const filePath = (name: string): string => resolve(DIR, name);
@@ -62,12 +62,13 @@ function sortVariants(values: readonly Variant[]): Variant[] {
 
 const ICO_SIZES: readonly number[] = [16, 32, 48] as const;
 const FAVICON_VARIANT = "avatar-maskable" as const;
+const JPEG2000_COMPARISON_RATIO = 10;
 const MASKABLE_SIZES: readonly number[] = [192, 512] as const;
 const TRANSPARENT_BACKGROUND_ARGS = ["--export-background-opacity=0"] as const;
 const WHITE_BACKGROUND_ARGS = ["--export-background=white", "--export-background-opacity=1"] as const;
 
 const RESERVED_PHONY_TARGETS = new Set([
-  "png", "webp", "jxl", "jpeg", "favicon", "metadata", "ci-golden", "maskable", "full",
+  "png", "webp", "jxl", "jpeg", "jpeg2000", "jp2", "favicon", "metadata", "ci-golden", "maskable", "full",
   "check-missingdeps", "check-commands", "check-graph", "compare-quality",
 ]);
 
@@ -184,6 +185,7 @@ const pngOutputs: NinjaPath[] = [];
 const webpOutputs: NinjaPath[] = [];
 const jxlOutputs: NinjaPath[] = [];
 const jpegOutputs: NinjaPath[] = [];
+const jpeg2000Outputs: NinjaPath[] = [];
 const metadataStamps: NinjaPath[] = [];
 const ciGoldenOutputs: NinjaPath[] = [];
 const variantOutputs = new Map<VariantPrefix, NinjaPath[]>();
@@ -273,7 +275,7 @@ for (const v of sortVariants(VARIANTS)) {
       cicp_cmd: hasPngCicpEditor ? ` && png_cicp_editor add --preset ${v.cicpPreset} $out` : "",
     });
 
-    // JXL, JPEG and WebP encode from rawPng — run fully in parallel with optimize+metadata chain.
+    // Encoders use rawPng independently of PNG optimization and metadata.
     const rawJxl = buildPath(`${base}.raw.jxl`);
     registerOutput(outputRegistry, rawJxl);
     cjxl({ out: rawJxl, in: rawPng });
@@ -284,6 +286,17 @@ for (const v of sortVariants(VARIANTS)) {
     registerOutput(outputRegistry, rawJpeg);
     cjpegli({ out: rawJpeg, in: rawPng });
 
+    // Keep the lossy comparison's raw.jp2 separate.
+    const rawJpeg2000 = buildPath(`${base}.lossless.jp2`);
+    const jpeg2000Resolutions = Math.min(JPEG2000_DEFAULT_RESOLUTIONS, Math.floor(Math.log2(size)) + 1);
+    registerOutput(outputRegistry, rawJpeg2000);
+    opjCompress({
+      out: rawJpeg2000,
+      in: rawPng,
+      args: "-r 1" +
+        (jpeg2000Resolutions === JPEG2000_DEFAULT_RESOLUTIONS ? "" : ` -n ${String(jpeg2000Resolutions)}`),
+    });
+
     const rawWebp = buildPath(`${base}.raw.webp`);
     registerOutput(outputRegistry, rawWebp);
     cwebp({ out: rawWebp, in: rawPng });
@@ -291,17 +304,19 @@ for (const v of sortVariants(VARIANTS)) {
     const pubPngOut = publishImage(base, "png", optPngOut);
     const jxlOut = publishImage(base, "jxl", rawJxl);
     const jpegOut = publishImage(base, "jpg", rawJpeg);
+    const jpeg2000Out = publishImage(base, "jp2", rawJpeg2000);
     const pubWebpOut = publishImage(base, "webp", rawWebp);
 
     // JPEG remains opt-in for full and per-variant builds.
-    allOutputs.push(pubPngOut, jxlOut, pubWebpOut);
+    allOutputs.push(pubPngOut, jxlOut, jpeg2000Out, pubWebpOut);
     pngOutputs.push(pubPngOut);
     jxlOutputs.push(jxlOut);
     jpegOutputs.push(jpegOut);
+    jpeg2000Outputs.push(jpeg2000Out);
     webpOutputs.push(pubWebpOut);
 
     const vOutputs = variantOutputs.get(v.prefix) ?? [];
-    vOutputs.push(pubPngOut, jxlOut, pubWebpOut);
+    vOutputs.push(pubPngOut, jxlOut, jpeg2000Out, pubWebpOut);
     variantOutputs.set(v.prefix, vOutputs);
 
     if (v.prefix === FAVICON_VARIANT && ICO_SIZES.includes(size)) {
@@ -309,7 +324,7 @@ for (const v of sortVariants(VARIANTS)) {
     }
 
     if (size === 256 || size === 1024) {
-      ciGoldenOutputs.push(pubPngOut, jxlOut, jpegOut, pubWebpOut);
+      ciGoldenOutputs.push(pubPngOut, jxlOut, jpegOut, jpeg2000Out, pubWebpOut);
     }
   }
 }
@@ -331,6 +346,7 @@ const sortedPngOutputs = uniqueSorted(pngOutputs);
 const sortedWebpOutputs = uniqueSorted(webpOutputs);
 const sortedJxlOutputs = uniqueSorted(jxlOutputs);
 const sortedJpegOutputs = uniqueSorted(jpegOutputs);
+const sortedJpeg2000Outputs = uniqueSorted(jpeg2000Outputs);
 const sortedMetadataStamps = uniqueSorted(metadataStamps);
 const sortedCiGoldenOutputs = uniqueSorted(ciGoldenOutputs);
 
@@ -392,7 +408,7 @@ for (const v of sortVariants(VARIANTS)) {
     const extraFmts = [
       { fmt: "avif", ext: "avif", encode: (i: NinjaPath, o: NinjaPath): NinjaPath => avifenc({ out: o, in: i }) },
       { fmt: "heic", ext: "heic", encode: (i: NinjaPath, o: NinjaPath): NinjaPath => heifEnc({ out: o, in: i }) },
-      { fmt: "jp2",  ext: "jp2",  encode: (i: NinjaPath, o: NinjaPath): NinjaPath => opjCompress({ out: o, in: i }) },
+      { fmt: "jp2",  ext: "jp2",  encode: (i: NinjaPath, o: NinjaPath): NinjaPath => opjCompress({ out: o, in: i, args: `-r ${String(JPEG2000_COMPARISON_RATIO)}` }) },
     ] as const;
     for (const { fmt, ext, encode } of extraFmts) {
       const rawOut  = buildPath(`${base}.raw.${ext}`);
@@ -447,6 +463,8 @@ ninja.phony({ out: "png",               in: sortedPngOutputs });
 ninja.phony({ out: "webp",              in: sortedWebpOutputs });
 ninja.phony({ out: "jxl",               in: sortedJxlOutputs });
 ninja.phony({ out: "jpeg",              in: sortedJpegOutputs });
+ninja.phony({ out: "jpeg2000",          in: sortedJpeg2000Outputs });
+ninja.phony({ out: "jp2",               in: "jpeg2000" });
 ninja.phony({ out: "favicon",           in: faviconOut });
 ninja.phony({ out: "metadata",          in: sortedMetadataStamps });
 ninja.phony({ out: "ci-golden",         in: sortedCiGoldenOutputs });
