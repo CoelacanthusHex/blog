@@ -169,54 +169,26 @@
 
         <!-- ">" shape calculation:
             Thickness t = 4480 (equal to horizontal line)
-            Quarter circle radius R = t/2 = 2240
-            Semicircle radius r = 2240
-            Perpendicular offset = t/√2 = 3167.11
-            
-            Vertex V = (25348, 32640)
-            Quarter circle center C = V + R√2·(1,0) = (28515.11, 32640)
-            
-            Branch directions:
-            - Upper: (-1/√2, -1/√2) at 45° up-left
-            - Lower: (-1/√2, 1/√2) at 45° down-left
-            - Angle between branches: 90°
-            
-            Perpendicular directions (toward opening):
-            - Upper: (1/√2, -1/√2)
-            - Lower: (1/√2, 1/√2)
-            
-            Constraint: lowest point at y = 44416
-            Semicircle center_y = (P_lower_inner_y + P_lower_outer_y)/2
-            P_lower_outer_y = P_lower_inner_y + 3167.11
-            center_y = P_lower_inner_y + 1583.56
-            Lowest point: center_y + r = P_lower_inner_y + 1583.56 + 2240 = 44416
-            P_lower_inner_y = 40592.44
-            
-            Branch length: L/√2 = 40592.44 - 32640 = 7952.44
-            
-            Upper branch:
-            - Inner edge: V + L·(-1/√2, -1/√2) = (17395.56, 24687.56)
-            - Outer edge at V: C + R·(1/√2, -1/√2) = (30098.67, 31056.44)
-            - Outer edge at end: (17395.56, 24687.56) + t·(1/√2, -1/√2) = (20562.67, 21520.45)
-            
-            Lower branch:
-            - Inner edge: V + L·(-1/√2, 1/√2) = (17395.56, 40592.44)
-            - Outer edge at V: C + R·(1/√2, 1/√2) = (30098.67, 34223.56)
-            - Outer edge at end: (17395.56, 40592.44) + t·(1/√2, 1/√2) = (20562.67, 43759.55)
+            Cap and outer-corner radius r = t/2 = 2240
+
+            Rotate an axis-aligned L by 45° about inner vertex V = (25348, 32640).
+            Constraint: lowest point at y = 44416 (aligned with cursor)
+            Branch extent = (44416 - 32640 - r)√2 - r ≈ 11245.940531
         -->
         <g id="squinting-smile-terminal">
             <path id="prompt"
                 d="
-                    M 30098.67,31056.44
-                    L 20562.67,21520.45
-                    A 2240 2240 0 0 0 17395.56,24687.56
-                    L 25348,32640
-                    L 17395.56,40592.44
-                    A 2240 2240 0 0 0 20562.67,43759.55
-                    L 30098.67,34223.56
-                    A 2240 2240 0 0 0 30098.67,31056.44
+                    M 2240,-4480
+                    L -11245.940531,-4480
+                    A 2240 2240 0 0 0 -11245.940531,0
+                    L 0,0
+                    L 0,11245.940531
+                    A 2240 2240 0 0 0 4480,11245.940531
+                    L 4480,-2240
+                    A 2240 2240 0 0 0 2240,-4480
                     Z
                 "
+                transform="translate(25348 32640) rotate(45)"
                 fill="black"
             />
             <path id="cursor"
