@@ -186,7 +186,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   /** measure_quality: runs ffmpeg PSNR+SSIM+XPSNR+VMAF for one file vs raw.png reference.
    *  Output file contains ffmpeg stderr + file size line for parsing by compare-quality.ts. */
   const measureQuality = ninja.rule("measure_quality", {
-    command: "ffmpeg -i $ref -i $in -lavfi \"ssim;[0:v][1:v]psnr;[0:v][1:v]xpsnr;[0:v][1:v]libvmaf\" -f null - > $out 2>&1; wc -c < $in >> $out",
+    command: "ffmpeg -i $ref -i $in -lavfi \"ssim;[0:v][1:v]psnr;[0:v][1:v]xpsnr;[0:v][1:v]libvmaf\" -f null - > $out 2>&1 && wc -c < $in >> $out",
     description: "measure quality $in",
     out: needs<string>(),
     in: needs<string>(),
@@ -198,7 +198,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
    *  Output file contains the ssimulacra2 score + file size, parsed by compare-quality.ts.
    *  Only emitted when ./ssimulacra2 binary exists (built via build-ssimulacra2.sh). */
   const measureSsimu2 = ninja.rule("measure_ssimu2", {
-    command: "$ssimu2 $ref $in > $out 2>&1; wc -c < $in >> $out",
+    command: "$ssimu2 $ref $in > $out 2>&1 && wc -c < $in >> $out",
     description: "measure ssimulacra2 $in",
     out: needs<string>(),
     in: needs<string>(),
@@ -208,7 +208,7 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const reportQuality = ninja.rule("report_quality", {
-    command: "pnpm tsx compare-quality.ts $in 2>&1 | tee $out",
+    command: "pnpm tsx compare-quality.ts $in > $out 2>&1 && cat $out",
     description: "report quality comparison",
     out: needs<string>(),
     in: needs<readonly string[]>(),

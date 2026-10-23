@@ -3,7 +3,7 @@
 // Run with: pnpm tsx static/configure-img.ts
 // Then build with: ninja -C static
 
-import { NinjaBuilder, implicitDeps } from "@ninjutsu-build/core";
+import { NinjaBuilder, implicitDeps, implicitOut } from "@ninjutsu-build/core";
 import { writeFileSync, mkdirSync, renameSync } from "node:fs";
 import which from "which";
 import { resolve } from "node:path";
@@ -17,6 +17,7 @@ import { computePoolDepths, defineImgRules } from "./ninja-img-rules.ts";
 
 /** Ninja-relative path (may contain $builddir variables). Never an absolute filesystem path. */
 type NinjaPath = string & { readonly __ninjaPath: unique symbol };
+type BitmapFormat = "png" | "jxl" | "jpg" | "webp";
 
 const DIR = import.meta.dirname;
 const filePath = (name: string): string => resolve(DIR, name);
@@ -186,6 +187,7 @@ const jpegOutputs: NinjaPath[] = [];
 const metadataStamps: NinjaPath[] = [];
 const ciGoldenOutputs: NinjaPath[] = [];
 const variantOutputs = new Map<VariantPrefix, NinjaPath[]>();
+const svgScriptDeps = ["svg-meta.ts", "avatar-meta-types.ts", "write-stable.ts"] as const;
 
 const svgVariantOutputs = [
   buildPath("avatar-maskable.image.svg"),
@@ -198,7 +200,7 @@ for (const output of svgVariantOutputs) {
 void svgVariants({
   out: [...svgVariantOutputs],
   in: ["avatar.image.svg", "svg-variant.ts"],
-  [implicitDeps]: ["svg-meta.ts"],
+  [implicitDeps]: svgScriptDeps,
 });
 
 const svgMergeOutputs = [
@@ -217,7 +219,7 @@ for (const output of svgMergeOutputs) {
 void svgMerge({
   out: [...svgMergeOutputs],
   in: [buildPath("avatar-maskable.image.svg"), buildPath("avatar-maskable-shadow.image.svg"), "avatar.image.svg", "avatar-bimi.svg", "avatar.metadata.svg", "svg-merge.ts"],
-  [implicitDeps]: ["svg-meta.ts"],
+  [implicitDeps]: [...svgScriptDeps, "svgo.config.cjs"],
 });
 
 const icoLayerStamps = new Map<number, string>();
@@ -225,8 +227,26 @@ const xmpOut = genXmp({
   out: xmpFile,
   in: relPath("avatar.metadata.svg"),
   locale: primaryLocale,
-  [implicitDeps]: ["gen-avatar-xmp.ts", "svg-meta.ts", "avatar-meta-types.ts", "write-stable.ts"],
+  [implicitDeps]: ["gen-avatar-xmp.ts", ...svgScriptDeps],
 });
+
+function publishImage(base: string, format: BitmapFormat, input: NinjaPath): NinjaPath {
+  const final = buildPath(`${base}.final.${format}`);
+  const output = relPath(`${base}.${format}`);
+  registerOutput(outputRegistry, final);
+  registerOutput(outputRegistry, output);
+
+  const finalOutput = embedMetadata({
+    out: final,
+    in: input,
+    argsfile: metaArgsNinjaPath,
+    xmp: xmpFile,
+    [implicitDeps]: [metaArgsNinjaPath, xmpOut],
+  });
+  metadataStamps.push(finalOutput);
+
+  return reflinkCopy({ out: output, in: finalOutput });
+}
 
 for (const v of sortVariants(VARIANTS)) {
   ninja.comment(`--- ${v.prefix} ---`);
@@ -234,15 +254,6 @@ for (const v of sortVariants(VARIANTS)) {
   for (const size of [...SIZES].sort(numberComparator)) {
     const base = `${v.prefix}-${String(size)}x${String(size)}`;
     const rawPng   = buildPath(`${base}.raw.png`);    // raster output (image-only dep)
-    const pubPng   = relPath(`${base}.png`);           // public PNG (final reflink)
-    const pubWebp  = relPath(`${base}.webp`);          // public WebP (final reflink)
-    const jxl      = relPath(`${base}.jxl`);
-    const jpeg     = relPath(`${base}.jpg`);
-
-    registerOutput(outputRegistry, pubPng);
-    registerOutput(outputRegistry, pubWebp);
-    registerOutput(outputRegistry, jxl);
-    registerOutput(outputRegistry, jpeg);
 
     // === Image-only chain (no metadata deps) ===
 
@@ -277,64 +288,17 @@ for (const v of sortVariants(VARIANTS)) {
     registerOutput(outputRegistry, rawWebp);
     cwebp({ out: rawWebp, in: rawPng });
 
-    // === Metadata chain (depends on avatar.metadata.svg) ===
-    // All formats use the same embedMetadata rule (exiftool only, no exiv2).
-    // metaArgsNinjaPath and xmpFile are implicit deps — stable mtimes prevent re-runs.
+    const pubPngOut = publishImage(base, "png", optPngOut);
+    const jxlOut = publishImage(base, "jxl", rawJxl);
+    const jpegOut = publishImage(base, "jpg", rawJpeg);
+    const pubWebpOut = publishImage(base, "webp", rawWebp);
 
-    // PNG: opt.png → final.png → public.png
-    const finalPng = buildPath(`${base}.final.png`);
-    registerOutput(outputRegistry, finalPng);
-    const finalPngOut = embedMetadata({
-      out: finalPng,
-      in: optPngOut,
-      argsfile: metaArgsNinjaPath,
-      xmp: xmpFile,
-      [implicitDeps]: [metaArgsNinjaPath, xmpOut],
-    });
-    const pubPngOut = reflinkCopy({ out: pubPng, in: finalPngOut });
-
-    // JXL: raw.jxl → final.jxl → public.jxl
-    const finalJxl = buildPath(`${base}.final.jxl`);
-    registerOutput(outputRegistry, finalJxl);
-    const finalJxlOut = embedMetadata({
-      out: finalJxl,
-      in: rawJxl,
-      argsfile: metaArgsNinjaPath,
-      xmp: xmpFile,
-      [implicitDeps]: [metaArgsNinjaPath, xmpOut],
-    });
-    const jxlOut = reflinkCopy({ out: jxl, in: finalJxlOut });
-
-    // JPEG: raw.jpg → final.jpg → public.jpg
-    const finalJpeg = buildPath(`${base}.final.jpg`);
-    registerOutput(outputRegistry, finalJpeg);
-    const finalJpegOut = embedMetadata({
-      out: finalJpeg,
-      in: rawJpeg,
-      argsfile: metaArgsNinjaPath,
-      xmp: xmpFile,
-      [implicitDeps]: [metaArgsNinjaPath, xmpOut],
-    });
-    const jpegOut = reflinkCopy({ out: jpeg, in: finalJpegOut });
-
-    // WebP: raw.webp → final.webp → public.webp
-    const finalWebp = buildPath(`${base}.final.webp`);
-    registerOutput(outputRegistry, finalWebp);
-    const finalWebpOut = embedMetadata({
-      out: finalWebp,
-      in: rawWebp,
-      argsfile: metaArgsNinjaPath,
-      xmp: xmpFile,
-      [implicitDeps]: [metaArgsNinjaPath, xmpOut],
-    });
-    const pubWebpOut = reflinkCopy({ out: pubWebp, in: finalWebpOut });
-
+    // JPEG remains opt-in for full and per-variant builds.
     allOutputs.push(pubPngOut, jxlOut, pubWebpOut);
     pngOutputs.push(pubPngOut);
     jxlOutputs.push(jxlOut);
     jpegOutputs.push(jpegOut);
     webpOutputs.push(pubWebpOut);
-    metadataStamps.push(finalPngOut, finalJxlOut, finalJpegOut, finalWebpOut);
 
     const vOutputs = variantOutputs.get(v.prefix) ?? [];
     vOutputs.push(pubPngOut, jxlOut, pubWebpOut);
@@ -502,6 +466,7 @@ for (const v of sortVariants(VARIANTS)) {
 
 reconfigure({
   out: "build.ninja",
+  [implicitOut]: metaArgsNinjaPath,
   in: ["configure-img.ts", "ninja-img-rules.ts", "gen-avatar-xmp.ts", "svg-meta.ts", "avatar-meta-types.ts", "write-stable.ts", "run-if-changed.sh", "avatar.image.svg", "avatar.metadata.svg"],
 });
 
