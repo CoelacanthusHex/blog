@@ -5,6 +5,8 @@
 import { type NinjaBuilder, needs } from "@ninjutsu-build/core";
 import { cpus } from "node:os";
 
+export const JPEG2000_DEFAULT_RESOLUTIONS = 6;
+
 export interface PoolDepths {
   readonly inkscape: number;
   readonly heavy: number;
@@ -263,10 +265,11 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   });
 
   const opjCompress = ninja.rule("opj_compress", {
-    command: "opj_compress -i $in -o $out -r 10",
+    command: "opj_compress -i $in -o $out $args",
     description: "opj_compress $in -> $out",
     out: needs<string>(),
     in: needs<string>(),
+    args: "",
     restat: 1,
     pool: heavyPool,
   });
