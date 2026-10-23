@@ -1,0 +1,6 @@
+*.jxl diff=imagemeta
+*.jp2 diff=imagemeta
+*.png diff=imagemeta
+*.webp diff=imagemeta
+*.avif diff=imagemeta
+*.jpg diff=imagemeta
