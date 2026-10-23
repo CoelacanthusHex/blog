@@ -15,6 +15,7 @@ import { ARTWORK_ID, findElementById } from "./svg-meta.ts";
 
 const DIR = import.meta.dirname;
 const BUILD_DIR = `${DIR}/.ninja_build`;
+const SVG_TINY_MAX_FRACTION_DIGITS = 4;
 const filePath = (name: SvgFileName): string => `${DIR}/${name}`;
 const buildPath = (name: string): string => `${BUILD_DIR}/${name}`;
 
@@ -79,8 +80,10 @@ async function makeRoundImage(scale: number, outName: string, cx: number, cy: nu
     svg.children.splice(artworkIndex, 0, comment, new XmlText("\n    "));
   }
 
+  const serializedScale = Number(scale.toFixed(SVG_TINY_MAX_FRACTION_DIGITS)).toString();
+
   artwork.attributes.push(new XmlAttribute("transform",
-    `translate(${cx.toString()} ${cy.toString()}) scale(${scale.toString()}, ${scale.toString()}) translate(-${cx.toString()} -${cy.toString()})`));
+    `translate(${cx.toString()} ${cy.toString()}) scale(${serializedScale}, ${serializedScale}) translate(-${cx.toString()} -${cy.toString()})`));
 
   await writeStableAsync(buildPath(outName), doc.toString());
 }
