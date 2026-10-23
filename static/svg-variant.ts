@@ -8,10 +8,10 @@ import { readFile, writeFile } from "node:fs/promises";
 import { XmlParser, XmlAttribute, XmlElement, XmlText, XmlComment } from "xml-trueformat";
 import type { XmlChildNode } from "xml-trueformat";
 import { type Undefinable, isNotUndefined } from "option-t/undefinable";
-import { andThenForUndefinable } from "option-t/undefinable/and_then";
 import { unwrapOrElseForUndefinable } from "option-t/undefinable/unwrap_or_else";
 import { type SvgFileName, svgFile } from "./avatar-meta-types.ts";
 import { writeStableAsync } from "./write-stable.ts";
+import { ARTWORK_ID, findElementById } from "./svg-tree.ts";
 
 const DIR = import.meta.dirname;
 const BUILD_DIR = `${DIR}/.ninja_build`;
@@ -42,9 +42,10 @@ function parseViewBox(svg: XmlElement): ViewBox {
 function computeGeometry(svg: XmlElement): { cx: number; cy: number; k: number } {
   const { w, h } = parseViewBox(svg);
 
-  const g: Undefinable<XmlElement> = svg.getFirstElementByName("g");
-  const rect: Undefinable<XmlElement> = andThenForUndefinable(g, (el) => el.getFirstElementByName("rect"));
-  if (!isNotUndefined(g) || !isNotUndefined(rect)) throw new Error("No <g>/<rect> in avatar.image.svg");
+  const rect = findElementById(svg, "outer-border");
+  if (!isNotUndefined(rect)) {
+    throw new Error("No #outer-border in avatar.image.svg");
+  }
 
   const rw = Number(unwrapOrElseForUndefinable(rect.getAttributeValue("width"), () => { throw new Error("No width attribute on <rect> in avatar.image.svg"); }));
   const rh = Number(unwrapOrElseForUndefinable(rect.getAttributeValue("height"), () => { throw new Error("No height attribute on <rect> in avatar.image.svg"); }));
@@ -61,22 +62,24 @@ async function makeRoundImage(scale: number, outName: string, cx: number, cy: nu
   const doc = XmlParser.parse(await read(svgFile("avatar.image.svg")));
   const svg = doc.getRootElement();
 
-  const g: Undefinable<XmlElement> = svg.getFirstElementByName("g");
-  if (!isNotUndefined(g)) throw new Error("No <g> in avatar.image.svg");
+  const artwork = findElementById(svg, ARTWORK_ID);
+  if (!isNotUndefined(artwork)) {
+    throw new Error("No #artwork in avatar.image.svg");
+  }
 
-  // Inject PWA maskable / safe-zone comment before the <g>
+  // Inject PWA maskable / safe-zone comment before #artwork
   const safeZoneRadius = Math.round(cx * scale * 0.8 * 100) / 100;
   const comment = new XmlComment(
     ` PWA maskable / Android adaptive icon: artwork at ${(scale * 100).toFixed(0)}% of canvas,` +
     ` Can be used for any launcher crop shape. ` +
     ` See also https://www.w3.org/TR/appmanifest/#icon-masks`);
 
-  const gIndex = svg.children.indexOf(g);
-  if (gIndex !== -1) {
-    svg.children.splice(gIndex, 0, comment, new XmlText("\n    "));
+  const artworkIndex = svg.children.indexOf(artwork);
+  if (artworkIndex !== -1) {
+    svg.children.splice(artworkIndex, 0, comment, new XmlText("\n    "));
   }
 
-  g.attributes.push(new XmlAttribute("transform",
+  artwork.attributes.push(new XmlAttribute("transform",
     `translate(${cx.toString()} ${cy.toString()}) scale(${scale.toString()}, ${scale.toString()}) translate(-${cx.toString()} -${cy.toString()})`));
 
   await writeStableAsync(buildPath(outName), doc.toString());
