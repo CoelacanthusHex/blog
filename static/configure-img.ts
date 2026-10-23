@@ -43,7 +43,7 @@ type VariantPrefix =
   | "avatar-maskable-shadow"
   | "avatar-maskable-shadow-white-bg";
 
-const SIZES = [16, 32, 48, 80, 120, 128, 192, 200, 256, 400, 512, 1024, 2048, 4096, 8192] as const;
+const SIZES = [16, 32, 48, 80, 120, 128, 192, 200, 256, 400, 512, 640, 1000, 1024, 2048, 4096, 8192] as const;
 type Size = (typeof SIZES)[number];
 
 type Comparator<T> = (a: T, b: T) => number;
