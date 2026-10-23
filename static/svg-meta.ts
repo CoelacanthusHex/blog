@@ -17,6 +17,25 @@ import {
   type AvatarMeta,
 } from "./avatar-meta-types.ts";
 
+export const ARTWORK_ID = "artwork";
+
+export function findElementById(element: XmlElement, id: string): Undefinable<XmlElement> {
+  if (element.getAttributeValue("id") === id) {
+    return element;
+  }
+
+  for (const child of element.children) {
+    if (child instanceof XmlElement) {
+      const match = findElementById(child, id);
+      if (isNotUndefined(match)) {
+        return match;
+      }
+    }
+  }
+
+  return undefined;
+}
+
 function asOptionalNonEmptyString(value: string): Nullable<NonEmptyString> {
   const trimmed = value.trim();
   return trimmed.length > 0 ? trimmed as NonEmptyString : null;
@@ -263,6 +282,6 @@ export function extractAvatarMeta(svgPath: string, primaryLocale: string): Avata
       createdDateTime: asOptionalIsoDateTimeWithOffset(createdDateTime),
       dateOnly: asOptionalIsoDateOnly(dateOnly),
     },
-    software: "rsvg-convert" as NonEmptyString,
+    software: "Inkscape" as NonEmptyString,
   };
 }

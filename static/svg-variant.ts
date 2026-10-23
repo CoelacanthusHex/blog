@@ -11,7 +11,7 @@ import { type Undefinable, isNotUndefined } from "option-t/undefinable";
 import { unwrapOrElseForUndefinable } from "option-t/undefinable/unwrap_or_else";
 import { type SvgFileName, svgFile } from "./avatar-meta-types.ts";
 import { writeStableAsync } from "./write-stable.ts";
-import { ARTWORK_ID, findElementById } from "./svg-tree.ts";
+import { ARTWORK_ID, findElementById } from "./svg-meta.ts";
 
 const DIR = import.meta.dirname;
 const BUILD_DIR = `${DIR}/.ninja_build`;

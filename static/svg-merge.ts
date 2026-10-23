@@ -10,10 +10,11 @@
 
 import { readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
-import { XmlParser, XmlElement, XmlText } from "xml-trueformat";
+import { XmlParser, XmlElement } from "xml-trueformat";
 import { type Undefinable, isNotUndefined } from "option-t/undefinable";
 import { type SvgFileName, svgFile } from "./avatar-meta-types.ts";
 import { writeStableAsync } from "./write-stable.ts";
+import { ARTWORK_ID, findElementById } from "./svg-meta.ts";
 
 const DIR = import.meta.dirname;
 const BUILD_DIR = `${DIR}/.ninja_build`;
@@ -33,7 +34,7 @@ async function svgo(input: SvgFileName, output: SvgFileName): Promise<void> {
 }
 
 /** Merge an image SVG (by raw content string) with avatar.metadata.svg to produce a full *.svg.
- *  Inserts the <metadata> element just before the first <g> in the image SVG,
+ *  Inserts <metadata> before the root child containing #artwork,
  *  reproducing the original avatar.svg structure. */
 async function mergeSvg(imageContent: string, outSvg: SvgFileName): Promise<void> {
   const [imageDoc, metaDoc] = await Promise.all([
@@ -47,12 +48,14 @@ async function mergeSvg(imageContent: string, outSvg: SvgFileName): Promise<void
   const metadataEl: Undefinable<XmlElement> = metaSvg.getFirstElementByName("metadata");
   if (!isNotUndefined(metadataEl)) throw new Error("No <metadata> in avatar.metadata.svg");
 
-  const gIndex = svg.children.findIndex(
-    (n): n is XmlElement => n instanceof XmlElement && n.tagName === "g"
+  const artworkRoot = svg.children.find(
+    (node): node is XmlElement => node instanceof XmlElement && isNotUndefined(findElementById(node, ARTWORK_ID))
   );
-  if (gIndex === -1) throw new Error(`No <g> in source for ${outSvg}`);
+  if (!isNotUndefined(artworkRoot)) {
+    throw new Error(`No #artwork in source for ${outSvg}`);
+  }
 
-  svg.children.splice(gIndex - 1, 0, new XmlText("\n    "), metadataEl);
+  svg.addElement(metadataEl, { before: artworkRoot });
 
   await writeStableAsync(filePath(outSvg), imageDoc.toString());
 }
