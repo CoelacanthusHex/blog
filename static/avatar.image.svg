@@ -35,36 +35,33 @@
             Thickness t = 4480 (equal to horizontal line)
             Cap and outer-corner radius r = t/2 = 2240
 
-            Rotate an axis-aligned L by 45° about inner vertex V = (25348, 32640).
-            Constraint: lowest point at y = 44416 (aligned with cursor)
-            Branch extent = (44416 - 32640 - r)√2 - r ≈ 11245.940531
+            Opposite rotations turn translate(r -r) into a horizontal offset,
+            keeping the inner vertex at (25348, 32640).
+            Lowest point: 42176 + r = 44416 (aligned with cursor)
         -->
         <g id="squinting-smile-terminal">
             <path id="prompt"
                 d="
-                    M 2240,-4480
-                    L -11245.940531,-4480
-                    A 2240 2240 0 0 0 -11245.940531,0
-                    L 0,0
-                    L 0,11245.940531
-                    A 2240 2240 0 0 0 4480,11245.940531
-                    L 4480,-2240
-                    A 2240 2240 0 0 0 2240,-4480
-                    Z
+                    M 15812,23104
+                    L 25348,32640
+                    L 15812,42176
                 "
-                transform="translate(25348 32640) rotate(45)"
-                fill="black"
+                transform="rotate(45) translate(2240 -2240) rotate(-45)"
+                fill="none"
+                stroke="black"
+                stroke-width="4480"
+                stroke-linecap="round"
+                stroke-linejoin="round"
             />
             <path id="cursor"
                 d="
-                    M 32512,39936
-                    L 45312,39936
-                    A 640 640 0 0 1 45312,44416
-                    L 32512,44416
-                    A 640 640 0 0 1 32512,39936
-                    Z
+                    M 32512,42176
+                    L 45312,42176
                 "
-                fill="black"
+                fill="none"
+                stroke="black"
+                stroke-width="4480"
+                stroke-linecap="round"
             />
         </g>
     </g>
