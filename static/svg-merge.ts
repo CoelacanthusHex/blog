@@ -6,7 +6,8 @@
 //          avatar-maskable.image.svg, avatar-maskable-shadow.image.svg (.ninja_build/),
 //          avatar-bimi.svg (static/), avatar.metadata.svg (static/)
 // Outputs: avatar.svg, avatar-maskable.svg, avatar-maskable-shadow.svg,
-//          avatar.min.svg, avatar-maskable.min.svg, avatar-bimi.min.svg (all static/)
+//          avatar.min.svg, avatar-maskable.min.svg, avatar-maskable-shadow.min.svg,
+//          avatar-bimi.min.svg (all static/)
 
 import { readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
@@ -76,6 +77,7 @@ async function main(): Promise<void> {
   await Promise.all([
     svgo(svgFile("avatar.svg"),       svgFile("avatar.min.svg")),
     svgo(svgFile("avatar-maskable.svg"), svgFile("avatar-maskable.min.svg")),
+    svgo(svgFile("avatar-maskable-shadow.svg"), svgFile("avatar-maskable-shadow.min.svg")),
     svgo(svgFile("avatar-bimi.svg"),  svgFile("avatar-bimi.min.svg")),
   ]);
 }
