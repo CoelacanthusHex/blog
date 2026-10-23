@@ -5,7 +5,7 @@
     aria-labelledby="avatar-title avatar-desc"
     width="512"
     height="512"
-    viewBox="0 0 65536 65536"
+    viewBox="0 0 16384 16384"
     color-interpolation="sRGB"
     xmlns="http://www.w3.org/2000/svg"
 >
@@ -44,7 +44,7 @@
                 </xmp:Identifier>
                 <xmp:CreateDate>2019-01-07T18:27:22+08:00</xmp:CreateDate>
                 <xmpMM:DocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:DocumentID>
-                <xmpMM:InstanceID>xmp.iid:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:InstanceID>
+                <xmpMM:InstanceID>xmp.iid:6773a731-68bd-4d39-9f60-0457915ea197</xmpMM:InstanceID>
                 <xmpMM:OriginalDocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:OriginalDocumentID>
                 <iptcExt:DigImageGUID>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</iptcExt:DigImageGUID>
             </rdf:Description>
@@ -150,54 +150,54 @@
             </cc:Work>
         </rdf:RDF>
     </metadata>
-    <g id="artwork" transform="translate(32768 32768) scale(0.8, 0.8) translate(-32768 -32768)">
+    <g id="artwork" transform="translate(8192 8192) scale(0.8, 0.8) translate(-8192 -8192)">
         <g id="border">
             <rect id="outer-border"
-                x="2944"
-                y="4864"
-                width="59648"
-                height="55808"
+                x="736"
+                y="1216"
+                width="14912"
+                height="13952"
                 fill="#f45b8d"
             />
             <rect id="inner-border"
-                x="8960"
-                y="10880"
-                width="47616"
-                height="43520"
+                x="2240"
+                y="2720"
+                width="11904"
+                height="10880"
                 fill="white"
             />
         </g>
 
         <!-- ">" shape calculation:
-            Thickness t = 4480 (equal to horizontal line)
-            Cap and outer-corner radius r = t/2 = 2240
+            Thickness t = 1120 (equal to horizontal line)
+            Cap and outer-corner radius r = t/2 = 560
 
             Opposite rotations turn translate(r -r) into a horizontal offset,
-            keeping the inner vertex at (25348, 32640).
-            Lowest point: 42176 + r = 44416 (aligned with cursor)
+            keeping the inner vertex at (6337, 8160).
+            Lowest point: 10544 + r = 11104 (aligned with cursor)
         -->
         <g id="squinting-smile-terminal">
             <path id="prompt"
                 d="
-                    M 15812,23104
-                    L 25348,32640
-                    L 15812,42176
+                    M 3953,5776
+                    L 6337,8160
+                    L 3953,10544
                 "
-                transform="rotate(45) translate(2240 -2240) rotate(-45)"
+                transform="rotate(45) translate(560 -560) rotate(-45)"
                 fill="none"
                 stroke="black"
-                stroke-width="4480"
+                stroke-width="1120"
                 stroke-linecap="round"
                 stroke-linejoin="round"
             />
             <path id="cursor"
                 d="
-                    M 32512,42176
-                    L 45312,42176
+                    M 8128,10544
+                    L 11328,10544
                 "
                 fill="none"
                 stroke="black"
-                stroke-width="4480"
+                stroke-width="1120"
                 stroke-linecap="round"
             />
         </g>
