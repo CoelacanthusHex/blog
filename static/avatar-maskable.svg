@@ -43,10 +43,10 @@
                 </xmp:Identifier>
                 <xmp:CreateDate>2019-01-07T18:27:22+08:00</xmp:CreateDate>
                 <xmpMM:DocumentID>xmp.did:6acfb961-a5b8-5f3a-841b-740d8fccd62d</xmpMM:DocumentID>
-                <xmpMM:InstanceID>xmp.iid:20b7d84a-d354-52b3-a2cb-b09d244c5e55</xmpMM:InstanceID>
+                <xmpMM:InstanceID>xmp.iid:39d5ae9c-5a32-5b04-abd3-53a85ef9ba3f</xmpMM:InstanceID>
                 <xmpMM:OriginalDocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:OriginalDocumentID>
                 <iptcExt:DigImageGUID>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</iptcExt:DigImageGUID>
-                <xmpMM:DerivedFrom rdf:parseType="Resource"><stRef:filePath>avatar.svg</stRef:filePath><stRef:documentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</stRef:documentID><stRef:instanceID>xmp.iid:ae50b65f-30ec-533c-b0a6-e0f643717755</stRef:instanceID></xmpMM:DerivedFrom>
+                <xmpMM:DerivedFrom rdf:parseType="Resource"><stRef:filePath>avatar.svg</stRef:filePath><stRef:documentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</stRef:documentID><stRef:instanceID>xmp.iid:c8c6e069-d1d6-5306-a604-c4f8021827cb</stRef:instanceID></xmpMM:DerivedFrom>
             </rdf:Description>
             <cc:Work rdf:about="">
                 <!--
@@ -95,7 +95,9 @@
                 </dc:subject>
                 <dc:identifier>urn:uuid:6acfb961-a5b8-5f3a-841b-740d8fccd62d</dc:identifier>
                 <dcterms:format rdf:resource="http://purl.org/NET/mediatypes/image/svg+xml" />
+                <dc:format>image/svg+xml</dc:format>
                 <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
                 <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</dcterms:dateCopyrighted>
                 <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-07T18:27:22+08:00</dcterms:created>
                 <dc:date>2019-01-07</dc:date>

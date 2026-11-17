@@ -88,7 +88,9 @@
                     </rdf:Bag>
                 </dc:identifier>
                 <dcterms:format rdf:resource="http://purl.org/NET/mediatypes/image/svg+xml" />
+                <dc:format>image/svg+xml</dc:format>
                 <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
                 <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</dcterms:dateCopyrighted>
                 <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-07T18:27:22+08:00</dcterms:created>
                 <dc:date>2019-01-07</dc:date>
