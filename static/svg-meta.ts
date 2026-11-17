@@ -226,22 +226,18 @@ export function extractAvatarMeta(svgPath: string, primaryLocale: string): Avata
 
   const metadata = svg.getFirstElementByName("metadata");
   const rdfRDF = getByLocal(metadata, "RDF");
-  const ccWork = orElseForUndefinable(getByLocal(rdfRDF, "Work"), () => getByLocal(rdfRDF, "Description"));
   const rdfDescription = getByLocal(rdfRDF, "Description");
 
-  const rdfTitle = extractLangAlt(getByLocalPreferAlt(ccWork, "title"), primaryLocale);
-  const rdfDescriptionText = extractLangAlt(getByLocalPreferAlt(ccWork, "description"), primaryLocale);
-  const rights = extractLangAlt(getByLocalPreferAlt(ccWork, "rights"), primaryLocale);
-  const usageTerms = extractLangAlt(getByLocalPreferAlt(ccWork, "UsageTerms"), primaryLocale);
-  const accessibilityAltText = extractLangAlt(getByLocal(ccWork, "AltTextAccessibility"), primaryLocale);
+  const rdfTitle = extractLangAlt(getByLocalPreferAlt(rdfDescription, "title"), primaryLocale);
+  const rdfDescriptionText = extractLangAlt(getByLocalPreferAlt(rdfDescription, "description"), primaryLocale);
+  const rights = extractLangAlt(getByLocalPreferAlt(rdfDescription, "rights"), primaryLocale);
+  const usageTerms = extractLangAlt(getByLocalPreferAlt(rdfDescription, "UsageTerms"), primaryLocale);
+  const accessibilityAltText = extractLangAlt(getByLocal(rdfDescription, "AltTextAccessibility"), primaryLocale);
 
-  const createdDateTime = textContent(orElseForUndefinable(getByLocal(rdfDescription, "CreateDate"), () => getByLocal(ccWork, "created"))).trim();
-  const dateOnly = toDateOnly(textContent(orElseForUndefinable(getByLocal(ccWork, "date"), () => getByLocal(ccWork, "created"))).trim());
+  const createdDateTime = textContent(orElseForUndefinable(getByLocal(rdfDescription, "CreateDate"), () => getByLocal(rdfDescription, "created"))).trim();
+  const dateOnly = toDateOnly(textContent(orElseForUndefinable(getByLocal(rdfDescription, "date"), () => getByLocal(rdfDescription, "created"))).trim());
 
-  const creator = (
-    textContent(getByLocal(ccWork, "creator", true)).trim() ||
-    textContent(getByLocal(getByLocal(getByLocal(ccWork, "creator"), "Agent"), "title")).trim()
-  );
+  const creator = textContent(getByLocal(rdfDescription, "creator", true)).trim();
 
   const documentID = asOptionalXmpDocumentId(textContent(getByLocal(rdfDescription, "DocumentID")).trim());
   const instanceID = asOptionalXmpInstanceId(textContent(getByLocal(rdfDescription, "InstanceID")).trim());
@@ -249,11 +245,9 @@ export function extractAvatarMeta(svgPath: string, primaryLocale: string): Avata
   const digImageGUID = asUuidUrn(textContent(getByLocal(rdfDescription, "DigImageGUID")).trim());
 
   const identifierBag = extractBagItems(getByLocal(rdfDescription, "Identifier"));
-  const dcIdentifierBag = extractBagItems(getByLocal(ccWork, "identifier"));
-  const identifier = asAssetIdentifier(identifierBag[0] ?? dcIdentifierBag[0] ?? "");
-  const webStatement = textContent(getByLocal(ccWork, "WebStatement")).trim();
-  const keywords = extractBagItems(getByLocal(ccWork, "subject"));
-  const hierarchicalKeywords = extractBagItems(getByLocal(ccWork, "Keywords"));
+  const identifier = asAssetIdentifier(identifierBag[0] ?? textContent(getByLocal(rdfDescription, "identifier")));
+  const webStatement = textContent(getByLocal(rdfDescription, "WebStatement")).trim();
+  const keywords = extractBagItems(getByLocal(rdfDescription, "subject"));
 
   return {
     text: {
@@ -264,6 +258,8 @@ export function extractAvatarMeta(svgPath: string, primaryLocale: string): Avata
     },
     rights: {
       rights: coalesceLocalized(rights),
+      license: asOptionalNonEmptyString(rdfDescription?.getFirstElementByName("cc:license")?.getAttributeValue("rdf:resource") ?? ""),
+      statement: asOptionalNonEmptyString(rdfDescription?.getFirstElementByName("dcterms:rights")?.getAttributeValue("rdf:resource") ?? ""),
       usageTerms: coalesceLocalized(usageTerms),
       webStatement: asOptionalNonEmptyString(webStatement),
     },
@@ -276,7 +272,6 @@ export function extractAvatarMeta(svgPath: string, primaryLocale: string): Avata
     },
     keywords: {
       flat: keywords,
-      hierarchical: hierarchicalKeywords,
     },
     dates: {
       createdDateTime: asOptionalIsoDateTimeWithOffset(createdDateTime),

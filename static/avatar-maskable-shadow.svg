@@ -34,7 +34,6 @@
             xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
             xmlns:iptc="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
             xmlns:iptcExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/"
-            xmlns:mwg-kw="http://www.metadataworkinggroup.com/schemas/keywords/"
             xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
         >
             <rdf:Description rdf:about="">
@@ -43,12 +42,10 @@
                 </xmp:Identifier>
                 <xmp:CreateDate>2019-01-07T18:27:22+08:00</xmp:CreateDate>
                 <xmpMM:DocumentID>xmp.did:af88b9ea-2380-5255-91cf-8001180fcca0</xmpMM:DocumentID>
-                <xmpMM:InstanceID>xmp.iid:191a2b29-980d-525b-9fc6-6b1fc963c1c4</xmpMM:InstanceID>
+                <xmpMM:InstanceID>xmp.iid:122f62b0-89ae-5a2d-8af9-88aba7a97f29</xmpMM:InstanceID>
                 <xmpMM:OriginalDocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:OriginalDocumentID>
                 <iptcExt:DigImageGUID>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</iptcExt:DigImageGUID>
-                <xmpMM:DerivedFrom rdf:parseType="Resource"><stRef:filePath>avatar.svg</stRef:filePath><stRef:documentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</stRef:documentID><stRef:instanceID>xmp.iid:c8c6e069-d1d6-5306-a604-c4f8021827cb</stRef:instanceID></xmpMM:DerivedFrom>
-            </rdf:Description>
-            <cc:Work rdf:about="">
+                <rdf:type rdf:resource="http://creativecommons.org/ns#Work" />
                 <!--
                     dcterms is modern, standard namespace,
                     but we need to keep compatible with old tools like Inkscape.
@@ -80,11 +77,6 @@
                         <rdf:li>Coelacanthus</rdf:li>
                     </rdf:Seq>
                 </dc:creator>
-                <dc:creator>
-                    <cc:Agent>
-                        <dc:title>Coelacanthus</dc:title>
-                    </cc:Agent>
-                </dc:creator>
                 <dc:subject>
                     <rdf:Bag>
                         <rdf:li>avatar</rdf:li>
@@ -97,10 +89,18 @@
                 <dcterms:format rdf:resource="http://purl.org/NET/mediatypes/image/svg+xml" />
                 <dc:format>image/svg+xml</dc:format>
                 <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</dcterms:dateCopyrighted>
-                <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-07T18:27:22+08:00</dcterms:created>
-                <dc:date>2019-01-07</dc:date>
+                <dc:type>
+                    <rdf:Bag>
+                        <rdf:li>http://purl.org/dc/dcmitype/StillImage</rdf:li>
+                    </rdf:Bag>
+                </dc:type>
+                <dcterms:dateCopyrighted>2019</dcterms:dateCopyrighted>
+                <dcterms:created>2019-01-07T18:27:22+08:00</dcterms:created>
+                <dc:date>
+                    <rdf:Seq>
+                        <rdf:li>2019-01-07</rdf:li>
+                    </rdf:Seq>
+                </dc:date>
                 <dcterms:rights rdf:resource="http://rightsstatements.org/vocab/InC/1.0/" />
                 <dc:rights>
                     <rdf:Alt>
@@ -111,7 +111,6 @@
                         <rdf:li xml:lang="ja">Copyright 2019 Coelacanthus. All rights reserved.</rdf:li>
                     </rdf:Alt>
                 </dc:rights>
-                <cc:license rdf:resource="http://rightsstatements.org/vocab/InC/1.0/" />
                 <xmpRights:Marked>True</xmpRights:Marked>
                 <xmpRights:Owner>
                     <rdf:Bag>
@@ -137,15 +136,8 @@
                         <rdf:li xml:lang="ja">Coelacanthus のアバター。ピンク色の長方形の枠内に、白地に黒いターミナルプロンプト。</rdf:li>
                     </rdf:Alt>
                 </iptc:AltTextAccessibility>
-                <mwg-kw:Keywords>
-                    <rdf:Bag>
-                        <rdf:li>avatar</rdf:li>
-                        <rdf:li>profile image</rdf:li>
-                        <rdf:li>terminal prompt</rdf:li>
-                        <rdf:li>coelacanthus</rdf:li>
-                    </rdf:Bag>
-                </mwg-kw:Keywords>
-            </cc:Work>
+                <xmpMM:DerivedFrom rdf:parseType="Resource"><stRef:filePath rdf:resource="avatar.svg"></stRef:filePath><stRef:documentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</stRef:documentID><stRef:instanceID>xmp.iid:2069bc5a-6bc3-50dc-8e46-0eaf839f6059</stRef:instanceID></xmpMM:DerivedFrom>
+            </rdf:Description>
         </rdf:RDF>
     </metadata>
     <g id="artwork" transform="translate(8192 8192) scale(0.7, 0.7) translate(-8192 -8192)">

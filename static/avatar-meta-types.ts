@@ -40,6 +40,8 @@ export interface AvatarIdentity {
 
 export interface AvatarRights {
   readonly rights: LocalizedText;
+  readonly license: Nullable<NonEmptyString>;
+  readonly statement: Nullable<NonEmptyString>;
   readonly usageTerms: LocalizedText;
   readonly webStatement: Nullable<NonEmptyString>;
 }
@@ -58,7 +60,6 @@ export interface AvatarDates {
 
 export interface AvatarKeywords {
   readonly flat: readonly string[];
-  readonly hierarchical: readonly string[];
 }
 
 export interface AvatarMeta {

@@ -92,7 +92,7 @@ function asStringOrEmpty(value: string | null | undefined): string {
 }
 
 /** Generate unified exiftool -@ argfile covering Exif IFD + PNG iTXt fields.
- *  XMP is handled separately via -tagsfromfile $xmp -XMP:all.
+ *  XMP is embedded separately as a complete sidecar packet.
  *  One argument per line, no shell quoting — exiftool reads values literally. */
 function makeMetaArgsFile(m: AvatarMeta): string {
   const exifDate = toExifDateTime(asStringOrEmpty(m.dates.createdDateTime ?? m.dates.dateOnly));

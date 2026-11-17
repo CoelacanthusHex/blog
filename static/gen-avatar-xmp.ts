@@ -43,8 +43,7 @@ type XmpField =
   | { kind: "langalt";      tag: XmpTag; value: LocalizedText }
   | { kind: "resource";     tag: XmpTag; href: string }
   | { kind: "seq";          tag: XmpTag; items: NonEmptyArray<string> }
-  | { kind: "bag";          tag: XmpTag; items: NonEmptyArray<string> }
-  | { kind: "bag-resource"; tag: XmpTag; hrefs: NonEmptyArray<string> };
+  | { kind: "bag";          tag: XmpTag; items: NonEmptyArray<string> };
 
 function buildLangAlt(localized: LocalizedText): string {
   const entries: string[] = [];
@@ -71,8 +70,6 @@ function renderField(f: XmpField): string {
       return `<${f.tag}><rdf:Seq>${f.items.map(v => `<rdf:li>${xmlEscape(v)}</rdf:li>`).join("")}</rdf:Seq></${f.tag}>`;
     case "bag":
       return `<${f.tag}><rdf:Bag>${f.items.map(v => `<rdf:li>${xmlEscape(v)}</rdf:li>`).join("")}</rdf:Bag></${f.tag}>`;
-    case "bag-resource":
-      return `<${f.tag}><rdf:Bag>${f.hrefs.map(h => `<rdf:li rdf:resource="${xmlEscape(h)}"/>`).join("")}</rdf:Bag></${f.tag}>`;
   }
 }
 
@@ -95,9 +92,8 @@ function buildXmp({ meta, documentID, originalDocumentID, instanceID, source, mi
     { kind: "seq",          tag: "dc:creator",                 items: nonEmptyItems([asStringOrEmpty(meta.text.creator)]) },
     { kind: "langalt",      tag: "dc:rights",                  value: meta.rights.rights },
     { kind: "bag",          tag: "dc:subject",                 items: nonEmptyItems(meta.keywords.flat) },
-    { kind: "bag-resource", tag: "dc:type",                    hrefs: ["http://purl.org/dc/dcmitype/StillImage"] },
+    { kind: "bag",          tag: "dc:type",                    items: ["http://purl.org/dc/dcmitype/StillImage"] },
     { kind: "text",         tag: "dc:format",                  value: mime },
-    { kind: "resource",     tag: "dcterms:license",            href: "http://rightsstatements.org/vocab/InC/1.0/" },
     { kind: "text",         tag: "xmpRights:Marked",           value: "True" },
     { kind: "bag",          tag: "xmpRights:Owner",            items: nonEmptyItems([asStringOrEmpty(meta.text.creator)]) },
     { kind: "langalt",      tag: "xmpRights:UsageTerms",       value: meta.rights.usageTerms },
@@ -113,6 +109,17 @@ function buildXmp({ meta, documentID, originalDocumentID, instanceID, source, mi
     { kind: "text",         tag: "dc:identifier",              value: documentIdentifier(documentID) },
   ];
 
+  if (isNotNull(meta.rights.statement)) {
+    fields.push({ kind: "resource", tag: "dcterms:rights", href: meta.rights.statement });
+  }
+
+  if (isNotNull(meta.rights.license)) {
+    fields.push(
+      { kind: "resource", tag: "cc:license", href: meta.rights.license },
+      { kind: "resource", tag: "dcterms:license", href: meta.rights.license },
+    );
+  }
+
   if (isNotNull(meta.identity.digImageGUID)) {
     fields.push({ kind: "text", tag: "iptcExt:DigImageGUID", value: meta.identity.digImageGUID });
   }
@@ -123,7 +130,7 @@ function buildXmp({ meta, documentID, originalDocumentID, instanceID, source, mi
   // xmpMM:DerivedFrom has mixed children (file path, document and instance IDs), so it can't
   // be expressed as a plain XmpField variant — kept as a literal template string.
   const derivedFrom = `${indent}<xmpMM:DerivedFrom rdf:parseType="Resource">
-        <stRef:filePath>${xmlEscape(source.filePath)}</stRef:filePath>
+        <stRef:filePath rdf:resource="${xmlEscape(source.filePath)}"/>
         <stRef:documentID>${xmlEscape(source.documentID)}</stRef:documentID>
         <stRef:instanceID>${xmlEscape(source.instanceID)}</stRef:instanceID>
       </xmpMM:DerivedFrom>`;
@@ -134,6 +141,7 @@ function buildXmp({ meta, documentID, originalDocumentID, instanceID, source, mi
     <rdf:Description rdf:about=""
       xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:cc="http://creativecommons.org/ns#"
       xmlns:xmp="http://ns.adobe.com/xap/1.0/"
       xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
       xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"

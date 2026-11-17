@@ -85,10 +85,10 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
 
   /** Unified metadata embedding rule using exiftool only.
    *  -@ argsfile: Exif IFD + PNG iTXt fields (PNG:* tags ignored for non-PNG formats)
-   *  -XMP:all>all:all: preserve namespace groups, including both Identifier fields
+   *  -XMP<=sidecar: preserve the complete packet, including unregistered namespaces
    *  -o $out $in: non-in-place output; rm -f first because exiftool refuses to overwrite */
   const embedMetadata = ninja.rule("embed_metadata", {
-    command: "rm -f $out && exiftool -@ $argsfile -tagsfromfile $xmp '-XMP:all>all:all' -o $out $in",
+    command: "rm -f $out && exiftool -@ $argsfile '-XMP<=$xmp' -o $out $in",
     description: "embed metadata $in -> $out",
     out: needs<string>(),
     in: needs<string>(),

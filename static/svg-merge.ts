@@ -82,15 +82,14 @@ async function mergeSvg(imageContent: string, outSvg: SvgFileName, parent: Resou
   });
   const rdf = metadataEl.getFirstElementByName("rdf:RDF");
   const description = rdf?.getFirstElementByName("rdf:Description");
-  const work = rdf?.getFirstElementByName("cc:Work");
-  if (rdf === undefined || description === undefined || work === undefined) {
-    throw new Error("Missing RDF identity or work in avatar.metadata.svg");
+  if (rdf === undefined || description === undefined) {
+    throw new Error("Missing RDF description in avatar.metadata.svg");
   }
   const identifier = documentIdentifier(documentID);
   setText(description, "xmpMM:DocumentID", documentID);
   setText(description, "xmpMM:OriginalDocumentID", originalDocumentID);
   setText(description, "xmpMM:InstanceID", "");
-  setText(work, "dc:identifier", identifier);
+  setText(description, "dc:identifier", identifier);
   const identifiers = description.getFirstElementByName("xmp:Identifier")?.getFirstElementByName("rdf:Bag");
   if (identifiers === undefined) {
     throw new Error("Missing xmp:Identifier bag in avatar.metadata.svg");
@@ -101,7 +100,9 @@ async function mergeSvg(imageContent: string, outSvg: SvgFileName, parent: Resou
     rdf.setAttributeValue("xmlns:stRef", "http://ns.adobe.com/xap/1.0/sType/ResourceRef#");
     const derivedFrom = new XmlElement("xmpMM:DerivedFrom");
     derivedFrom.setAttributeValue("rdf:parseType", "Resource");
-    setText(derivedFrom, "stRef:filePath", parent.filePath);
+    const sourcePath = new XmlElement("stRef:filePath");
+    sourcePath.setAttributeValue("rdf:resource", parent.filePath);
+    derivedFrom.addElement(sourcePath);
     setText(derivedFrom, "stRef:documentID", parent.documentID);
     setText(derivedFrom, "stRef:instanceID", parent.instanceID);
     description.addElement(derivedFrom);
