@@ -44,11 +44,16 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
   ninja.comment("=== Rules ===");
 
   const genXmp = ninja.rule("gen_xmp", {
-    command: "pnpm tsx gen-avatar-xmp.ts $in $out $locale",
-    description: "generate XMP sidecar",
+    command: "pnpm tsx gen-avatar-xmp.ts $in $out $source $variant $size $mime $argsfile $locale",
+    description: "generate XMP $out",
     out: needs<string>(),
     in: needs<string>(),
     locale: needs<string>(),
+    source: needs<string>(),
+    variant: needs<string>(),
+    size: needs<string>(),
+    mime: needs<string>(),
+    argsfile: needs<string>(),
     restat: 1,
   });
 
@@ -80,10 +85,10 @@ export function defineImgRules(ninja: NinjaBuilder, pools: PoolDepths) {
 
   /** Unified metadata embedding rule using exiftool only.
    *  -@ argsfile: Exif IFD + PNG iTXt fields (PNG:* tags ignored for non-PNG formats)
-   *  -tagsfromfile xmp -XMP:all: embed full XMP packet from shared sidecar
+   *  -XMP:all>all:all: preserve namespace groups, including both Identifier fields
    *  -o $out $in: non-in-place output; rm -f first because exiftool refuses to overwrite */
   const embedMetadata = ninja.rule("embed_metadata", {
-    command: "rm -f $out && exiftool -@ $argsfile -tagsfromfile $xmp -XMP:all -o $out $in",
+    command: "rm -f $out && exiftool -@ $argsfile -tagsfromfile $xmp '-XMP:all>all:all' -o $out $in",
     description: "embed metadata $in -> $out",
     out: needs<string>(),
     in: needs<string>(),

@@ -4,6 +4,16 @@
 
 import { type Nullable } from "option-t/nullable";
 
+export type BitmapFormat = "png" | "jxl" | "jpg" | "jp2" | "webp";
+
+export const BITMAP_MIME_TYPES: Readonly<Record<BitmapFormat, `image/${string}`>> = {
+  png: "image/png",
+  jxl: "image/jxl",
+  jpg: "image/jpeg",
+  jp2: "image/jp2",
+  webp: "image/webp",
+};
+
 export type SvgFileName = string & { readonly __svgFileName: unique symbol };
 export const svgFile = (name: string): SvgFileName => name as SvgFileName;
 

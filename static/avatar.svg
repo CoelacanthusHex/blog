@@ -37,13 +37,11 @@
         >
             <rdf:Description rdf:about="">
                 <xmp:Identifier>
-                    <rdf:Bag>
-                        <rdf:li>urn:coelacanthus:avatar:8c104d67-31b7-4f53-806d-441ff96b2c08</rdf:li>
-                    </rdf:Bag>
+                    <rdf:Bag><rdf:li>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</rdf:li></rdf:Bag>
                 </xmp:Identifier>
                 <xmp:CreateDate>2019-01-07T18:27:22+08:00</xmp:CreateDate>
                 <xmpMM:DocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:DocumentID>
-                <xmpMM:InstanceID>xmp.iid:6773a731-68bd-4d39-9f60-0457915ea197</xmpMM:InstanceID>
+                <xmpMM:InstanceID>xmp.iid:ae50b65f-30ec-533c-b0a6-e0f643717755</xmpMM:InstanceID>
                 <xmpMM:OriginalDocumentID>xmp.did:8c104d67-31b7-4f53-806d-441ff96b2c08</xmpMM:OriginalDocumentID>
                 <iptcExt:DigImageGUID>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</iptcExt:DigImageGUID>
             </rdf:Description>
@@ -92,11 +90,7 @@
                         <rdf:li>coelacanthus</rdf:li>
                     </rdf:Bag>
                 </dc:subject>
-                <dc:identifier>
-                    <rdf:Bag>
-                        <rdf:li>urn:coelacanthus:avatar:8c104d67-31b7-4f53-806d-441ff96b2c08</rdf:li>
-                    </rdf:Bag>
-                </dc:identifier>
+                <dc:identifier>urn:uuid:8c104d67-31b7-4f53-806d-441ff96b2c08</dc:identifier>
                 <dcterms:format rdf:resource="http://purl.org/NET/mediatypes/image/svg+xml" />
                 <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
                 <dcterms:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</dcterms:dateCopyrighted>

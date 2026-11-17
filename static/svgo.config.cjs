@@ -5,6 +5,7 @@ module.exports = {
       name: 'preset-default',
       params: {
         overrides: {
+          removeMetadata: false,
         },
       },
     },

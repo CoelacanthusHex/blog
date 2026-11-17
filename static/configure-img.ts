@@ -6,18 +6,17 @@
 import { NinjaBuilder, implicitDeps, implicitOut } from "@ninjutsu-build/core";
 import { writeFileSync, mkdirSync, renameSync } from "node:fs";
 import which from "which";
-import { resolve } from "node:path";
+import { basename, resolve } from "node:path";
 import { isNotNull } from "option-t/nullable";
 import { isNotUndefined } from "option-t/undefinable";
 import { unwrapOrElseForUndefinable } from "option-t/undefinable/unwrap_or_else";
-import { type AvatarMeta } from "./avatar-meta-types.ts";
+import { BITMAP_MIME_TYPES, type AvatarMeta, type BitmapFormat } from "./avatar-meta-types.ts";
 import { extractAvatarMeta, toExifDateTime } from "./svg-meta.ts";
 import { writeStableSync } from "./write-stable.ts";
 import { JPEG2000_DEFAULT_RESOLUTIONS, computePoolDepths, defineImgRules } from "./ninja-img-rules.ts";
 
 /** Ninja-relative path (may contain $builddir variables). Never an absolute filesystem path. */
 type NinjaPath = string & { readonly __ninjaPath: unique symbol };
-type BitmapFormat = "png" | "jxl" | "jpg" | "jp2" | "webp";
 
 const DIR = import.meta.dirname;
 const filePath = (name: string): string => resolve(DIR, name);
@@ -145,7 +144,6 @@ function ensureNoPhonyAliasCollision(outputs: readonly string[]): void {
 mkdirSync(buildDir, { recursive: true });
 const primaryLocale = process.env["META_PRIMARY_LOCALE"] ?? "en";
 const meta = extractAvatarMeta(filePath("avatar.metadata.svg"), primaryLocale);
-const xmpFile = buildPath("avatar-meta.xmp");
 const metaArgsFile = filePath(".ninja_build/avatar-meta.args");
 const metaArgsNinjaPath = buildPath("avatar-meta.args");
 writeStableSync(metaArgsFile, makeMetaArgsFile(meta));
@@ -221,22 +219,38 @@ for (const output of svgMergeOutputs) {
 void svgMerge({
   out: [...svgMergeOutputs],
   in: [buildPath("avatar-maskable.image.svg"), buildPath("avatar-maskable-shadow.image.svg"), "avatar.image.svg", "avatar-bimi.svg", "avatar.metadata.svg", "svg-merge.ts"],
-  [implicitDeps]: [...svgScriptDeps, "svgo.config.cjs"],
+  [implicitDeps]: [...svgScriptDeps, "avatar-identity.ts", "svgo.config.cjs"],
 });
 
 const icoLayerStamps = new Map<number, string>();
-const xmpOut = genXmp({
-  out: xmpFile,
-  in: relPath("avatar.metadata.svg"),
-  locale: primaryLocale,
-  [implicitDeps]: ["gen-avatar-xmp.ts", ...svgScriptDeps],
-});
 
-function publishImage(base: string, format: BitmapFormat, input: NinjaPath): NinjaPath {
+interface BitmapRendition {
+  readonly base: string;
+  readonly variant: VariantPrefix;
+  readonly size: number;
+  readonly sourceSvg: NinjaPath;
+}
+
+function publishImage(rendition: BitmapRendition, format: BitmapFormat, input: NinjaPath): NinjaPath {
+  const { base, variant, size, sourceSvg } = rendition;
   const final = buildPath(`${base}.final.${format}`);
   const output = relPath(`${base}.${format}`);
+  const xmpFile = buildPath(`${base}.${format}.xmp`);
   registerOutput(outputRegistry, final);
   registerOutput(outputRegistry, output);
+  registerOutput(outputRegistry, xmpFile);
+
+  const xmpOut = genXmp({
+    out: xmpFile,
+    in: input,
+    source: sourceSvg,
+    variant,
+    size: String(size),
+    mime: BITMAP_MIME_TYPES[format],
+    argsfile: metaArgsNinjaPath,
+    locale: primaryLocale,
+    [implicitDeps]: [sourceSvg, metaArgsNinjaPath, "gen-avatar-xmp.ts", "avatar-identity.ts", ...svgScriptDeps],
+  });
 
   const finalOutput = embedMetadata({
     out: final,
@@ -255,6 +269,10 @@ for (const v of sortVariants(VARIANTS)) {
 
   for (const size of [...SIZES].sort(numberComparator)) {
     const base = `${v.prefix}-${String(size)}x${String(size)}`;
+    const rendition = {
+      base, variant: v.prefix, size,
+      sourceSvg: relPath(`${basename(v.svg, ".image.svg")}.svg`),
+    } satisfies BitmapRendition;
     const rawPng   = buildPath(`${base}.raw.png`);    // raster output (image-only dep)
 
     // === Image-only chain (no metadata deps) ===
@@ -301,11 +319,11 @@ for (const v of sortVariants(VARIANTS)) {
     registerOutput(outputRegistry, rawWebp);
     cwebp({ out: rawWebp, in: rawPng });
 
-    const pubPngOut = publishImage(base, "png", optPngOut);
-    const jxlOut = publishImage(base, "jxl", rawJxl);
-    const jpegOut = publishImage(base, "jpg", rawJpeg);
-    const jpeg2000Out = publishImage(base, "jp2", rawJpeg2000);
-    const pubWebpOut = publishImage(base, "webp", rawWebp);
+    const pubPngOut = publishImage(rendition, "png", optPngOut);
+    const jxlOut = publishImage(rendition, "jxl", rawJxl);
+    const jpegOut = publishImage(rendition, "jpg", rawJpeg);
+    const jpeg2000Out = publishImage(rendition, "jp2", rawJpeg2000);
+    const pubWebpOut = publishImage(rendition, "webp", rawWebp);
 
     // JPEG remains opt-in for full and per-variant builds.
     allOutputs.push(pubPngOut, jxlOut, jpeg2000Out, pubWebpOut);

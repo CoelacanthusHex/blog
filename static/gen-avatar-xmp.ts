@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MPL-2.0
-// gen-avatar-xmp.ts — generates an XMP sidecar from avatar.metadata.svg.
-// Run with: pnpm tsx gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]
-// Inputs:  avatar.metadata.svg
-// Outputs: avatar-meta.xmp (.ninja_build/)
+// gen-avatar-xmp.ts — generates a rendition-specific XMP sidecar.
+// Inputs: encoded image, source SVG, Exif args, rendition key and locale.
 
-import { createHash, randomUUID } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { isNotUndefined, type Undefinable } from "option-t/undefinable";
 import { isNotNull } from "option-t/nullable";
-import { type AvatarMeta, type LocalizedText, type XmpInstanceId } from "./avatar-meta-types.ts";
+import { BITMAP_MIME_TYPES, type AvatarMeta, type LocalizedText, type XmpDocumentId } from "./avatar-meta-types.ts";
+import { contentInstanceID, documentIdentifier, renditionDocumentID, type ResourceReference } from "./avatar-identity.ts";
 import { extractAvatarMeta } from "./svg-meta.ts";
 import { writeStableSync } from "./write-stable.ts";
 
@@ -78,19 +78,25 @@ function renderField(f: XmpField): string {
 
 interface XmpParams {
   readonly meta: AvatarMeta;
-  readonly instanceID: XmpInstanceId;
+  readonly documentID: XmpDocumentId;
+  readonly originalDocumentID: XmpDocumentId;
+  readonly instanceID: string;
+  readonly source: ResourceReference;
+  readonly mime: `image/${string}`;
 }
 
-function buildXmp({ meta, instanceID }: XmpParams): string {
+function buildXmp({ meta, documentID, originalDocumentID, instanceID, source, mime }: XmpParams): string {
   const xmpDate = asStringOrEmpty(meta.dates.createdDateTime);
 
   const fields: XmpField[] = [
     { kind: "langalt",      tag: "dc:title",                   value: meta.text.title },
     { kind: "langalt",      tag: "dc:description",             value: meta.text.description },
+    { kind: "langalt",      tag: "iptc:AltTextAccessibility",   value: meta.text.accessibilityAltText },
     { kind: "seq",          tag: "dc:creator",                 items: nonEmptyItems([asStringOrEmpty(meta.text.creator)]) },
     { kind: "langalt",      tag: "dc:rights",                  value: meta.rights.rights },
     { kind: "bag",          tag: "dc:subject",                 items: nonEmptyItems(meta.keywords.flat) },
     { kind: "bag-resource", tag: "dc:type",                    hrefs: ["http://purl.org/dc/dcmitype/StillImage"] },
+    { kind: "text",         tag: "dc:format",                  value: mime },
     { kind: "resource",     tag: "dcterms:license",            href: "http://rightsstatements.org/vocab/InC/1.0/" },
     { kind: "text",         tag: "xmpRights:Marked",           value: "True" },
     { kind: "bag",          tag: "xmpRights:Owner",            items: nonEmptyItems([asStringOrEmpty(meta.text.creator)]) },
@@ -100,20 +106,26 @@ function buildXmp({ meta, instanceID }: XmpParams): string {
     { kind: "text",         tag: "xmp:CreateDate",             value: xmpDate },
     { kind: "text",         tag: "photoshop:DateCreated",      value: xmpDate },
     { kind: "text",         tag: "photoshop:Credit",           value: asStringOrEmpty(meta.text.creator) },
-    { kind: "text",         tag: "xmpMM:DocumentID",           value: asStringOrEmpty(meta.identity.documentID) },
-    { kind: "text",         tag: "xmpMM:OriginalDocumentID",   value: asStringOrEmpty(meta.identity.originalDocumentID) },
+    { kind: "text",         tag: "xmpMM:DocumentID",           value: documentID },
+    { kind: "text",         tag: "xmpMM:OriginalDocumentID",   value: originalDocumentID },
     { kind: "text",         tag: "xmpMM:InstanceID",           value: instanceID },
+    { kind: "bag",          tag: "xmp:Identifier",             items: [documentIdentifier(documentID)] },
+    { kind: "text",         tag: "dc:identifier",              value: documentIdentifier(documentID) },
   ];
+
+  if (isNotNull(meta.identity.digImageGUID)) {
+    fields.push({ kind: "text", tag: "iptcExt:DigImageGUID", value: meta.identity.digImageGUID });
+  }
 
   const indent = "      ";
   const body = fields.map(f => indent + renderField(f)).join("\n");
 
-  // xmpMM:DerivedFrom has mixed children (stRef:filePath + stRef:documentID), so it can't
+  // xmpMM:DerivedFrom has mixed children (file path, document and instance IDs), so it can't
   // be expressed as a plain XmpField variant — kept as a literal template string.
-  const derivedFromDocId = asStringOrEmpty(meta.identity.documentID);
   const derivedFrom = `${indent}<xmpMM:DerivedFrom rdf:parseType="Resource">
-        <stRef:filePath>avatar.svg</stRef:filePath>
-        <stRef:documentID>${xmlEscape(derivedFromDocId)}</stRef:documentID>
+        <stRef:filePath>${xmlEscape(source.filePath)}</stRef:filePath>
+        <stRef:documentID>${xmlEscape(source.documentID)}</stRef:documentID>
+        <stRef:instanceID>${xmlEscape(source.instanceID)}</stRef:instanceID>
       </xmpMM:DerivedFrom>`;
 
   return `<?xpacket begin="\uFEFF" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -126,6 +138,8 @@ function buildXmp({ meta, instanceID }: XmpParams): string {
       xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
       xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
       xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
+      xmlns:iptc="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
+      xmlns:iptcExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/"
       xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/">
 ${body}
 ${derivedFrom}
@@ -137,23 +151,39 @@ ${derivedFrom}
 
 function main(): void {
   const args = process.argv.slice(2);
-  if (args.length < 2) {
-    throw new Error("Usage: pnpm tsx static/gen-avatar-xmp.ts <input.svg> <output.xmp> [primary-locale]");
+  const [input, output, sourceSvg, variant, sizeArg, mime, argsFile, locale = "en"] = args;
+  if (input === undefined || output === undefined || sourceSvg === undefined || variant === undefined ||
+      sizeArg === undefined || mime === undefined || argsFile === undefined || args.length > 8 ||
+      args.slice(0, 7).some(arg => arg.length === 0)) {
+    throw new Error("Usage: gen-avatar-xmp.ts <encoded-image> <output.xmp> <source.svg> <variant> <size> <mime> <exif-args> [locale]");
   }
-  const [inputSvgArg, outputXmpArg, primaryLocaleArg] = args;
-  const inputSvg = asStringOrEmpty(inputSvgArg);
-  const outputXmp = asStringOrEmpty(outputXmpArg);
-  const primaryLocale = (primaryLocaleArg ?? process.env["META_PRIMARY_LOCALE"] ?? "en").trim() || "en";
-  const reproducible = isNotUndefined(process.env["SOURCE_DATE_EPOCH"]);
-  const inPath = `${import.meta.dirname}/${inputSvg}`;
-  const outPath = `${import.meta.dirname}/${outputXmp}`;
-  const meta = extractAvatarMeta(inPath, primaryLocale);
-  const instanceSeedDocId = asStringOrEmpty(meta.identity.documentID);
-  const instanceID: XmpInstanceId = reproducible
-    ? (`xmp.iid:${createHash("sha256").update(`${instanceSeedDocId}:${meta.text.title.defaultText}:${meta.text.description.defaultText}`).digest("hex").slice(0, 32)}` as XmpInstanceId)
-    : (`xmp.iid:${randomUUID()}` as XmpInstanceId);
-  const xmp = buildXmp({ meta, instanceID });
-  writeStableSync(outPath, xmp);
+  const size = Number(sizeArg);
+  if (!Number.isSafeInteger(size) || size <= 0) {
+    throw new Error(`Invalid rendition size: ${sizeArg}`);
+  }
+  const mimeType = Object.values(BITMAP_MIME_TYPES).find(value => value === mime);
+  if (mimeType === undefined) {
+    throw new Error(`Unsupported bitmap MIME type: ${mime}`);
+  }
+
+  const filePath = (path: string): string => resolve(import.meta.dirname, path);
+  const meta = extractAvatarMeta(filePath(sourceSvg), locale);
+  const { documentID: sourceDocumentID, instanceID: sourceInstanceID } = meta.identity;
+  if (sourceDocumentID === null || sourceInstanceID === null) {
+    throw new Error(`Missing source identity in ${sourceSvg}`);
+  }
+  const originalDocumentID = meta.identity.originalDocumentID ?? sourceDocumentID;
+  const documentID = renditionDocumentID(originalDocumentID, { variant, dimensions: [size, size], mime: mimeType });
+  const params = {
+    meta, documentID, originalDocumentID, mime: mimeType,
+    source: { documentID: sourceDocumentID, instanceID: sourceInstanceID, filePath: sourceSvg },
+  } satisfies Omit<XmpParams, "instanceID">;
+  const instanceID = contentInstanceID(documentID, [
+    readFileSync(filePath(input)),
+    buildXmp({ ...params, instanceID: "" }),
+    readFileSync(filePath(argsFile)),
+  ]);
+  writeStableSync(filePath(output), buildXmp({ ...params, instanceID }));
 }
 
 main();
