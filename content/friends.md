@@ -49,9 +49,6 @@ build:
 ### [三日月綾香](https://ayaka.shn.hk/)
 >   好耶，是可爱的三日月綾香姐姐
 
-### [小陈的窝](https://be233.com/)
->   be233\~
-
 ### [Karuboniru's Blog](https://yanqiyu.info/)
 >   某学不懂物理的学生
 
@@ -61,23 +58,13 @@ build:
 ### [NyaCat](https://nyac.at/)
 >   凌莞小可爱
 
-### [ChungZH](https://blog.chungzh.cn/)
->   OIer, 独立开发者，自己写了个编辑器，他的 bucket 里有 lemon 哦！
-
 ### [Senioria](https://91khr.github.io/)
 >   可爱又强强的小刺猬
 >   ~~（你什么时候给 Vimscript9 加 Typeclass（被打死~~
 
-### [KiteAB](https://blog.kiteab.me)
-
 ### [sxyugao](https://sxyugao.top/)
 
 ### [thyzzsのblog](https://thyzzs.top/)
-
-### [简记](https://moonbegonia.xyz/)
-
-### [Starx's Home](https://www.starx.ink/)
->   让我们某天一起仰望星空吧。
 
 ### [xzOS](https://xzos.net/)
 >   UpgradeAll 作者
@@ -85,16 +72,11 @@ build:
 ### [小方de博客 ](https://fang.blog.miri.site/)
 >   Minecraft 公益服 $CO_3$ 腐竹
 
-### [Tommy0103](https://tommy0103.github.io)
->   可可爱爱
-
 ### [肥鱼Blog](https://www.feiyuyu.net)
 >   但盼风雨来，能留你在此。
 
 ### [Studying Father's blog](https://studyingfather.com/)
 >   一只大佬
-
-### [络壳 LockShell](https://lockshell.com/)
 
 ### [高轲用](http://blog.gaokeyong.top/)
 
