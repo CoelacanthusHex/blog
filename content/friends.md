@@ -19,6 +19,10 @@ build:
 ### [XYenChi](https://xyenchi.github.io/)
 >   延迟小姐姐
 
+### [飞羊](https://blog.flygoat.com/)
+
+### [梓瑶老师](https://blog.ziyao.cc/)
+
 ### [洛灵](https://blog.luoling.moe/)
 >   以梦为马，不负韶华
 
